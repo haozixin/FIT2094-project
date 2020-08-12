@@ -1,3 +1,5 @@
+-- Tutorial week2 - ZIXIN HAO
+
 set echo on
 
 create table student_good (
