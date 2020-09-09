@@ -1,86 +1,73 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="73CD4223-690C-4E1B-FCA7-334A90EDCCB6" name="CUSTOMER">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5FCA1CFC-97F0-FBAF-F76E-5D69DEBC6D2A" name="CUSTOMER">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-09 08:29:31 UTC</createdTime>
+<createdTime>2020-09-09 11:57:43 UTC</createdTime>
+<generatorID>73CD4223-690C-4E1B-FCA7-334A90EDCCB6</generatorID>
 <ownerDesignName>cust_orders</ownerDesignName>
-<engineerTo>
-<item key="A6690583-194D-DA73-91D3-7A5784426CBB" value="true"/>
-</engineerTo>
-<adequatelyNormalized>NO</adequatelyNormalized>
-<expectedVolumes>0</expectedVolumes>
-<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
-<growthPercent>0</growthPercent>
-<growthType>Year</growthType>
-<maxVolumes>9999999</maxVolumes>
-<minVolumes>0</minVolumes>
-<normalForm>Third</normalForm>
-<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="cust_no" id="79A35862-618D-6D80-A124-CA3BA56DABD7">
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cust_no" id="8307E910-7C01-406C-405B-730A5A2997DB">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-09 08:30:22 UTC</createdTime>
+<createdTime>2020-09-09 11:57:43 UTC</createdTime>
 <commentInRDBMS><![CDATA[Customer Number]]></commentInRDBMS>
+<generatorID>79A35862-618D-6D80-A124-CA3BA56DABD7</generatorID>
 <ownerDesignName>cust_orders</ownerDesignName>
-<engineerTo>
-<item key="A6690583-194D-DA73-91D3-7A5784426CBB" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>0</dataTypePrecision>
 <dataTypeScale>7</dataTypeScale>
 <ownDataTypeParameters>,0,7</ownDataTypeParameters>
-</Attribute>
-<Attribute name="cust_name" id="F97348D6-00E2-4CC6-8F0C-5DE42BAFE829">
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cust_name" id="CFB93181-5ABB-1C9A-BD06-C52CF6EFC99B">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-09 08:31:21 UTC</createdTime>
+<createdTime>2020-09-09 11:57:43 UTC</createdTime>
 <commentInRDBMS><![CDATA[Name of the customer]]></commentInRDBMS>
+<generatorID>F97348D6-00E2-4CC6-8F0C-5DE42BAFE829</generatorID>
 <ownerDesignName>cust_orders</ownerDesignName>
-<engineerTo>
-<item key="A6690583-194D-DA73-91D3-7A5784426CBB" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>50 BYTE</dataTypeSize>
 <ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="cust_address" id="C6F671A0-5D82-26A7-5641-40E9EC2ECDEB">
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cust_address" id="32841E65-316A-69AC-8430-63CD59EA8983">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-09 08:32:03 UTC</createdTime>
+<createdTime>2020-09-09 11:57:43 UTC</createdTime>
 <commentInRDBMS><![CDATA[Address of customer]]></commentInRDBMS>
+<generatorID>C6F671A0-5D82-26A7-5641-40E9EC2ECDEB</generatorID>
 <ownerDesignName>cust_orders</ownerDesignName>
-<engineerTo>
-<item key="A6690583-194D-DA73-91D3-7A5784426CBB" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="cust_phone" id="FCB7D50D-48B9-8BAC-7C3E-484677F95A00">
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cust_phone" id="986F4814-E1E3-CBC4-5C96-4A30AA7C9921">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-09 08:32:35 UTC</createdTime>
+<createdTime>2020-09-09 11:57:43 UTC</createdTime>
 <commentInRDBMS><![CDATA[customer phone number]]></commentInRDBMS>
+<generatorID>FCB7D50D-48B9-8BAC-7C3E-484677F95A00</generatorID>
 <ownerDesignName>cust_orders</ownerDesignName>
-<engineerTo>
-<item key="A6690583-194D-DA73-91D3-7A5784426CBB" value="true"/>
-</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
 <dataTypeSize>10</dataTypeSize>
 <ownDataTypeParameters>10,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="cust_level" id="BDED49C7-428B-3CBE-5918-1182606BC39E">
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cust_level" id="C18A60C9-21CC-8504-1DC6-F0F2AD44F309">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-09 11:03:50 UTC</createdTime>
+<createdTime>2020-09-09 11:57:43 UTC</createdTime>
 <commentInRDBMS><![CDATA[customer level]]></commentInRDBMS>
+<generatorID>BDED49C7-428B-3CBE-5918-1182606BC39E</generatorID>
 <ownerDesignName>cust_orders</ownerDesignName>
-<engineerTo>
-<item key="A6690583-194D-DA73-91D3-7A5784426CBB" value="true"/>
-</engineerTo>
 <constraintName>chk_custlevel</constraintName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -92,6 +79,7 @@
 <valueDef value="S" description="Silver"/>
 </listOfValues>
 <ownDataTypeParameters>6 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
 <listOfRanges>
 <rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
 <beginValue>0</beginValue>
@@ -109,20 +97,20 @@
 <description>Gold</description>
 </rangeDef>
 </listOfRanges>
-</Attribute>
-</attributes>
-<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="66829ED8-C79D-35D1-6517-7C78FD00FA10" name="CUSTOMER PK">
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EC34BFD5-2B52-B6F0-C563-BC9D1A19005A" name="CUSTOMER_PK">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-09 08:33:38 UTC</createdTime>
+<createdTime>2020-09-09 11:57:43 UTC</createdTime>
+<generatorID>66829ED8-C79D-35D1-6517-7C78FD00FA10</generatorID>
 <ownerDesignName>cust_orders</ownerDesignName>
-<engineerTo>
-<item key="A6690583-194D-DA73-91D3-7A5784426CBB" value="true"/>
-</engineerTo>
 <pk>true</pk>
-<usedAttributes>
-<attributeRef>79A35862-618D-6D80-A124-CA3BA56DABD7</attributeRef>
-</usedAttributes>
-</identifier>
-</identifiers>
-</Entity>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8307E910-7C01-406C-405B-730A5A2997DB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

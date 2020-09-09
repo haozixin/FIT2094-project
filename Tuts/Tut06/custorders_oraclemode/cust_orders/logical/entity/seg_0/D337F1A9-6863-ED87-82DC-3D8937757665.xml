@@ -26,8 +26,9 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>7</dataTypePrecision>
-<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>7</dataTypeScale>
+<ownDataTypeParameters>,0,7</ownDataTypeParameters>
 </Attribute>
 <Attribute name="order_date" id="C89788AD-9410-6080-CB9C-5C778795D63A">
 <createdBy>zhao0004</createdBy>
@@ -42,21 +43,22 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="order_no1" id="754A5077-E90F-EFD5-D3D3-9AF5201CA8D6">
+<Attribute name="cust_no" id="B7B486EA-C957-4F30-05B9-8F890F0BB2B9">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-09 08:50:58 UTC</createdTime>
-<commentInRDBMS><![CDATA[order number]]></commentInRDBMS>
+<createdTime>2020-09-09 10:20:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[Customer Number]]></commentInRDBMS>
 <generatorID>DDE2816F-EF88-CA56-D468-43BC59D49F8E</generatorID>
 <ownerDesignName>cust_orders</ownerDesignName>
 <engineerTo>
 <item key="A6690583-194D-DA73-91D3-7A5784426CBB" value="true"/>
 </engineerTo>
-<referedAttribute>B16B2201-E909-EF80-6266-AC3CAEC65D99</referedAttribute>
+<referedAttribute>79A35862-618D-6D80-A124-CA3BA56DABD7</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>7</dataTypePrecision>
-<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>7</dataTypeScale>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A1D12984-6794-A396-205D-757C9B2A0974" name="ORDERS">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-09 11:57:43 UTC</createdTime>
+<generatorID>D337F1A9-6863-ED87-82DC-3D8937757665</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="order_no" id="5B253C35-C1F9-0AFD-CD49-C5409AD64BE7">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-09 11:57:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[order number]]></commentInRDBMS>
+<generatorID>B16B2201-E909-EF80-6266-AC3CAEC65D99</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>7</dataTypeScale>
+<ownDataTypeParameters>,0,7</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="order_date" id="C61C5662-A98F-4F47-6B68-109AB9A8510D">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-09 11:57:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[order date]]></commentInRDBMS>
+<generatorID>C89788AD-9410-6080-CB9C-5C778795D63A</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cust_no" id="F6C7C650-53AC-7BB4-1A70-EF80B05B9808">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-09 11:57:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Customer Number]]></commentInRDBMS>
+<generatorID>B7B486EA-C957-4F30-05B9-8F890F0BB2B9</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>7</dataTypeScale>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C1281318-E926-48EA-3A3D-7ED10BC27D62" referredColumn="8307E910-7C01-406C-405B-730A5A2997DB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5DE65028-D067-8308-F2ED-5518D8EE19EC" name="ORDER_PK">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-09 11:57:43 UTC</createdTime>
+<generatorID>4DCCBB7C-7FC9-1E69-DAFD-D5B32B934EB3</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5B253C35-C1F9-0AFD-CD49-C5409AD64BE7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2F909D8F-E8A9-B3C4-24AD-933540750505" name="CUSTOMER_ORDERS">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-09 11:57:43 UTC</createdTime>
+<generatorID>DDE2816F-EF88-CA56-D468-43BC59D49F8E</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F6C7C650-53AC-7BB4-1A70-EF80B05B9808"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

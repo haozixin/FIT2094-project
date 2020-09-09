@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AFC22E03-64E9-B650-CCE5-5C1B0AF513EB" name="PRODUCT">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-09 11:57:43 UTC</createdTime>
+<generatorID>52B4B1F8-D4F7-EFC6-5C65-5468DD4E97C0</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="prod_no" id="AEE47C8A-A94B-FE6F-6C33-B651E7AE01AA">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-09 11:57:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Product Number]]></commentInRDBMS>
+<generatorID>063787FB-889E-773A-0F68-9C91F14F7F99</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>7</dataTypeScale>
+<ownDataTypeParameters>,0,7</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prod_desc" id="F264990F-26F3-14FD-5B5F-BBE083E37823">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-09 11:57:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Product description]]></commentInRDBMS>
+<generatorID>946707E7-AC48-5F73-5624-CE5D310FE0B6</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prod_unit_price" id="F15A6307-752B-674D-98AB-484507C6F92E">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-09 11:57:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Product Unit Description]]></commentInRDBMS>
+<generatorID>011BC625-41D9-B2C5-BB78-8A8A7FDC26C3</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prod_category" id="4AE3E0B1-47AE-802E-6B27-B7C35D486487">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-09 11:57:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[product category]]></commentInRDBMS>
+<generatorID>CAE638BA-5CF5-DA21-945A-643AFF1E89B4</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<ownDataTypeParameters>25 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pcat_id" id="F2F63706-DA4B-88FF-8F44-22EA01E42BD4">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-09 11:57:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[product category]]></commentInRDBMS>
+<generatorID>73601B15-997E-960B-F9DC-1F13A2E3BF7B</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypeScale>7</dataTypeScale>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6F68DE67-5064-FAF5-2AB9-92F6C9A7177E" referredColumn="7D646835-8568-6838-A9AC-AB6C8F273707"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0FBBC5EC-2789-F1B6-D2EF-1BEF70F6895A" name="PRODUCT_PK">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-09 11:57:43 UTC</createdTime>
+<generatorID>C51824CB-7E86-8507-F7BF-6BF0D28CBE4D</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AEE47C8A-A94B-FE6F-6C33-B651E7AE01AA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="58DA92D0-CE05-2FFE-A92B-18EDEA33DA46" name="PRO_CATEGORY_PRODUCT">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-09 11:57:43 UTC</createdTime>
+<generatorID>681C025F-E078-959C-780D-7D0A50763CCC</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F2F63706-DA4B-88FF-8F44-22EA01E42BD4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
