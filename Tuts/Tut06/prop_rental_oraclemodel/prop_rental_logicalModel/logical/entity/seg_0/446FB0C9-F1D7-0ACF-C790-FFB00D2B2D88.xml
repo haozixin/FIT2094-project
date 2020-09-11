@@ -15,6 +15,20 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="dam_no" id="98032E60-E620-E1D8-750C-2387029778E8">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-11 12:12:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[damage number(surrogate PK)]]></commentInRDBMS>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<engineerTo>
+<item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="prop_no" id="DCEBBB20-8652-DF52-785E-99C85090CD1C">
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-11 11:36:05 UTC</createdTime>
@@ -100,6 +114,23 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="pay_no" id="300487BB-9027-B26D-29FB-1EB946D1D488">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-11 12:13:19 UTC</createdTime>
+<commentInRDBMS><![CDATA[payment number]]></commentInRDBMS>
+<generatorID>43E32648-3FF2-1C18-965B-F21DBB3C7F52</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<engineerTo>
+<item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>E2B140A8-CD8E-5AF0-A148-651EE5E248FE</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="761C5E1B-ADE0-8163-81E7-93CD0240BA1F" name="DAMAGE PK">
@@ -110,11 +141,25 @@
 <item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
 </engineerTo>
 <pk>true</pk>
+<newElementsIDs>98032E60-E620-E1D8-750C-2387029778E8</newElementsIDs>
 <usedAttributes>
-<attributeRef>FFB2E432-0C36-EAF9-028F-F0651A730E96</attributeRef>
+<attributeRef>98032E60-E620-E1D8-750C-2387029778E8</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="7244AEE3-5D01-D787-5C2E-1517D24DA560" name="DAMAGE_NK">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-11 12:35:59 UTC</createdTime>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<engineerTo>
+<item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
+</engineerTo>
+<deprecated>true</deprecated>
+<newElementsIDs>746F6D8B-13EE-703E-34DE-E7BDA4667F84,5763BDA3-6E91-1ACE-97C1-65D932F2BE50,34A04F3F-EB36-D4E1-E9F8-E4515B350FF6</newElementsIDs>
+<usedAttributes>
 <attributeRef>746F6D8B-13EE-703E-34DE-E7BDA4667F84</attributeRef>
 <attributeRef>5763BDA3-6E91-1ACE-97C1-65D932F2BE50</attributeRef>
 <attributeRef>DCEBBB20-8652-DF52-785E-99C85090CD1C</attributeRef>
+<attributeRef>AFECE813-E32E-0C37-B216-D9D156C163E6</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

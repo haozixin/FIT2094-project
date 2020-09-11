@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PAYMENT_PAID_BY_METHOD" directorySegmentName="seg_0" id="7B3E4426-A534-09C8-D732-44B22AB7AA63">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-11 12:10:25 UTC</createdTime>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<engineerTo>
+<item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
+</engineerTo>
+<sourcePk>59EBC71D-3A17-3E48-C219-524122EB9E81</sourcePk>
+<targetPk>62169A87-9326-01FB-3D90-8F1E938A7D43</targetPk>
+<identifying>false</identifying>
+<nameOnSource>paid by</nameOnSource>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>CEFCBD68-7383-13D1-F857-66728F8F161F</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>22AABD62-0363-F265-2D7A-549B972B0604</targetEntity>
+<transferable>true</transferable>
+</Relation>

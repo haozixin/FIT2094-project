@@ -63,10 +63,16 @@
 <engineerTo>
 <item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
 </engineerTo>
+<constraintName>Chk_payment_type</constraintName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>10 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="B" description="Bond"/>
+<valueDef value="D" description="Damage"/>
+<valueDef value="R" description="Rental"/>
+</listOfValues>
 <ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="pay_amount" id="1BD2C1B9-D260-22F4-2951-BDBA8D91B1AE">
@@ -114,11 +120,11 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="payMet_id" id="53C2B374-A7D5-A8B1-DA50-73B933F14AAB">
+<Attribute name="payMet_id" id="20A6E9DE-8132-6B93-B70D-4C5473E30F32">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-11 11:31:14 UTC</createdTime>
+<createdTime>2020-09-11 12:11:00 UTC</createdTime>
 <commentInRDBMS><![CDATA[pay method ID]]></commentInRDBMS>
-<generatorID>7656E352-B424-C024-3DA9-13384104918D</generatorID>
+<generatorID>7B3E4426-A534-09C8-D732-44B22AB7AA63</generatorID>
 <ownerDesignName>prop_rental_logicalModel</ownerDesignName>
 <engineerTo>
 <item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
