@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="RENT_PAYMENT" directorySegmentName="seg_0" id="CF3C9E06-2558-BAB1-B833-EC9AF37B3E10">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-11 10:56:36 UTC</createdTime>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<engineerTo>
+<item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
+</engineerTo>
+<sourcePk>AA94A11F-0F1F-BB67-949A-4F5EF4DDB5DE</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>makes</nameOnSource>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>61DC3594-33B0-93F6-761F-585DA895F49A</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>CEFCBD68-7383-13D1-F857-66728F8F161F</targetEntity>
+<transferable>true</transferable>
+</Relation>

@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="22AABD62-0363-F265-2D7A-549B972B0604" name="PAID_BY_METHOD">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-11 11:28:18 UTC</createdTime>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<engineerTo>
+<item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="payMet_id" id="BA4B56B9-D902-9180-E1EC-6F5A47CB93E1">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-11 11:29:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[pay method ID]]></commentInRDBMS>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<engineerTo>
+<item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="payMet_name" id="D5F5C979-BDEC-D382-DF93-C803AF21284F">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-11 11:29:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[name of payment methods]]></commentInRDBMS>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<engineerTo>
+<item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="62169A87-9326-01FB-3D90-8F1E938A7D43" name="PAID_BY_METHOD PK">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-11 11:29:34 UTC</createdTime>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<engineerTo>
+<item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>BA4B56B9-D902-9180-E1EC-6F5A47CB93E1</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

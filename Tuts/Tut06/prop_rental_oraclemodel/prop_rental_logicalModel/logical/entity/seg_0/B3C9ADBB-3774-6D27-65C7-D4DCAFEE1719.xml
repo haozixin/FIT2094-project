@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D71817D1-6A57-F07F-F036-67F177275DBF" name="OWNER">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B3C9ADBB-3774-6D27-65C7-D4DCAFEE1719" name="TENANT">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-11 09:47:23 UTC</createdTime>
+<createdTime>2020-09-11 10:57:24 UTC</createdTime>
 <ownerDesignName>prop_rental_logicalModel</ownerDesignName>
 <engineerTo>
 <item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
@@ -15,10 +15,10 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="owner_no" id="327522CB-A036-41E5-06EE-744BD0830FFC">
+<Attribute name="tenant_no" id="AA4A4B8C-3725-BC3F-23CC-F8C5105CAA8C">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-11 09:48:09 UTC</createdTime>
-<commentInRDBMS><![CDATA[owner number]]></commentInRDBMS>
+<createdTime>2020-09-11 10:57:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[tenant number]]></commentInRDBMS>
 <ownerDesignName>prop_rental_logicalModel</ownerDesignName>
 <engineerTo>
 <item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
@@ -29,10 +29,10 @@
 <dataTypePrecision>7</dataTypePrecision>
 <ownDataTypeParameters>,7,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="owner_title" id="FBA6065B-49D5-64A7-4838-DA6D646AD305">
+<Attribute name="tenant_title" id="8CBFCB5E-3F93-C447-8A99-B1279CEEDCB1">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-11 09:54:12 UTC</createdTime>
-<commentInRDBMS><![CDATA[owner's title]]></commentInRDBMS>
+<createdTime>2020-09-11 10:59:34 UTC</createdTime>
+<commentInRDBMS><![CDATA[tenant title]]></commentInRDBMS>
 <ownerDesignName>prop_rental_logicalModel</ownerDesignName>
 <engineerTo>
 <item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
@@ -43,38 +43,40 @@
 <dataTypeSize>20 BYTE</dataTypeSize>
 <ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="owner_gname" id="576B5EA2-CDAA-A397-A7CA-6E3CCEFA52FE">
+<Attribute name="tenant_fname" id="166DAA19-5B19-CF66-4276-6AF2BE0CDED4">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-11 09:50:54 UTC</createdTime>
-<commentInRDBMS><![CDATA[owner's given name]]></commentInRDBMS>
+<createdTime>2020-09-11 11:00:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[tenant family name]]></commentInRDBMS>
 <ownerDesignName>prop_rental_logicalModel</ownerDesignName>
 <engineerTo>
 <item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>15 BYTE</dataTypeSize>
-<ownDataTypeParameters>15 BYTE,,</ownDataTypeParameters>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="owner_fname" id="CFA640E9-03FD-C200-7D64-CE31DD8DFBE4">
+<Attribute name="tenant_gname" id="6456A9A9-A42A-1916-2F28-0B30044DA77D">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-11 09:53:35 UTC</createdTime>
-<commentInRDBMS><![CDATA[owner's family name]]></commentInRDBMS>
+<createdTime>2020-09-11 11:00:53 UTC</createdTime>
+<commentInRDBMS><![CDATA[tenant given name]]></commentInRDBMS>
 <ownerDesignName>prop_rental_logicalModel</ownerDesignName>
 <engineerTo>
 <item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>15 BYTE</dataTypeSize>
-<ownDataTypeParameters>15 BYTE,,</ownDataTypeParameters>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="owner_ad_street" id="C63606D4-FAB8-A49D-09C5-85A9F4DFDC8D">
+<Attribute name="tenant_ad_street" id="3450691B-24A8-7BF7-679A-6B1C0F2B942E">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-11 09:55:59 UTC</createdTime>
-<commentInRDBMS><![CDATA[owner_address_street]]></commentInRDBMS>
+<createdTime>2020-09-11 11:01:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[tenant address - street]]></commentInRDBMS>
 <ownerDesignName>prop_rental_logicalModel</ownerDesignName>
 <engineerTo>
 <item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
@@ -85,10 +87,10 @@
 <dataTypeSize>20 BYTE</dataTypeSize>
 <ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="owner_ad_city" id="4062418C-9D8F-3501-DAF1-F6B0E282343E">
+<Attribute name="tenant_ad_city" id="746580D5-517D-08A6-24F4-3ED41572AD3C">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-11 09:58:48 UTC</createdTime>
-<commentInRDBMS><![CDATA[owner_address_city]]></commentInRDBMS>
+<createdTime>2020-09-11 11:02:42 UTC</createdTime>
+<commentInRDBMS><![CDATA[tenant address - city]]></commentInRDBMS>
 <ownerDesignName>prop_rental_logicalModel</ownerDesignName>
 <engineerTo>
 <item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
@@ -99,10 +101,10 @@
 <dataTypeSize>20 BYTE</dataTypeSize>
 <ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="owner_ad_state" id="C8600825-75EC-1457-5B3F-C308EA542D07">
+<Attribute name="tenant_ad_state" id="44187EA0-AFCA-696D-68EC-BFF4193A262E">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-11 09:59:41 UTC</createdTime>
-<commentInRDBMS><![CDATA[owner_address_state]]></commentInRDBMS>
+<createdTime>2020-09-11 11:03:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[tenant_ad_state]]></commentInRDBMS>
 <ownerDesignName>prop_rental_logicalModel</ownerDesignName>
 <engineerTo>
 <item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
@@ -113,32 +115,46 @@
 <dataTypeSize>20 BYTE</dataTypeSize>
 <ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="owner_ad_postcode" id="D11631F7-A9DD-548D-C4E8-58DEE45B37A2">
+<Attribute name="tenant_ad_pcode" id="A898B9DC-C271-3791-93B8-67F288B8B782">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-11 10:00:18 UTC</createdTime>
-<commentInRDBMS><![CDATA[owner_address_postcode]]></commentInRDBMS>
+<createdTime>2020-09-11 11:03:46 UTC</createdTime>
+<commentInRDBMS><![CDATA[tenant address - postcode]]></commentInRDBMS>
 <ownerDesignName>prop_rental_logicalModel</ownerDesignName>
 <engineerTo>
 <item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT025</logicalDatatype>
 <dataTypeSize>4 BYTE</dataTypeSize>
 <ownDataTypeParameters>4 BYTE,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="tenant_phone" id="A91E3017-86C2-2981-CC11-8978A3764D12">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-11 11:05:42 UTC</createdTime>
+<commentInRDBMS><![CDATA[tenant phone number]]></commentInRDBMS>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<engineerTo>
+<item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>9 BYTE</dataTypeSize>
+<ownDataTypeParameters>9 BYTE,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="CFCFBA5F-898D-763D-D888-CCE9E79EE6B5" name="OWNER PK">
+<identifier id="1175A04C-CA3D-6AA3-E627-D699B64F9294" name="TENANT PK">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-11 09:48:21 UTC</createdTime>
+<createdTime>2020-09-11 10:57:50 UTC</createdTime>
 <ownerDesignName>prop_rental_logicalModel</ownerDesignName>
 <engineerTo>
 <item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>327522CB-A036-41E5-06EE-744BD0830FFC</attributeRef>
+<attributeRef>AA4A4B8C-3725-BC3F-23CC-F8C5105CAA8C</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

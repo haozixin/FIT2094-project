@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A28E3C4A-6AE1-57C5-8F0D-A5FFC2600F65" name="MAINTENANCE">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="61DC3594-33B0-93F6-761F-585DA895F49A" name="RENT">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-11 10:03:40 UTC</createdTime>
+<createdTime>2020-09-11 10:50:53 UTC</createdTime>
 <ownerDesignName>prop_rental_logicalModel</ownerDesignName>
 <engineerTo>
 <item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
@@ -15,11 +15,11 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="prop_no" id="91725492-2A8C-F8A4-FE6F-0254104EDACB">
+<Attribute name="prop_no" id="817C1C34-E757-C7D1-3E0D-B172C185EC56">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-11 10:38:56 UTC</createdTime>
+<createdTime>2020-09-11 10:52:59 UTC</createdTime>
 <commentInRDBMS><![CDATA[property number]]></commentInRDBMS>
-<generatorID>70CE6052-1D86-EDC9-C0A5-1BB7CA7A702A</generatorID>
+<generatorID>7CDDB8AC-CAD0-38F2-D9E8-E198A26CF74E</generatorID>
 <ownerDesignName>prop_rental_logicalModel</ownerDesignName>
 <engineerTo>
 <item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
@@ -31,10 +31,23 @@
 <dataTypePrecision>7</dataTypePrecision>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="maint_cost" id="8C2A8973-9F9A-8025-4CEA-91054FA6DEA0">
+<Attribute name="rent_lease_startdate" id="4AEAD8A1-8E92-EE5F-88A4-1C56A93E0F04">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-11 10:40:52 UTC</createdTime>
-<commentInRDBMS><![CDATA[maintenance cost]]></commentInRDBMS>
+<createdTime>2020-09-11 10:54:29 UTC</createdTime>
+<commentInRDBMS><![CDATA[the start date of rent lease]]></commentInRDBMS>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<engineerTo>
+<item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rent_bond" id="9E7ABF62-08DC-9D06-3938-31F7DB04ABE5">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-11 11:07:55 UTC</createdTime>
+<commentInRDBMS><![CDATA[rent bond]]></commentInRDBMS>
 <ownerDesignName>prop_rental_logicalModel</ownerDesignName>
 <engineerTo>
 <item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
@@ -45,10 +58,10 @@
 <dataTypeScale>2</dataTypeScale>
 <ownDataTypeParameters>,,2</ownDataTypeParameters>
 </Attribute>
-<Attribute name="maint_desc" id="557DBD97-3724-8BF0-E025-28BE7CF9EC50">
+<Attribute name="rent_lease_period" id="5F874087-38C4-745F-F6DB-ECBF835BB2C9">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-11 10:41:44 UTC</createdTime>
-<commentInRDBMS><![CDATA[maintenance describe]]></commentInRDBMS>
+<createdTime>2020-09-11 11:17:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[period of rent lease]]></commentInRDBMS>
 <ownerDesignName>prop_rental_logicalModel</ownerDesignName>
 <engineerTo>
 <item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
@@ -56,45 +69,34 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50 BYTE</dataTypeSize>
-<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="maint_date" id="15195FD0-AB50-5ADA-CFF5-A9DA4631C129">
+<Attribute name="rent_weekly_rate" id="CC73D5EA-4D8C-50D9-96FC-BBC609D62D4D">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-11 10:42:42 UTC</createdTime>
-<commentInRDBMS><![CDATA[maintenance date]]></commentInRDBMS>
+<createdTime>2020-09-11 11:18:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[rent weekly rate]]></commentInRDBMS>
 <ownerDesignName>prop_rental_logicalModel</ownerDesignName>
 <engineerTo>
 <item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT007</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,,2</ownDataTypeParameters>
 </Attribute>
-<Attribute name="maint_time" id="AC16BB88-835C-19DB-8310-C8145711860D">
+<Attribute name="tenant_no" id="5D97E483-BA3B-2D9A-E7BD-46F87D0F4F22">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-11 10:45:04 UTC</createdTime>
-<commentInRDBMS><![CDATA[maintenance time]]></commentInRDBMS>
+<createdTime>2020-09-11 10:58:32 UTC</createdTime>
+<commentInRDBMS><![CDATA[tenant number]]></commentInRDBMS>
+<generatorID>7C974FDC-8078-7FDA-D48E-FD1800450A3E</generatorID>
 <ownerDesignName>prop_rental_logicalModel</ownerDesignName>
 <engineerTo>
 <item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
 </engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT007</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="owner_no" id="C4662051-219A-71BC-A594-4F96110626AA">
-<createdBy>zhao0004</createdBy>
-<createdTime>2020-09-11 10:36:21 UTC</createdTime>
-<commentInRDBMS><![CDATA[owner number]]></commentInRDBMS>
-<generatorID>C852FED0-F4A2-41FA-BA6B-EA6983158B84</generatorID>
-<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
-<engineerTo>
-<item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
-</engineerTo>
-<referedAttribute>327522CB-A036-41E5-06EE-744BD0830FFC</referedAttribute>
+<referedAttribute>AA4A4B8C-3725-BC3F-23CC-F8C5105CAA8C</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -103,17 +105,17 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="5B382E74-A760-AFD4-8C48-B30635EB836D" name="MAINTENANCE PK">
+<identifier id="AA94A11F-0F1F-BB67-949A-4F5EF4DDB5DE" name="RENT PK">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-11 10:04:23 UTC</createdTime>
+<createdTime>2020-09-11 10:52:59 UTC</createdTime>
 <ownerDesignName>prop_rental_logicalModel</ownerDesignName>
 <engineerTo>
 <item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>C9D7AA64-A4DB-D6B1-A4A4-28ED743984AE</attributeRef>
-<attributeRef>91725492-2A8C-F8A4-FE6F-0254104EDACB</attributeRef>
+<attributeRef>817C1C34-E757-C7D1-3E0D-B172C185EC56</attributeRef>
+<attributeRef>4AEAD8A1-8E92-EE5F-88A4-1C56A93E0F04</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

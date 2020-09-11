@@ -1,19 +1,19 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="OWNER_PROPERTY" directorySegmentName="seg_0" id="0BE9F225-1DE9-43A2-7004-F46CFA97E865">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="TENANT_RENT" directorySegmentName="seg_0" id="7C974FDC-8078-7FDA-D48E-FD1800450A3E">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-11 10:19:11 UTC</createdTime>
+<createdTime>2020-09-11 10:58:32 UTC</createdTime>
 <ownerDesignName>prop_rental_logicalModel</ownerDesignName>
 <engineerTo>
 <item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
 </engineerTo>
-<sourcePk>CFCFBA5F-898D-763D-D888-CCE9E79EE6B5</sourcePk>
+<sourcePk>1175A04C-CA3D-6AA3-E627-D699B64F9294</sourcePk>
 <identifying>false</identifying>
-<nameOnSource>owns</nameOnSource>
+<nameOnSource>agrees to</nameOnSource>
 <optionalSource>false</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
-<sourceEntity>D71817D1-6A57-F07F-F036-67F177275DBF</sourceEntity>
+<sourceEntity>B3C9ADBB-3774-6D27-65C7-D4DCAFEE1719</sourceEntity>
 <targetCardinalityString>*</targetCardinalityString>
-<targetEntity>C70B30FC-613C-6069-205F-7C528D449801</targetEntity>
+<targetEntity>61DC3594-33B0-93F6-761F-585DA895F49A</targetEntity>
 <transferable>true</transferable>
 </Relation>
