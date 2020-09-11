@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="prop_rental_logicalModel" id="C70A5225-0859-63E6-78F8-A3D4BC3560B2" version="3.5">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-11 09:39:52 UTC</createdTime>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>C70A5225-0859-63E6-78F8-A3D4BC3560B2</designId>
+</OSDM_Design>
