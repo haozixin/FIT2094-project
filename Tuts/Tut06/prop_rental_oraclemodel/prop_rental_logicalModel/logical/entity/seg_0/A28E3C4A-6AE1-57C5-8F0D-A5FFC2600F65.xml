@@ -31,6 +31,19 @@
 <dataTypePrecision>7</dataTypePrecision>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="maint_datetime" id="15195FD0-AB50-5ADA-CFF5-A9DA4631C129">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-11 10:42:42 UTC</createdTime>
+<commentInRDBMS><![CDATA[maintenance date]]></commentInRDBMS>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<engineerTo>
+<item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="maint_cost" id="8C2A8973-9F9A-8025-4CEA-91054FA6DEA0">
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-11 10:40:52 UTC</createdTime>
@@ -58,32 +71,6 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>50 BYTE</dataTypeSize>
 <ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="maint_date" id="15195FD0-AB50-5ADA-CFF5-A9DA4631C129">
-<createdBy>zhao0004</createdBy>
-<createdTime>2020-09-11 10:42:42 UTC</createdTime>
-<commentInRDBMS><![CDATA[maintenance date]]></commentInRDBMS>
-<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
-<engineerTo>
-<item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT007</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="maint_time" id="AC16BB88-835C-19DB-8310-C8145711860D">
-<createdBy>zhao0004</createdBy>
-<createdTime>2020-09-11 10:45:04 UTC</createdTime>
-<commentInRDBMS><![CDATA[maintenance time]]></commentInRDBMS>
-<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
-<engineerTo>
-<item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT007</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="owner_no" id="C4662051-219A-71BC-A594-4F96110626AA">
 <createdBy>zhao0004</createdBy>
@@ -114,6 +101,7 @@
 <usedAttributes>
 <attributeRef>C9D7AA64-A4DB-D6B1-A4A4-28ED743984AE</attributeRef>
 <attributeRef>91725492-2A8C-F8A4-FE6F-0254104EDACB</attributeRef>
+<attributeRef>15195FD0-AB50-5ADA-CFF5-A9DA4631C129</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

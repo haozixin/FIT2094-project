@@ -29,22 +29,6 @@
 <dataTypePrecision>7</dataTypePrecision>
 <ownDataTypeParameters>,7,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="prop_no" id="DCEBBB20-8652-DF52-785E-99C85090CD1C">
-<createdBy>zhao0004</createdBy>
-<createdTime>2020-09-11 11:36:05 UTC</createdTime>
-<commentInRDBMS><![CDATA[property number]]></commentInRDBMS>
-<generatorID>34A04F3F-EB36-D4E1-E9F8-E4515B350FF6</generatorID>
-<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
-<engineerTo>
-<item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
-</engineerTo>
-<referedAttribute>817C1C34-E757-C7D1-3E0D-B172C185EC56</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>7</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="dam_date" id="746F6D8B-13EE-703E-34DE-E7BDA4667F84">
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-11 11:33:46 UTC</createdTime>
@@ -69,6 +53,22 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="prop_no" id="7A6429C8-42E8-A6EE-BBE0-444249532A57">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-11 13:15:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[property number]]></commentInRDBMS>
+<generatorID>34A04F3F-EB36-D4E1-E9F8-E4515B350FF6</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<engineerTo>
+<item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
+</engineerTo>
+<referedAttribute>817C1C34-E757-C7D1-3E0D-B172C185EC56</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="dam_type" id="884E1737-E409-F75F-8414-030D9144F417">
@@ -99,9 +99,9 @@
 <dataTypeScale>2</dataTypeScale>
 <ownDataTypeParameters>,,2</ownDataTypeParameters>
 </Attribute>
-<Attribute name="rent_lease_startdate" id="AFECE813-E32E-0C37-B216-D9D156C163E6">
+<Attribute name="rent_lease_startdate" id="07C3081F-D26E-7D5B-687B-D7927BC9D05A">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-11 11:36:05 UTC</createdTime>
+<createdTime>2020-09-11 13:15:30 UTC</createdTime>
 <commentInRDBMS><![CDATA[the start date of rent lease]]></commentInRDBMS>
 <generatorID>34A04F3F-EB36-D4E1-E9F8-E4515B350FF6</generatorID>
 <ownerDesignName>prop_rental_logicalModel</ownerDesignName>
@@ -153,13 +153,12 @@
 <engineerTo>
 <item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
 </engineerTo>
-<deprecated>true</deprecated>
 <newElementsIDs>746F6D8B-13EE-703E-34DE-E7BDA4667F84,5763BDA3-6E91-1ACE-97C1-65D932F2BE50,34A04F3F-EB36-D4E1-E9F8-E4515B350FF6</newElementsIDs>
 <usedAttributes>
 <attributeRef>746F6D8B-13EE-703E-34DE-E7BDA4667F84</attributeRef>
 <attributeRef>5763BDA3-6E91-1ACE-97C1-65D932F2BE50</attributeRef>
-<attributeRef>DCEBBB20-8652-DF52-785E-99C85090CD1C</attributeRef>
-<attributeRef>AFECE813-E32E-0C37-B216-D9D156C163E6</attributeRef>
+<attributeRef>7A6429C8-42E8-A6EE-BBE0-444249532A57</attributeRef>
+<attributeRef>07C3081F-D26E-7D5B-687B-D7927BC9D05A</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
