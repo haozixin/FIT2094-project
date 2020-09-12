@@ -1,0 +1,145 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EE1DB43A-E682-9409-FCD4-B4C340417DFA" name="TENANT">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<generatorID>B3C9ADBB-3774-6D27-65C7-D4DCAFEE1719</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="tenant_no" id="F8A4744D-27D7-E30B-3DBD-4108B723D6D7">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[tenant number]]></commentInRDBMS>
+<generatorID>AA4A4B8C-3725-BC3F-23CC-F8C5105CAA8C</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tenant_title" id="7B6E6438-8CD1-ABBE-3A59-1CD36E8135AA">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[tenant title]]></commentInRDBMS>
+<generatorID>8CBFCB5E-3F93-C447-8A99-B1279CEEDCB1</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tenant_fname" id="933BD77B-FD18-EEB7-9AC7-A8D55B807EA5">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[tenant family name]]></commentInRDBMS>
+<generatorID>166DAA19-5B19-CF66-4276-6AF2BE0CDED4</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tenant_gname" id="C1CB06EB-232D-CEF3-87E4-07AADB7E302E">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[tenant given name]]></commentInRDBMS>
+<generatorID>6456A9A9-A42A-1916-2F28-0B30044DA77D</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tenant_ad_street" id="4E73C7A8-E782-5202-8F6B-525D04FEAB4A">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[tenant address - street]]></commentInRDBMS>
+<generatorID>3450691B-24A8-7BF7-679A-6B1C0F2B942E</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tenant_ad_city" id="9EF2A2C9-77CE-492C-4D03-ED95764AB543">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[tenant address - city]]></commentInRDBMS>
+<generatorID>746580D5-517D-08A6-24F4-3ED41572AD3C</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tenant_ad_state" id="822AD0EA-25EA-75B9-C9D6-55BA2B6104DE">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[tenant_ad_state]]></commentInRDBMS>
+<generatorID>44187EA0-AFCA-696D-68EC-BFF4193A262E</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tenant_ad_pcode" id="84C3AC6F-8681-659D-1701-EF55BE00A01B">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[tenant address - postcode]]></commentInRDBMS>
+<generatorID>A898B9DC-C271-3791-93B8-67F288B8B782</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4 BYTE</dataTypeSize>
+<ownDataTypeParameters>4 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tenant_phone" id="18B8A918-9190-562B-61AD-3161CA10A221">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[tenant phone number]]></commentInRDBMS>
+<generatorID>A91E3017-86C2-2981-CC11-8978A3764D12</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>9 BYTE</dataTypeSize>
+<ownDataTypeParameters>9 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8605D915-3D48-9D0B-5347-204A234A17E5" name="TENANT_PK">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<generatorID>1175A04C-CA3D-6AA3-E627-D699B64F9294</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F8A4744D-27D7-E30B-3DBD-4108B723D6D7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

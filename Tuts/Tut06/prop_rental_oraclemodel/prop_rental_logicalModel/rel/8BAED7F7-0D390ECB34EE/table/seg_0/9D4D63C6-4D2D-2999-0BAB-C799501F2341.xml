@@ -1,0 +1,132 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9D4D63C6-4D2D-2999-0BAB-C799501F2341" name="PROPERTY">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<generatorID>C70B30FC-613C-6069-205F-7C528D449801</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="prop_no" id="943A50C0-F63C-C19E-2617-083D796D5F0A">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[property number]]></commentInRDBMS>
+<generatorID>901C2367-802F-3D36-1DF9-5116FE494AF4</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prop_ad_street" id="E03F9CBF-337B-FC7B-E29A-500CE61DEE4B">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[property address street]]></commentInRDBMS>
+<generatorID>7328362A-C2CE-5E37-5E97-496B24E73EFE</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 BYTE</dataTypeSize>
+<ownDataTypeParameters>15 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prop_ad_city" id="15576F49-E604-97E2-C683-BD8964A824AF">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[property address city]]></commentInRDBMS>
+<generatorID>05D407C2-4851-8862-6644-7D019382F0E4</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 BYTE</dataTypeSize>
+<ownDataTypeParameters>15 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prop_ad_state" id="8A674E1C-F105-858B-9C65-B8A595EB161D">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[property address state]]></commentInRDBMS>
+<generatorID>9EDDEF62-CFB2-0A08-925F-8F7DF9D34E86</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 BYTE</dataTypeSize>
+<ownDataTypeParameters>15 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prop_ad_postcode" id="72F4BB92-9ED9-D83F-76DA-A705D251C834">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[property address postcode]]></commentInRDBMS>
+<generatorID>484D980A-C2F8-DC7B-06B3-F39CAC21DEFF</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 BYTE</dataTypeSize>
+<ownDataTypeParameters>15 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prop_value" id="3AAFEA19-5C20-1554-91A5-86C6403731CD">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[property value]]></commentInRDBMS>
+<generatorID>80AA2C40-47FA-6DF8-A748-2ABF2AE29AFF</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="owner_no" id="54690D23-6AFC-564B-8346-D9EBDCA559DB">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[owner number]]></commentInRDBMS>
+<generatorID>5415CA1E-02D8-07B8-417B-38DBF58FCC35</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C624806D-7DD2-CFDE-B4F8-9937BF13A9CF" referredColumn="CDED52D7-6BEB-0C30-0E51-14123CE015A3"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8361A976-3F76-3404-88DD-1CD8D91AE154" name="PROPERTY_PK">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<generatorID>7458C9C1-2D93-5767-8549-8C05458F01CA</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="943A50C0-F63C-C19E-2617-083D796D5F0A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8096677E-F5DD-E1DB-EAF9-DE127C36DA3E" name="OWNER_PROPERTY">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<generatorID>0BE9F225-1DE9-43A2-7004-F46CFA97E865</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="54690D23-6AFC-564B-8346-D9EBDCA559DB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,52 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="23EBB63D-8594-22BA-DC38-8390777B20BA" name="PAID_BY_METHOD">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<generatorID>22AABD62-0363-F265-2D7A-549B972B0604</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="payMet_id" id="CAE92985-6C81-CA2A-E60A-AF4A60DA6307">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[pay method ID]]></commentInRDBMS>
+<generatorID>BA4B56B9-D902-9180-E1EC-6F5A47CB93E1</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="payMet_name" id="86514C05-476A-EAD2-1990-22AB5FC0BCD0">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[name of payment methods]]></commentInRDBMS>
+<generatorID>D5F5C979-BDEC-D382-DF93-C803AF21284F</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="65849AEC-16AE-C7CD-176C-14645DF27DDC" name="PAID_BY_METHOD_PK">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<generatorID>62169A87-9326-01FB-3D90-8F1E938A7D43</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CAE92985-6C81-CA2A-E60A-AF4A60DA6307"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

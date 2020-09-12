@@ -1,0 +1,130 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="156281AB-697C-9AD9-DCBB-98F7C257A58E" name="OWNER">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<generatorID>D71817D1-6A57-F07F-F036-67F177275DBF</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="owner_no" id="CDED52D7-6BEB-0C30-0E51-14123CE015A3">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[owner number]]></commentInRDBMS>
+<generatorID>327522CB-A036-41E5-06EE-744BD0830FFC</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="owner_title" id="0DDF5224-2F08-8ACA-9399-3087948C2F04">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[owner's title]]></commentInRDBMS>
+<generatorID>FBA6065B-49D5-64A7-4838-DA6D646AD305</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="owner_gname" id="C8F1BAA6-88CA-D967-E091-7CD77B49F313">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[owner's given name]]></commentInRDBMS>
+<generatorID>576B5EA2-CDAA-A397-A7CA-6E3CCEFA52FE</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 BYTE</dataTypeSize>
+<ownDataTypeParameters>15 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="owner_fname" id="0F6107D3-6A00-57DF-792D-11695BF8F7DC">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[owner's family name]]></commentInRDBMS>
+<generatorID>CFA640E9-03FD-C200-7D64-CE31DD8DFBE4</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 BYTE</dataTypeSize>
+<ownDataTypeParameters>15 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="owner_ad_street" id="84F2CFA7-A730-9686-BF07-41E1983E7D92">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[owner_address_street]]></commentInRDBMS>
+<generatorID>C63606D4-FAB8-A49D-09C5-85A9F4DFDC8D</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="owner_ad_city" id="7DA41796-E00C-21A9-F269-58CAC1B0A6D8">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[owner_address_city]]></commentInRDBMS>
+<generatorID>4062418C-9D8F-3501-DAF1-F6B0E282343E</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="owner_ad_state" id="FCF7C18A-29BC-927C-1FAF-C36C77FCF18B">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[owner_address_state]]></commentInRDBMS>
+<generatorID>C8600825-75EC-1457-5B3F-C308EA542D07</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="owner_ad_postcode" id="C3ABF1BB-62D6-AF63-D8FE-9A32F7467297">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[owner_address_postcode]]></commentInRDBMS>
+<generatorID>D11631F7-A9DD-548D-C4E8-58DEE45B37A2</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4 BYTE</dataTypeSize>
+<ownDataTypeParameters>4 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A1BC21CB-D1F7-098D-92D8-52C714B85FA3" name="OWNER_PK">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<generatorID>CFCFBA5F-898D-763D-D888-CCE9E79EE6B5</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CDED52D7-6BEB-0C30-0E51-14123CE015A3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,151 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7C06469D-C807-57A6-8551-98A6FA9645FC" name="PAYMENT">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<generatorID>CEFCBD68-7383-13D1-F857-66728F8F161F</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="pay_no" id="DFD39FA8-4D30-D8F7-53F6-64FC1944E55C">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[payment number]]></commentInRDBMS>
+<generatorID>E2B140A8-CD8E-5AF0-A148-651EE5E248FE</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pay_date" id="4E585F58-D34E-F68F-AB15-31F2A844F994">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[payment date]]></commentInRDBMS>
+<generatorID>453FDFB6-5938-9EC0-3F8A-9DACC5AFBD47</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pay_time" id="CC2912DE-8E7A-C163-6FA7-5F188582F528">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[payment time]]></commentInRDBMS>
+<generatorID>2B5E0764-715E-02A2-716E-9DC956C77C96</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pay_type" id="4DA09C73-80CD-3A1A-2934-A4581896D655">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[payment type]]></commentInRDBMS>
+<generatorID>297B2229-76AD-8DFD-8F3C-62642E03A764</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<constraintName>Chk_payment_type</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="B" description="Bond"/>
+<valueDef value="D" description="Damage"/>
+<valueDef value="R" description="Rental"/>
+</listOfValues>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pay_amount" id="452FDFA8-8244-652F-BEBF-ABE57D0CD5E0">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[the amount of payment]]></commentInRDBMS>
+<generatorID>1BD2C1B9-D260-22F4-2951-BDBA8D91B1AE</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="payMet_id" id="052C633B-71A3-11F5-58D9-2FF78B4CE233">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[pay method ID]]></commentInRDBMS>
+<generatorID>20A6E9DE-8132-6B93-B70D-4C5473E30F32</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="65CF3DC4-4A5C-D227-B9FE-AE521C3C8E05" referredColumn="CAE92985-6C81-CA2A-E60A-AF4A60DA6307"/>
+</associations>
+</Column>
+<Column name="rent_no" id="C1031C00-38BD-8F8D-3034-251B1DA944E2">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[rent number]]></commentInRDBMS>
+<generatorID>0B331881-F111-DAE2-CA8F-B0B914CB742C</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="900C02EA-9534-458F-1229-0DA41BEDB223" referredColumn="D240748E-454C-B748-8213-3615315646AC"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A19977F0-7276-AA1D-AA0D-363D4F28F117" name="PAYMENT_PK">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<generatorID>59EBC71D-3A17-3E48-C219-524122EB9E81</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DFD39FA8-4D30-D8F7-53F6-64FC1944E55C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="70A01A91-6DE2-BA26-4EED-DF559B82DEE9" name="PAYMENT_PAID_BY_METHOD">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<generatorID>7B3E4426-A534-09C8-D732-44B22AB7AA63</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="052C633B-71A3-11F5-58D9-2FF78B4CE233"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D59D85A0-5DC5-46D8-161D-20BE37640BAD" name="RENT_PAYMENT">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<generatorID>CF3C9E06-2558-BAB1-B833-EC9AF37B3E10</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C1031C00-38BD-8F8D-3034-251B1DA944E2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

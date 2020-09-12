@@ -1,0 +1,121 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F9988774-8E88-FDDF-3536-50E9823A7150" name="MAINTENANCE">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<generatorID>A28E3C4A-6AE1-57C5-8F0D-A5FFC2600F65</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="prop_no" id="2705DDC0-ECCB-289F-3A86-07590647CECA">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[property number]]></commentInRDBMS>
+<generatorID>91725492-2A8C-F8A4-FE6F-0254104EDACB</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3CC3CA9B-938E-D9DB-23A9-C9CDFF42EAB8" referredColumn="943A50C0-F63C-C19E-2617-083D796D5F0A"/>
+</associations>
+</Column>
+<Column name="maint_datetime" id="72D610BF-3FCB-C37B-5651-4B1952E30471">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[maintenance date]]></commentInRDBMS>
+<generatorID>15195FD0-AB50-5ADA-CFF5-A9DA4631C129</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="maint_cost" id="4D95B84F-5960-A3B5-C94B-B82628BB15C1">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[maintenance cost]]></commentInRDBMS>
+<generatorID>8C2A8973-9F9A-8025-4CEA-91054FA6DEA0</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="maint_desc" id="4E0824DA-DF6C-25BD-ABA3-637914600A8E">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[maintenance describe]]></commentInRDBMS>
+<generatorID>557DBD97-3724-8BF0-E025-28BE7CF9EC50</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="owner_no" id="AED7913C-BE26-035A-52A2-3C88CAA74008">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[owner number]]></commentInRDBMS>
+<generatorID>C4662051-219A-71BC-A594-4F96110626AA</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B32E289D-F000-5860-FFCF-03F08953BA9B" referredColumn="CDED52D7-6BEB-0C30-0E51-14123CE015A3"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2E052C72-B3D4-0620-077F-2B4C94046199" name="MAINTENANCE_PK">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<generatorID>5B382E74-A760-AFD4-8C48-B30635EB836D</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2705DDC0-ECCB-289F-3A86-07590647CECA"/>
+<colUsage columnID="72D610BF-3FCB-C37B-5651-4B1952E30471"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="93D0C916-D8D6-2210-FF93-1B744D9320CC" name="OWNER_MAINTENANCE">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<generatorID>C852FED0-F4A2-41FA-BA6B-EA6983158B84</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AED7913C-BE26-035A-52A2-3C88CAA74008"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DA2C50AA-B2D9-6944-B30E-54E57D9F6826" name="PROPERTY_MAINTENANCE">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:41:16 UTC</createdTime>
+<generatorID>70CE6052-1D86-EDC9-C0A5-1BB7CA7A702A</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2705DDC0-ECCB-289F-3A86-07590647CECA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
