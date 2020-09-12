@@ -89,37 +89,6 @@
 <dataTypeScale>2</dataTypeScale>
 <ownDataTypeParameters>,,2</ownDataTypeParameters>
 </Attribute>
-<Attribute name="prop_no" id="E251A2B9-B137-6446-1F93-3486779373DF">
-<createdBy>zhao0004</createdBy>
-<createdTime>2020-09-11 10:56:36 UTC</createdTime>
-<commentInRDBMS><![CDATA[property number]]></commentInRDBMS>
-<generatorID>CF3C9E06-2558-BAB1-B833-EC9AF37B3E10</generatorID>
-<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
-<engineerTo>
-<item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
-</engineerTo>
-<referedAttribute>817C1C34-E757-C7D1-3E0D-B172C185EC56</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>7</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="rent_lease_startdate" id="94CE47CF-2D6F-8749-9717-069C2601B83D">
-<createdBy>zhao0004</createdBy>
-<createdTime>2020-09-11 10:56:36 UTC</createdTime>
-<commentInRDBMS><![CDATA[the start date of rent lease]]></commentInRDBMS>
-<generatorID>CF3C9E06-2558-BAB1-B833-EC9AF37B3E10</generatorID>
-<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
-<engineerTo>
-<item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
-</engineerTo>
-<referedAttribute>4AEAD8A1-8E92-EE5F-88A4-1C56A93E0F04</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT007</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="payMet_id" id="20A6E9DE-8132-6B93-B70D-4C5473E30F32">
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-11 12:11:00 UTC</createdTime>
@@ -130,6 +99,22 @@
 <item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
 </engineerTo>
 <referedAttribute>BA4B56B9-D902-9180-E1EC-6F5A47CB93E1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rent_no" id="0B331881-F111-DAE2-CA8F-B0B914CB742C">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:18:08 UTC</createdTime>
+<commentInRDBMS><![CDATA[rent number]]></commentInRDBMS>
+<generatorID>CF3C9E06-2558-BAB1-B833-EC9AF37B3E10</generatorID>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<engineerTo>
+<item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
+</engineerTo>
+<referedAttribute>B052D950-1217-C3BE-3183-E170DFC68DE2</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>

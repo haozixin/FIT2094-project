@@ -15,6 +15,20 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="rent_no" id="B052D950-1217-C3BE-3183-E170DFC68DE2">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:17:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[rent number]]></commentInRDBMS>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<engineerTo>
+<item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="prop_no" id="817C1C34-E757-C7D1-3E0D-B172C185EC56">
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-11 10:52:59 UTC</createdTime>
@@ -101,7 +115,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>7</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -114,8 +128,20 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>817C1C34-E757-C7D1-3E0D-B172C185EC56</attributeRef>
+<attributeRef>B052D950-1217-C3BE-3183-E170DFC68DE2</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="7436A2F0-8499-CF4E-29B0-3DBB9FCE902E" name="RENT_NK">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-12 00:20:27 UTC</createdTime>
+<ownerDesignName>prop_rental_logicalModel</ownerDesignName>
+<engineerTo>
+<item key="8BAED7F7-729F-B1DD-8F42-0D390ECB34EE" value="true"/>
+</engineerTo>
+<newElementsIDs>4AEAD8A1-8E92-EE5F-88A4-1C56A93E0F04,7CDDB8AC-CAD0-38F2-D9E8-E198A26CF74E</newElementsIDs>
+<usedAttributes>
 <attributeRef>4AEAD8A1-8E92-EE5F-88A4-1C56A93E0F04</attributeRef>
+<attributeRef>817C1C34-E757-C7D1-3E0D-B172C185EC56</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
