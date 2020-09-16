@@ -55,16 +55,10 @@ Table ENROLMENT created.
 
 SQL> 
 SQL> ALTER TABLE ENROLMENT
-  2  ADD CONSTRAINT ENROLMENT_PK PRIMARY KEY(stu_ubr,unit_code,enrol_year,enrol_semester);
+  2  ADD CONSTRAINT ENROLMENT_PK PRIMARY KEY(stu_nbr,unit_code,enrol_year,enrol_semester);
 
-Error starting at line : 38 in command -
-ALTER TABLE ENROLMENT
-ADD CONSTRAINT ENROLMENT_PK PRIMARY KEY(stu_ubr,unit_code,enrol_year,enrol_semester)
-Error report -
-ORA-00904: "STU_UBR": invalid identifier
-00904. 00000 -  "%s: invalid identifier"
-*Cause:    
-*Action:
+Table ENROLMENT altered.
+
 SQL> 
 SQL> ALTER TABLE ENROLMENT
   2  ADD CONSTRAINT fk_enrolment_unit FOREIGN KEY(unit_code)
@@ -74,18 +68,11 @@ Table ENROLMENT altered.
 
 SQL> 
 SQL> ALTER TABLE ENROLMENT
-  2  ADD CONSTRAINT fk_enrolment_unit FOREIGN KEY(stu_nbr)
-  3  REFERENCES UNIT(stu_nbr);
+  2  ADD CONSTRAINT fk_enrolment_student FOREIGN KEY(stu_nbr)
+  3  REFERENCES STUDENT(stu_nbr);
 
-Error starting at line : 45 in command -
-ALTER TABLE ENROLMENT
-ADD CONSTRAINT fk_enrolment_unit FOREIGN KEY(stu_nbr)
-REFERENCES UNIT(stu_nbr)
-Error report -
-ORA-00904: "STU_NBR": invalid identifier
-00904. 00000 -  "%s: invalid identifier"
-*Cause:    
-*Action:
+Table ENROLMENT altered.
+
 SQL> 
 SQL> ALTER TABLE STUDENT
   2  ADD CONSTRAINT check_Stu_nbr CHECK(stu_nbr>10000000);

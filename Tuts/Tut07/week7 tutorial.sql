@@ -36,15 +36,15 @@ enrol_grade char(2)
 );
 
 ALTER TABLE ENROLMENT
-ADD CONSTRAINT ENROLMENT_PK PRIMARY KEY(stu_ubr,unit_code,enrol_year,enrol_semester);
+ADD CONSTRAINT ENROLMENT_PK PRIMARY KEY(stu_nbr,unit_code,enrol_year,enrol_semester);
 
 ALTER TABLE ENROLMENT
 ADD CONSTRAINT fk_enrolment_unit FOREIGN KEY(unit_code)
 REFERENCES UNIT(unit_code);
 
 ALTER TABLE ENROLMENT
-ADD CONSTRAINT fk_enrolment_unit FOREIGN KEY(stu_nbr)
-REFERENCES UNIT(stu_nbr);
+ADD CONSTRAINT fk_enrolment_student FOREIGN KEY(stu_nbr)
+REFERENCES STUDENT(stu_nbr);
 
 ALTER TABLE STUDENT
 ADD CONSTRAINT check_Stu_nbr CHECK(stu_nbr>10000000);
