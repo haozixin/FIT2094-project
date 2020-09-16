@@ -12,13 +12,8 @@ Table STUDENT dropped.
 
 SQL> DROP TABLE ENROLMENT CASCADE CONSTRAINTS PURGE;
 
-Error starting at line : 9 in command -
-DROP TABLE ENROLMENT CASCADE CONSTRAINTS PURGE
-Error report -
-ORA-00942: table or view does not exist
-00942. 00000 -  "table or view does not exist"
-*Cause:    
-*Action:
+Table ENROLMENT dropped.
+
 SQL> 
 SQL> CREATE TABLE UNIT
   2  (
@@ -54,27 +49,20 @@ SQL> CREATE TABLE ENROLMENT
   6  enrol_semester char(1) NOT NULL,
   7  enrol_mark numeric(4),
   8  enrol_grade char(2)
-  9  )
- 10  
- 11  ALTER TABLE ENROLMENT
- 12  ADD CONSTRAINT ENROLMENT_PK PRIMARY KEY(stu_ubr,unit_code,enrol_year,enrol_semester);
+  9  );
 
-Error starting at line : 28 in command -
-CREATE TABLE ENROLMENT
-(
-stu_nbr numeric(8) NOT NULL,
-unit_code char(7) NOT NULL,
-enrol_year numeric(4) NOT NULL,
-enrol_semester char(1) NOT NULL,
-enrol_mark numeric(4),
-enrol_grade char(2)
-)
+Table ENROLMENT created.
 
+SQL> 
+SQL> ALTER TABLE ENROLMENT
+  2  ADD CONSTRAINT ENROLMENT_PK PRIMARY KEY(stu_ubr,unit_code,enrol_year,enrol_semester);
+
+Error starting at line : 38 in command -
 ALTER TABLE ENROLMENT
 ADD CONSTRAINT ENROLMENT_PK PRIMARY KEY(stu_ubr,unit_code,enrol_year,enrol_semester)
 Error report -
-ORA-00922: missing or invalid option
-00922. 00000 -  "missing or invalid option"
+ORA-00904: "STU_UBR": invalid identifier
+00904. 00000 -  "%s: invalid identifier"
 *Cause:    
 *Action:
 SQL> 
@@ -82,15 +70,8 @@ SQL> ALTER TABLE ENROLMENT
   2  ADD CONSTRAINT fk_enrolment_unit FOREIGN KEY(unit_code)
   3  REFERENCES UNIT(unit_code);
 
-Error starting at line : 41 in command -
-ALTER TABLE ENROLMENT
-ADD CONSTRAINT fk_enrolment_unit FOREIGN KEY(unit_code)
-REFERENCES UNIT(unit_code)
-Error report -
-ORA-00942: table or view does not exist
-00942. 00000 -  "table or view does not exist"
-*Cause:    
-*Action:
+Table ENROLMENT altered.
+
 SQL> 
 SQL> ALTER TABLE ENROLMENT
   2  ADD CONSTRAINT fk_enrolment_unit FOREIGN KEY(stu_nbr)
@@ -101,8 +82,8 @@ ALTER TABLE ENROLMENT
 ADD CONSTRAINT fk_enrolment_unit FOREIGN KEY(stu_nbr)
 REFERENCES UNIT(stu_nbr)
 Error report -
-ORA-00942: table or view does not exist
-00942. 00000 -  "table or view does not exist"
+ORA-00904: "STU_NBR": invalid identifier
+00904. 00000 -  "%s: invalid identifier"
 *Cause:    
 *Action:
 SQL> 
@@ -115,14 +96,8 @@ SQL>
 SQL> ALTER TABLE ENROLMENT
   2  ADD CONSTRAINT check_enrol_semester CHECK(enrol_semester IN (1,2,3));
 
-Error starting at line : 52 in command -
-ALTER TABLE ENROLMENT
-ADD CONSTRAINT check_enrol_semester CHECK(enrol_semester IN (1,2,3))
-Error report -
-ORA-00942: table or view does not exist
-00942. 00000 -  "table or view does not exist"
-*Cause:    
-*Action:
+Table ENROLMENT altered.
+
 SQL> 
 SQL> ALTER TABLE UNIT
   2  ADD CONSTRAINT unq_unit_name UNIQUE(unit_name);

@@ -33,7 +33,7 @@ enrol_year numeric(4) NOT NULL,
 enrol_semester char(1) NOT NULL,
 enrol_mark numeric(4),
 enrol_grade char(2)
-)
+);
 
 ALTER TABLE ENROLMENT
 ADD CONSTRAINT ENROLMENT_PK PRIMARY KEY(stu_ubr,unit_code,enrol_year,enrol_semester);
