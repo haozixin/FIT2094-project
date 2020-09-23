@@ -1,0 +1,415 @@
+SQL> 
+SQL> INSERT INTO student VALUES (
+  2      11111111,
+  3      'Bloggs',
+  4      'Fred',
+  5      TO_DATE('01-Jan-1990', 'dd-Mon-yyyy')
+  6  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO student VALUES (
+  2      11111112,
+  3      'Nice',
+  4      'Nick',
+  5      TO_DATE('10-Oct-94', 'dd-Mon-yyyy')
+  6  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO student VALUES (
+  2      11111113,
+  3      'Wheat',
+  4      'Wendy',
+  5      TO_DATE('5-May-90', 'dd-Mon-yyyy')
+  6  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO student VALUES (
+  2      11111114,
+  3      'Sheen',
+  4      'Cindy',
+  5      TO_DATE('25-Dec-96', 'dd-Mon-yyyy')
+  6  );
+
+1 row inserted.
+
+SQL> 
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
+SQL> INSERT INTO unit VALUES (
+  2      'FIT9999',
+  3      'FIT Last Unit'
+  4  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO unit VALUES (
+  2      'FIT5132',
+  3      'Introduction to Databases'
+  4  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO unit VALUES (
+  2      'FIT5016',
+  3      'Project'
+  4  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO unit VALUES (
+  2      'FIT5111',
+  3      'Student''s Life'
+  4  );
+
+1 row inserted.
+
+SQL> 
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
+SQL> INSERT INTO enrolment VALUES (
+  2      11111111,
+  3      'FIT5132',
+  4      2013,
+  5      '1',
+  6      35,
+  7      'N'
+  8  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO enrolment VALUES (
+  2      11111111,
+  3      'FIT5016',
+  4      2013,
+  5      '1',
+  6      61,
+  7      'C'
+  8  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO enrolment VALUES (
+  2      11111111,
+  3      'FIT5132',
+  4      2013,
+  5      '2',
+  6      42,
+  7      'N'
+  8  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO enrolment VALUES (
+  2      11111111,
+  3      'FIT5111',
+  4      2013,
+  5      '2',
+  6      76,
+  7      'D'
+  8  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO enrolment VALUES (
+  2      11111111,
+  3      'FIT5132',
+  4      2014,
+  5      '2',
+  6      NULL,
+  7      NULL
+  8  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO enrolment VALUES (
+  2      11111112,
+  3      'FIT5132',
+  4      2013,
+  5      '2',
+  6      83,
+  7      'HD'
+  8  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO enrolment VALUES (
+  2      11111112,
+  3      'FIT5111',
+  4      2013,
+  5      '2',
+  6      79,
+  7      'D'
+  8  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO enrolment VALUES (
+  2      11111113,
+  3      'FIT5132',
+  4      2014,
+  5      '2',
+  6      NULL,
+  7      NULL
+  8  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO enrolment VALUES (
+  2      11111113,
+  3      'FIT5111',
+  4      2014,
+  5      '2',
+  6      NULL,
+  7      NULL
+  8  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO enrolment VALUES (
+  2      11111114,
+  3      'FIT5111',
+  4      2014,
+  5      '2',
+  6      NULL,
+  7      NULL
+  8  );
+
+1 row inserted.
+
+SQL> 
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
+SQL> --check table
+SQL> SELECT
+  2      *
+  3  FROM
+  4      student;
+
+   STU_NBR STU_LNAME                                          STU_FNAME                                          STU_DOB  
+---------- -------------------------------------------------- -------------------------------------------------- ---------
+  11111111 Bloggs                                             Fred                                               01/JAN/90
+  11111112 Nice                                               Nick                                               10/OCT/94
+  11111113 Wheat                                              Wendy                                              05/MAY/90
+  11111114 Sheen                                              Cindy                                              25/DEC/96
+
+SQL> 
+SQL> SELECT
+  2      *
+  3  FROM
+  4      unit;
+
+UNIT_CO UNIT_NAME                                         
+------- --------------------------------------------------
+FIT9999 FIT Last Unit                                     
+FIT5132 Introduction to Databases                         
+FIT5016 Project                                           
+FIT5111 Student's Life                                    
+
+SQL> 
+SQL> SELECT
+  2      *
+  3  FROM
+  4      enrolment;
+
+   STU_NBR UNIT_CO ENROL_YEAR E ENROL_MARK EN
+---------- ------- ---------- - ---------- --
+  11111111 FIT5132       2013 1         35 N 
+  11111111 FIT5016       2013 1         61 C 
+  11111111 FIT5132       2013 2         42 N 
+  11111111 FIT5111       2013 2         76 D 
+  11111111 FIT5132       2014 2              
+  11111112 FIT5132       2013 2         83 HD
+  11111112 FIT5111       2013 2         79 D 
+  11111113 FIT5132       2014 2              
+  11111113 FIT5111       2014 2              
+  11111114 FIT5111       2014 2              
+
+10 rows selected. 
+
+SQL> 
+SQL> --7.3.2 Using Sequences in an insert statement
+SQL> 
+SQL> --1
+SQL> --Create a sequence for student table
+SQL> CREATE SEQUENCE student_seq INCREMENT BY 1 START WITH 11111115;
+
+Sequence STUDENT_SEQ created.
+
+SQL> 
+SQL> --CHECK THE sequence
+SQL> SELECT
+  2      *
+  3  FROM
+  4      user_sequences
+  5  WHERE
+  6      sequence_name = 'STUDENT_SEQ';
+
+SEQUENCE_NAME                                                                                                                     MIN_VALUE  MAX_VALUE INCREMENT_BY C O CACHE_SIZE LAST_NUMBER S E S S K
+-------------------------------------------------------------------------------------------------------------------------------- ---------- ---------- ------------ - - ---------- ----------- - - - - -
+STUDENT_SEQ                                                                                                                               1 1.0000E+28            1 N N         20    11111115 N N N N N
+
+SQL> 
+SQL> SELECT
+  2      student_seq.NEXTVAL
+  3  FROM
+  4      dual;
+
+   NEXTVAL
+----------
+  11111115
+
+SQL> 
+SQL> --2
+SQL> INSERT INTO student VALUES (
+  2      student_seq.CURRVAL,
+  3      'MICKEY',
+  4      'MOUSE',
+  5      TO_DATE('21-Feb-2000', 'dd-Mon-yyyy')
+  6  );
+
+1 row inserted.
+
+SQL> 
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
+SQL> SELECT
+  2      *
+  3  FROM
+  4      student;
+
+   STU_NBR STU_LNAME                                          STU_FNAME                                          STU_DOB  
+---------- -------------------------------------------------- -------------------------------------------------- ---------
+  11111111 Bloggs                                             Fred                                               01/JAN/90
+  11111112 Nice                                               Nick                                               10/OCT/94
+  11111113 Wheat                                              Wendy                                              05/MAY/90
+  11111114 Sheen                                              Cindy                                              25/DEC/96
+  11111115 MICKEY                                             MOUSE                                              21/FEB/00
+
+SQL> 
+SQL> INSERT INTO enrolment VALUES (
+  2      student_seq.CURRVAL,
+  3      'FIT5132',
+  4      2016,
+  5      '2',
+  6      NULL,
+  7      NULL
+  8  );
+
+1 row inserted.
+
+SQL> 
+SQL> SELECT
+  2      *
+  3  FROM
+  4      enrolment;
+
+   STU_NBR UNIT_CO ENROL_YEAR E ENROL_MARK EN
+---------- ------- ---------- - ---------- --
+  11111111 FIT5132       2013 1         35 N 
+  11111111 FIT5016       2013 1         61 C 
+  11111111 FIT5132       2013 2         42 N 
+  11111111 FIT5111       2013 2         76 D 
+  11111111 FIT5132       2014 2              
+  11111112 FIT5132       2013 2         83 HD
+  11111112 FIT5111       2013 2         79 D 
+  11111113 FIT5132       2014 2              
+  11111113 FIT5111       2014 2              
+  11111114 FIT5111       2014 2              
+  11111115 FIT5132       2016 2              
+
+11 rows selected. 
+
+SQL> 
+SQL> --7.3.3 Advanced INSERT
+SQL> INSERT INTO student VALUES (
+  2      student_seq.NEXTVAL,
+  3      'ALLEN',
+  4      'HAO',
+  5      TO_DATE('23-Feb-2000', 'dd-Mon-yyyy')
+  6  );
+
+1 row inserted.
+
+SQL> 
+SQL> INSERT INTO enrolment VALUES (
+  2      student_seq.CURRVAL,
+  3      (
+  4          SELECT
+  5              unit_code
+  6          FROM
+  7              unit
+  8          WHERE
+  9              unit_name = 'Introduction to Databases'
+ 10      ),
+ 11      2015,
+ 12      '1',
+ 13      NULL,
+ 14      NULL
+ 15  );
+
+1 row inserted.
+
+SQL> 
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
+SQL> --7.3.4 
+SQL> 
+SQL> CREATE TABLE fit5111_student
+  2      AS
+  3          SELECT
+  4              *
+  5          FROM
+  6              enrolment
+  7          WHERE
+  8              unit_code = 'FIT5111';
+
+Table FIT5111_STUDENT created.
+
+SQL> 
+SQL> SELECT
+  2      *
+  3  FROM
+  4      fit5111_student;
+
+   STU_NBR UNIT_CO ENROL_YEAR E ENROL_MARK EN
+---------- ------- ---------- - ---------- --
+  11111111 FIT5111       2013 2         76 D 
+  11111112 FIT5111       2013 2         79 D 
+  11111113 FIT5111       2014 2              
+  11111114 FIT5111       2014 2              
+
+SQL> 
+SQL> spool off

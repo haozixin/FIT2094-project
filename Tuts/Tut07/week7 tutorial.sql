@@ -31,7 +31,7 @@ stu_nbr numeric(8) NOT NULL,
 unit_code char(7) NOT NULL,
 enrol_year numeric(4) NOT NULL,
 enrol_semester char(1) NOT NULL,
-enrol_mark numeric(4),
+enrol_mark numeric(3),
 enrol_grade char(2)
 );
 
