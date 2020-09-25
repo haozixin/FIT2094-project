@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="fdas_oraclemode" id="DF382187-13E4-5648-5D6D-8D83BD420866" version="3.5">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 10:44:36 UTC</createdTime>
+<ownerDesignName>fdas_oraclemode</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>DF382187-13E4-5648-5D6D-8D83BD420866</designId>
+</OSDM_Design>
