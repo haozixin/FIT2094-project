@@ -1,0 +1,106 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5E3B96BB-FE34-8881-D576-F1A06DCA11BC" name="ASSESSOR">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<generatorID>9417A1DB-310C-F651-3335-85546A4B44B6</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="assessor_id" id="D64D451B-38B6-6915-635A-8F3B9CDEE465">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[assessor ID]]></commentInRDBMS>
+<generatorID>F98F4D6A-A37D-106B-4D0B-EF02B0E16F8C</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="assessor_Gname" id="2AFE01A7-3438-C97A-4E70-45412FB14A4A">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[assessor_given name]]></commentInRDBMS>
+<generatorID>D3225254-BE3C-A981-264B-1E2443BDF7E8</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="assessor_Fname" id="835B072C-8611-34A7-5650-E613A8885749">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[assessor_family name]]></commentInRDBMS>
+<generatorID>312D0CC0-9C51-B9E2-B4E5-6C3553C5688F</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="assessor_contactNumber" id="4972E89C-3CFE-59C7-359F-7EFCA799C602">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[assessor's contact number]]></commentInRDBMS>
+<generatorID>B5594C6D-1426-2A64-27F5-53A692BFEA90</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="insur_code" id="1E45369A-4D4B-97F1-E315-269F3261E9DF">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[insurer code]]></commentInRDBMS>
+<generatorID>64983DDA-B2A9-E30D-651F-D8EC812FC6AE</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A5F72B24-7652-C6C1-1DC7-142E39566FE6" referredColumn="4B1338CA-4351-F122-DDE4-106C496A2256"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B24BAF8D-25B1-9179-9C95-B08959678DB9" name="ASSESSOR_PK">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<generatorID>BD346ECC-754E-3EF0-D75B-28E50488782C</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D64D451B-38B6-6915-635A-8F3B9CDEE465"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3D5C6EF0-06E4-589E-E762-8CF9B97BF222" name="INSURER_ASSESSOR">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<generatorID>1DEE9664-31D9-BFA4-C412-DE592208271A</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1E45369A-4D4B-97F1-E315-269F3261E9DF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

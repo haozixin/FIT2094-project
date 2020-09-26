@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D58A2282-5AC7-A6DC-CD0D-5774E79759C1" containerWithKeyObject="C47E30FB-2E10-63C5-9F2E-CE20A3DF9B11" localFKIndex="5CC4CAF7-E774-B7BC-4A96-8324A8180640" name="BUILDING_ASSE_DAMAGE">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<generatorID>1B6CBC24-45A4-88C6-3BDD-77C264A56D01</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<referredTableLongName>BUILDING</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>B23660B5-228F-32C9-C904-1124C952B745</referredTableID>
+<keyObject>ADD66481-636A-3787-7DAA-6665433D9C53</keyObject>
+<referredKeyID>ADD66481-636A-3787-7DAA-6665433D9C53</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>building_id,pro_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
