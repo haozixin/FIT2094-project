@@ -3,9 +3,6 @@
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-25 12:32:52 UTC</createdTime>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
-<engineerTo>
-<item key="A42F792D-58AD-BD50-20FF-E57E1803C415" value="true"/>
-</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -20,9 +17,6 @@
 <createdTime>2020-09-25 12:33:16 UTC</createdTime>
 <commentInRDBMS><![CDATA[property ID]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
-<engineerTo>
-<item key="A42F792D-58AD-BD50-20FF-E57E1803C415" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -34,9 +28,6 @@
 <createdTime>2020-09-25 12:34:01 UTC</createdTime>
 <commentInRDBMS><![CDATA[property  street address]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
-<engineerTo>
-<item key="A42F792D-58AD-BD50-20FF-E57E1803C415" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -48,9 +39,6 @@
 <createdTime>2020-09-25 12:34:56 UTC</createdTime>
 <commentInRDBMS><![CDATA[property twon address]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
-<engineerTo>
-<item key="A42F792D-58AD-BD50-20FF-E57E1803C415" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -62,9 +50,6 @@
 <createdTime>2020-09-25 12:35:26 UTC</createdTime>
 <commentInRDBMS><![CDATA[postcode of the property]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
-<engineerTo>
-<item key="A42F792D-58AD-BD50-20FF-E57E1803C415" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
@@ -76,9 +61,6 @@
 <createdTime>2020-09-25 12:36:35 UTC</createdTime>
 <commentInRDBMS><![CDATA[property size]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
-<engineerTo>
-<item key="A42F792D-58AD-BD50-20FF-E57E1803C415" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
@@ -88,14 +70,37 @@
 <createdTime>2020-09-25 12:37:48 UTC</createdTime>
 <commentInRDBMS><![CDATA[property type]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
-<engineerTo>
-<item key="A42F792D-58AD-BD50-20FF-E57E1803C415" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
 <dataTypeSize>1 BYTE</dataTypeSize>
 <ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="LGA_code" id="C57D8987-D9DF-D083-29BC-CADD6494B2DB">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 22:56:57 UTC</createdTime>
+<commentInRDBMS><![CDATA[local government area code]]></commentInRDBMS>
+<generatorID>DF3AF305-A0DA-7746-E1A3-E4A85E20B773</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<referedAttribute>9D49D1BA-0515-05A9-0E0B-994D8DE330C3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="owner_id" id="B3A8EB30-F7A2-33C4-86C7-9429AD177007">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 23:07:07 UTC</createdTime>
+<commentInRDBMS><![CDATA[owner_id]]></commentInRDBMS>
+<generatorID>AC683D84-345F-0E5D-17AC-FB122CF8E190</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<referedAttribute>9F4E3418-8497-94A2-8EDD-84AACC2C5DEC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -103,9 +108,6 @@
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-25 12:33:51 UTC</createdTime>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
-<engineerTo>
-<item key="A42F792D-58AD-BD50-20FF-E57E1803C415" value="true"/>
-</engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>9EA8DBD1-C5E4-7D5A-F57D-FB3EB781D26E</attributeRef>

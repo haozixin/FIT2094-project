@@ -3,9 +3,6 @@
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-25 11:25:17 UTC</createdTime>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
-<engineerTo>
-<item key="A42F792D-58AD-BD50-20FF-E57E1803C415" value="true"/>
-</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -14,4 +11,45 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="fire_event_id" id="D78431E9-FCDB-B710-E071-71BC5B639259">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 22:55:18 UTC</createdTime>
+<commentInRDBMS><![CDATA[fire event ID
+]]></commentInRDBMS>
+<generatorID>07C4C77F-8955-B1D8-7FFA-D6E2CFA8F8D4</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<referedAttribute>E0E1D21D-02F2-D724-550D-2B50EFC03889</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>9 BYTE</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="LGA_code" id="D87C0F74-EEB0-2512-4494-83ECA25B672E">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 22:55:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[local government area code]]></commentInRDBMS>
+<generatorID>E1A86C38-D92B-C342-56C0-7A5ACA8A85AE</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<referedAttribute>9D49D1BA-0515-05A9-0E0B-994D8DE330C3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="ABFFAF16-5A44-2F2A-12B4-B75CB59CBC1C" name="FIRE_LGA PK">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 22:55:18 UTC</createdTime>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D78431E9-FCDB-B710-E071-71BC5B639259</attributeRef>
+<attributeRef>D87C0F74-EEB0-2512-4494-83ECA25B672E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

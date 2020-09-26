@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FIRE_EVENT_VISIT" directorySegmentName="seg_0" id="0B4A057E-3A64-3201-E7D5-1D83585C9AE0">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 23:59:01 UTC</createdTime>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<sourcePk>18434E55-83B2-BE4A-1F65-7A798D360345</sourcePk>
+<identifying>false</identifying>
+<nameOnTarget>visit for</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>FB20C25D-1F12-D605-0A2F-6C217770C0B8</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>1D241260-DCD6-A16D-623E-1F6EF504CA82</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

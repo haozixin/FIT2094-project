@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E24C7F9D-A7C1-5C57-3342-EA7A43DF75D5" name="EMPLOYMENT">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 00:05:09 UTC</createdTime>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="assessor" id="1C860729-B146-C722-1D9A-C9B7FD7C1F83">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 00:07:23 UTC</createdTime>
+<commentInRDBMS><![CDATA[assessor ID]]></commentInRDBMS>
+<generatorID>0A7969E3-D13A-77A7-5C26-9975DE8B93E4</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<referedAttribute>F98F4D6A-A37D-106B-4D0B-EF02B0E16F8C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="insur_code" id="C25123AD-DECC-84E1-494A-8333D1CDAD1C">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 00:08:08 UTC</createdTime>
+<commentInRDBMS><![CDATA[insurer code]]></commentInRDBMS>
+<generatorID>7067B9D2-9561-4A7E-75AF-D2A27FC57E1F</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<referedAttribute>66AC0683-4E6B-1AA5-1A87-51FB395D03A1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="emp_Sdate" id="15373AEF-571E-9A1E-C218-CBDBF2CD2413">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 00:05:32 UTC</createdTime>
+<commentInRDBMS><![CDATA[employment start date]]></commentInRDBMS>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="emp_Ldate" id="AF8ED1CD-08EF-33E8-100C-186DC58F6182">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 00:05:45 UTC</createdTime>
+<commentInRDBMS><![CDATA[employment leave date]]></commentInRDBMS>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="22E9963F-0D5F-5E65-50B4-69B6F64DFFC3" name="EMPLOYMENT PK">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 00:07:23 UTC</createdTime>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1C860729-B146-C722-1D9A-C9B7FD7C1F83</attributeRef>
+<attributeRef>C25123AD-DECC-84E1-494A-8333D1CDAD1C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

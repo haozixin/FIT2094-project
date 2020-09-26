@@ -3,9 +3,6 @@
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-25 12:07:32 UTC</createdTime>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
-<engineerTo>
-<item key="A42F792D-58AD-BD50-20FF-E57E1803C415" value="true"/>
-</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -20,9 +17,6 @@
 <createdTime>2020-09-25 12:07:54 UTC</createdTime>
 <commentInRDBMS><![CDATA[local government area code]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
-<engineerTo>
-<item key="A42F792D-58AD-BD50-20FF-E57E1803C415" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -34,9 +28,6 @@
 <createdTime>2020-09-25 12:18:58 UTC</createdTime>
 <commentInRDBMS><![CDATA[the name of local government area]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
-<engineerTo>
-<item key="A42F792D-58AD-BD50-20FF-E57E1803C415" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -48,9 +39,6 @@
 <createdTime>2020-09-25 12:21:28 UTC</createdTime>
 <commentInRDBMS><![CDATA[local government area (km^2)]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
-<engineerTo>
-<item key="A42F792D-58AD-BD50-20FF-E57E1803C415" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -62,9 +50,6 @@
 <createdTime>2020-09-25 12:26:33 UTC</createdTime>
 <commentInRDBMS><![CDATA[name of CEO of local government area]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
-<engineerTo>
-<item key="A42F792D-58AD-BD50-20FF-E57E1803C415" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -76,9 +61,6 @@
 <createdTime>2020-09-25 12:27:14 UTC</createdTime>
 <commentInRDBMS><![CDATA[phone number of local government area office]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
-<engineerTo>
-<item key="A42F792D-58AD-BD50-20FF-E57E1803C415" value="true"/>
-</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
@@ -91,9 +73,6 @@
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-25 12:08:06 UTC</createdTime>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
-<engineerTo>
-<item key="A42F792D-58AD-BD50-20FF-E57E1803C415" value="true"/>
-</engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>9D49D1BA-0515-05A9-0E0B-994D8DE330C3</attributeRef>
