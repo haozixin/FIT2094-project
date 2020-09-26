@@ -114,5 +114,17 @@
 <attributeRef>15272A6A-A7F6-7E68-F7A1-9CE6A41B4157</attributeRef>
 </usedAttributes>
 </identifier>
+<identifier id="6B1E7B1D-55C5-E214-C340-DA826F347417" name="VISIT_NK">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 00:28:41 UTC</createdTime>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<newElementsIDs>274E83DF-1735-EDE2-3917-F3E951F01A7A,9622494A-B2D5-C117-2984-D9ADF27ADF24,7F28FD25-11B9-61FC-C78B-47432D01D18B</newElementsIDs>
+<usedAttributes>
+<attributeRef>CABAB32F-3794-8657-DF6F-A5716C095DAA</attributeRef>
+<attributeRef>45A43450-3233-9950-C36D-51655A7107C2</attributeRef>
+<attributeRef>9622494A-B2D5-C117-2984-D9ADF27ADF24</attributeRef>
+<attributeRef>7F28FD25-11B9-61FC-C78B-47432D01D18B</attributeRef>
+</usedAttributes>
+</identifier>
 </identifiers>
 </Entity>

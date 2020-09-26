@@ -12,7 +12,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="assessor" id="1C860729-B146-C722-1D9A-C9B7FD7C1F83">
+<Attribute name="assessor_id" id="1C860729-B146-C722-1D9A-C9B7FD7C1F83">
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-26 00:07:23 UTC</createdTime>
 <commentInRDBMS><![CDATA[assessor ID]]></commentInRDBMS>

@@ -84,6 +84,10 @@
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
 <dataTypeSize>1 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="N" description="no-not totally destroyed"/>
+<valueDef value="Y" description="yes-totally destroyed"/>
+</listOfValues>
 <ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="asse_Building_value" id="F2F96148-D58F-0883-3889-F9C576D6E919">
@@ -97,7 +101,7 @@
 <dataTypePrecision>5</dataTypePrecision>
 <ownDataTypeParameters>,5,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="assessor" id="36651F82-DB76-70E7-88D4-E6446DB9407C">
+<Attribute name="assessor_id" id="36651F82-DB76-70E7-88D4-E6446DB9407C">
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-25 23:40:23 UTC</createdTime>
 <commentInRDBMS><![CDATA[assessor ID]]></commentInRDBMS>
@@ -119,6 +123,17 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>A93A2EF1-8261-EDDA-0CA3-CAA00D5A7167</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="4599FC64-D522-CB64-DA1D-173063CAEBBD" name="ASSESSMENT_DAMAGE_NK">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 00:25:36 UTC</createdTime>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<newElementsIDs>3A2C74DC-62AA-E3FF-4B50-E832C8AE48D3,1B6CBC24-45A4-88C6-3BDD-77C264A56D01</newElementsIDs>
+<usedAttributes>
+<attributeRef>F7C9BA9D-3919-85DF-39C4-A1E512397D4D</attributeRef>
+<attributeRef>4F4864F0-E196-AA6D-58C8-44EBF7DBF799</attributeRef>
+<attributeRef>217F63ED-4D15-A8C7-632D-A858BD47AF14</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

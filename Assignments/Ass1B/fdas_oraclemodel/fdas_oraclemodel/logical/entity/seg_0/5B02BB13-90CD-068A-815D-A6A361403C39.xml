@@ -74,6 +74,12 @@
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
 <dataTypeSize>1 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="B" description="business property"/>
+<valueDef value="C" description="residential property(in city)"/>
+<valueDef value="F" description="farm property"/>
+<valueDef value="T" description="residential property(in town)"/>
+</listOfValues>
 <ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="LGA_code" id="C57D8987-D9DF-D083-29BC-CADD6494B2DB">
