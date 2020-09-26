@@ -3,6 +3,9 @@
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-25 23:51:02 UTC</createdTime>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
+</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -17,6 +20,9 @@
 <createdTime>2020-09-25 23:51:10 UTC</createdTime>
 <commentInRDBMS><![CDATA[visit number(surrogate key)]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -28,6 +34,9 @@
 <createdTime>2020-09-26 02:15:05 UTC</createdTime>
 <commentInRDBMS><![CDATA[property ID]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -39,6 +48,9 @@
 <createdTime>2020-09-26 02:15:26 UTC</createdTime>
 <commentInRDBMS><![CDATA[building ID]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -50,6 +62,9 @@
 <createdTime>2020-09-25 23:53:07 UTC</createdTime>
 <commentInRDBMS><![CDATA[visit_arrived_date]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
@@ -60,6 +75,9 @@
 <createdTime>2020-09-25 23:54:29 UTC</createdTime>
 <commentInRDBMS><![CDATA[visit_arrived_time]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
@@ -70,6 +88,9 @@
 <createdTime>2020-09-25 23:54:55 UTC</createdTime>
 <commentInRDBMS><![CDATA[visit_depart_date]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
@@ -80,6 +101,9 @@
 <createdTime>2020-09-25 23:55:33 UTC</createdTime>
 <commentInRDBMS><![CDATA[visit_depart_time]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
@@ -91,12 +115,15 @@
 <commentInRDBMS><![CDATA[ number of the assessment damage (surrogate key)]]></commentInRDBMS>
 <generatorID>B5ACACE9-2C73-B258-533E-3A899A86E449</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
+</engineerTo>
 <referedAttribute>A93A2EF1-8261-EDDA-0CA3-CAA00D5A7167</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>7</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -104,6 +131,10 @@
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-25 23:51:35 UTC</createdTime>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="false"/>
+</engineerTo>
 <pk>true</pk>
 <newElementsIDs>15272A6A-A7F6-7E68-F7A1-9CE6A41B4157</newElementsIDs>
 <usedAttributes>
@@ -114,6 +145,10 @@
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-26 00:28:41 UTC</createdTime>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="false"/>
+</engineerTo>
 <newElementsIDs>9622494A-B2D5-C117-2984-D9ADF27ADF24,7F28FD25-11B9-61FC-C78B-47432D01D18B,77DD97ED-6CC3-419B-AE6F-BB4FB1D92C7D,2252B5E2-D2E7-1068-0F8E-704AF787CEB2</newElementsIDs>
 <usedAttributes>
 <attributeRef>9622494A-B2D5-C117-2984-D9ADF27ADF24</attributeRef>

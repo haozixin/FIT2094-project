@@ -1,4 +1,7 @@
 SQL> 
+SQL> 
+SQL> 
+SQL> 
 SQL> DROP TABLE assessment_damage CASCADE CONSTRAINTS;
 
 Table ASSESSMENT_DAMAGE dropped.
@@ -70,7 +73,7 @@ SQL> CREATE TABLE assessment_damage (
   5      pro_id               NUMBER(7) NOT NULL,
   6      asse_bdamage_cost    NUMBER(8, 2) NOT NULL,
   7      asse_building_value  NUMBER(5) NOT NULL,
-  8      assessor_id          NUMBER(7) NOT NULL
+  8      assessor_id          NUMBER(7)
   9  );
 
 Table ASSESSMENT_DAMAGE created.
@@ -851,4 +854,5 @@ SQL> -- ORDS ENABLE OBJECT                       0
 SQL> -- 
 SQL> -- ERRORS                                   0
 SQL> -- WARNINGS                                 0
+SQL> 
 SQL> spool off

@@ -9,7 +9,7 @@
 <referredTableID>5E3B96BB-FE34-8881-D576-F1A06DCA11BC</referredTableID>
 <keyObject>B24BAF8D-25B1-9179-9C95-B08959678DB9</keyObject>
 <referredKeyID>B24BAF8D-25B1-9179-9C95-B08959678DB9</referredKeyID>
-<mandatory>true</mandatory>
+<mandatory>false</mandatory>
 <refColNames>assessor_id</refColNames>
 <transferable>true</transferable>
 <rely>false</rely>
