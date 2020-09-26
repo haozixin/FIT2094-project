@@ -12,7 +12,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="vis_no" id="15272A6A-A7F6-7E68-F7A1-9CE6A41B4157">
+<Attribute name="Vi_no" id="15272A6A-A7F6-7E68-F7A1-9CE6A41B4157">
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-25 23:51:10 UTC</createdTime>
 <commentInRDBMS><![CDATA[visit number(surrogate key)]]></commentInRDBMS>
@@ -23,33 +23,29 @@
 <dataTypePrecision>7</dataTypePrecision>
 <ownDataTypeParameters>,7,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="pro_id" id="CABAB32F-3794-8657-DF6F-A5716C095DAA">
+<Attribute name="pro_id" id="2252B5E2-D2E7-1068-0F8E-704AF787CEB2">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 00:02:51 UTC</createdTime>
+<createdTime>2020-09-26 02:15:05 UTC</createdTime>
 <commentInRDBMS><![CDATA[property ID]]></commentInRDBMS>
-<generatorID>274E83DF-1735-EDE2-3917-F3E951F01A7A</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
-<referedAttribute>996CCC77-B074-3F7C-7D7D-26CBD0A7D1DB</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>7</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="building_id" id="45A43450-3233-9950-C36D-51655A7107C2">
+<Attribute name="Building_id" id="77DD97ED-6CC3-419B-AE6F-BB4FB1D92C7D">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 00:02:51 UTC</createdTime>
+<createdTime>2020-09-26 02:15:26 UTC</createdTime>
 <commentInRDBMS><![CDATA[building ID]]></commentInRDBMS>
-<generatorID>274E83DF-1735-EDE2-3917-F3E951F01A7A</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
-<referedAttribute>6CE97A9A-C37C-9A10-2EF3-D3F69253AEB4</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>3</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="vis_arr_date" id="9622494A-B2D5-C117-2984-D9ADF27ADF24">
+<Attribute name="Vi_arr_date" id="9622494A-B2D5-C117-2984-D9ADF27ADF24">
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-25 23:53:07 UTC</createdTime>
 <commentInRDBMS><![CDATA[visit_arrived_date]]></commentInRDBMS>
@@ -59,7 +55,7 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="vis_arr_time" id="7F28FD25-11B9-61FC-C78B-47432D01D18B">
+<Attribute name="Vi_arr_time" id="7F28FD25-11B9-61FC-C78B-47432D01D18B">
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-25 23:54:29 UTC</createdTime>
 <commentInRDBMS><![CDATA[visit_arrived_time]]></commentInRDBMS>
@@ -69,7 +65,7 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="vis_depart_date" id="F40DFD0B-580B-C06B-89E4-9D586F64316E">
+<Attribute name="Vi_depart_date" id="F40DFD0B-580B-C06B-89E4-9D586F64316E">
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-25 23:54:55 UTC</createdTime>
 <commentInRDBMS><![CDATA[visit_depart_date]]></commentInRDBMS>
@@ -79,7 +75,7 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="vis_depart_time" id="7A1BB730-564A-8483-9018-51C74FE09403">
+<Attribute name="Vi_depart_time" id="7A1BB730-564A-8483-9018-51C74FE09403">
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-25 23:55:33 UTC</createdTime>
 <commentInRDBMS><![CDATA[visit_depart_time]]></commentInRDBMS>
@@ -89,18 +85,17 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="fire_event_id" id="887A7FB7-4DA6-8BEB-EE27-F17E24EF7377">
+<Attribute name="asse_dam_no" id="90C1B89F-43DF-7967-AE60-871FC522C0C2">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-25 23:59:01 UTC</createdTime>
-<commentInRDBMS><![CDATA[fire event ID
-]]></commentInRDBMS>
-<generatorID>0B4A057E-3A64-3201-E7D5-1D83585C9AE0</generatorID>
+<createdTime>2020-09-26 02:03:03 UTC</createdTime>
+<commentInRDBMS><![CDATA[ number of the assessment damage (surrogate key)]]></commentInRDBMS>
+<generatorID>B5ACACE9-2C73-B258-533E-3A899A86E449</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
-<referedAttribute>E0E1D21D-02F2-D724-550D-2B50EFC03889</referedAttribute>
+<referedAttribute>A93A2EF1-8261-EDDA-0CA3-CAA00D5A7167</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>9 BYTE</dataTypeSize>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -110,6 +105,7 @@
 <createdTime>2020-09-25 23:51:35 UTC</createdTime>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
 <pk>true</pk>
+<newElementsIDs>15272A6A-A7F6-7E68-F7A1-9CE6A41B4157</newElementsIDs>
 <usedAttributes>
 <attributeRef>15272A6A-A7F6-7E68-F7A1-9CE6A41B4157</attributeRef>
 </usedAttributes>
@@ -118,12 +114,12 @@
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-26 00:28:41 UTC</createdTime>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
-<newElementsIDs>274E83DF-1735-EDE2-3917-F3E951F01A7A,9622494A-B2D5-C117-2984-D9ADF27ADF24,7F28FD25-11B9-61FC-C78B-47432D01D18B</newElementsIDs>
+<newElementsIDs>9622494A-B2D5-C117-2984-D9ADF27ADF24,7F28FD25-11B9-61FC-C78B-47432D01D18B,77DD97ED-6CC3-419B-AE6F-BB4FB1D92C7D,2252B5E2-D2E7-1068-0F8E-704AF787CEB2</newElementsIDs>
 <usedAttributes>
-<attributeRef>CABAB32F-3794-8657-DF6F-A5716C095DAA</attributeRef>
-<attributeRef>45A43450-3233-9950-C36D-51655A7107C2</attributeRef>
 <attributeRef>9622494A-B2D5-C117-2984-D9ADF27ADF24</attributeRef>
 <attributeRef>7F28FD25-11B9-61FC-C78B-47432D01D18B</attributeRef>
+<attributeRef>77DD97ED-6CC3-419B-AE6F-BB4FB1D92C7D</attributeRef>
+<attributeRef>2252B5E2-D2E7-1068-0F8E-704AF787CEB2</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

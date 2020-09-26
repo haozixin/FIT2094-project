@@ -59,11 +59,13 @@
 <Attribute name="pro_size" id="36207ADD-3F3F-BFB0-A162-B50040D25652">
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-25 12:36:35 UTC</createdTime>
-<commentInRDBMS><![CDATA[property size]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[property size(km^2)]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="pro_type" id="8D3C2A9E-2BC7-A889-EFA0-7485E2BC7722">
 <createdBy>zhao0004</createdBy>
@@ -106,6 +108,19 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pro_ty_id" id="B4A727A9-DA0A-918A-AADC-B535D0FB996D">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 01:12:25 UTC</createdTime>
+<commentInRDBMS><![CDATA[property type ID]]></commentInRDBMS>
+<generatorID>BEB2E4B6-EEB8-26E7-772F-0897A27402A1</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<referedAttribute>E5090692-12D2-A465-6783-54975F09BE1C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>

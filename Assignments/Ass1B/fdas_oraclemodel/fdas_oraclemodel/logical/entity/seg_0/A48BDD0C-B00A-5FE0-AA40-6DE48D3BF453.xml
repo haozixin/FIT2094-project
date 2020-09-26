@@ -39,16 +39,18 @@
 <Attribute name="building_size" id="03A2E8CF-0D27-65EC-A837-63C1BF0A444A">
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-25 23:29:05 UTC</createdTime>
-<commentInRDBMS><![CDATA[building size]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[building size (in square metres)]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="building_date" id="AABE0C27-96B5-C3F8-F3C2-195D5AA1136A">
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-25 23:36:28 UTC</createdTime>
-<commentInRDBMS><![CDATA[building date]]></commentInRDBMS>
+<commentInRDBMS><![CDATA[building construction  date]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -78,6 +80,21 @@
 <listOfValues>
 <valueDef value="N" description="no- no insurance coverage"/>
 <valueDef value="Y" description="yes-insurance coverage"/>
+</listOfValues>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="builidng_Totally_destr" id="DEA1FCE2-A738-1814-967C-225BF25F2E64">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 01:31:55 UTC</createdTime>
+<commentInRDBMS><![CDATA[check if building is totally destroyed]]></commentInRDBMS>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="N" description="no-not totally destroyed"/>
+<valueDef value="Y" description="yes-the building is totally destroyed"/>
 </listOfValues>
 <ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
 </Attribute>

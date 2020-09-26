@@ -79,6 +79,7 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>11</dataTypePrecision>
 <dataTypeScale>2</dataTypeScale>
+<defaultValue>0</defaultValue>
 <ownDataTypeParameters>,11,2</ownDataTypeParameters>
 </Attribute>
 <Attribute name="fire_event_LiLost" id="6DB511DB-D338-EDCA-9B90-D968FA53C049">
@@ -103,6 +104,21 @@
 <dataTypePrecision>9</dataTypePrecision>
 <dataTypeScale>2</dataTypeScale>
 <ownDataTypeParameters>,9,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fire_event_sparkID" id="B232D12F-2966-7DA6-93C7-16512E0C052D">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 00:58:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[fire event ID
+]]></commentInRDBMS>
+<generatorID>26051C68-81FE-9748-C45E-80CC389D4A00</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>E0E1D21D-02F2-D724-550D-2B50EFC03889</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>9 BYTE</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

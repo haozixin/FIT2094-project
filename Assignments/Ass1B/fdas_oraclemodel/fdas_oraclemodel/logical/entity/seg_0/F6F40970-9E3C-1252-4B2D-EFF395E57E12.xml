@@ -75,21 +75,6 @@
 <dataTypeScale>2</dataTypeScale>
 <ownDataTypeParameters>,8,2</ownDataTypeParameters>
 </Attribute>
-<Attribute name="asse_Totally_destr" id="4501589E-6E2D-8F13-5CE5-01EE11A33B54">
-<createdBy>zhao0004</createdBy>
-<createdTime>2020-09-25 23:13:07 UTC</createdTime>
-<commentInRDBMS><![CDATA[totally destroyed or not in assessment]]></commentInRDBMS>
-<ownerDesignName>fdas_oraclemodel</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>1 BYTE</dataTypeSize>
-<listOfValues>
-<valueDef value="N" description="no-not totally destroyed"/>
-<valueDef value="Y" description="yes-totally destroyed"/>
-</listOfValues>
-<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="asse_Building_value" id="F2F96148-D58F-0883-3889-F9C576D6E919">
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-25 23:14:28 UTC</createdTime>
@@ -121,11 +106,12 @@
 <createdTime>2020-09-25 23:09:49 UTC</createdTime>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
 <pk>true</pk>
+<newElementsIDs>A93A2EF1-8261-EDDA-0CA3-CAA00D5A7167</newElementsIDs>
 <usedAttributes>
 <attributeRef>A93A2EF1-8261-EDDA-0CA3-CAA00D5A7167</attributeRef>
 </usedAttributes>
 </identifier>
-<identifier id="4599FC64-D522-CB64-DA1D-173063CAEBBD" name="ASSESSMENT_DAMAGE_NK">
+<identifier id="4599FC64-D522-CB64-DA1D-173063CAEBBD" name="ASSESSMENT_DAMAGE NK">
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-26 00:25:36 UTC</createdTime>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
