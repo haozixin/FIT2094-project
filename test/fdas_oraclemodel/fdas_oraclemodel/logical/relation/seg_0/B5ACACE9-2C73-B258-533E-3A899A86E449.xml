@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ASSESSMENT_DAMAGE_VISIT" directorySegmentName="seg_0" id="B5ACACE9-2C73-B258-533E-3A899A86E449">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 02:03:03 UTC</createdTime>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<sourcePk>51A08B7E-860D-18AF-38D4-ADFB3046354F</sourcePk>
+<identifying>false</identifying>
+<nameOnTarget>is for</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>F6F40970-9E3C-1252-4B2D-EFF395E57E12</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>1D241260-DCD6-A16D-623E-1F6EF504CA82</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

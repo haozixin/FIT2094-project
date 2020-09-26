@@ -3,6 +3,8 @@
 --   site:      Oracle Database 11g
 --   type:      Oracle Database 11g
 
+--ZIXIN HAO
+--30758017
 set echo on 
 spool  fdas_schema_output.txt
 

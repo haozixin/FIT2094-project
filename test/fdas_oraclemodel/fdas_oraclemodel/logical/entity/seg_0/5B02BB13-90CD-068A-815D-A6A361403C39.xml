@@ -1,0 +1,138 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5B02BB13-90CD-068A-815D-A6A361403C39" name="PROPERTY">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 12:32:52 UTC</createdTime>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="pro_id" id="9EA8DBD1-C5E4-7D5A-F57D-FB3EB781D26E">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 12:33:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[property ID]]></commentInRDBMS>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pro_addStreet" id="0EF9A646-9954-C7D3-C906-A18EC5647146">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 12:34:01 UTC</createdTime>
+<commentInRDBMS><![CDATA[property  street address]]></commentInRDBMS>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pro_addtown" id="F1936390-445B-4D01-E3FC-447B8FE07ABC">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 12:34:56 UTC</createdTime>
+<commentInRDBMS><![CDATA[property twon address]]></commentInRDBMS>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pro_addpostcode" id="2EA164A4-5202-8133-2237-85B676100F6E">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 12:35:26 UTC</createdTime>
+<commentInRDBMS><![CDATA[postcode of the property]]></commentInRDBMS>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4 BYTE</dataTypeSize>
+<ownDataTypeParameters>4 BYTE,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pro_size" id="36207ADD-3F3F-BFB0-A162-B50040D25652">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 12:36:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[property size(km^2)]]></commentInRDBMS>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pro_type" id="8D3C2A9E-2BC7-A889-EFA0-7485E2BC7722">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 12:37:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[property type]]></commentInRDBMS>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="B" description="business property"/>
+<valueDef value="C" description="residential property(in city)"/>
+<valueDef value="F" description="farm property"/>
+<valueDef value="T" description="residential property(in town)"/>
+</listOfValues>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="LGA_code" id="C57D8987-D9DF-D083-29BC-CADD6494B2DB">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 22:56:57 UTC</createdTime>
+<commentInRDBMS><![CDATA[local government area code]]></commentInRDBMS>
+<generatorID>DF3AF305-A0DA-7746-E1A3-E4A85E20B773</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<referedAttribute>9D49D1BA-0515-05A9-0E0B-994D8DE330C3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="owner_id" id="B3A8EB30-F7A2-33C4-86C7-9429AD177007">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 23:07:07 UTC</createdTime>
+<commentInRDBMS><![CDATA[owner_id]]></commentInRDBMS>
+<generatorID>AC683D84-345F-0E5D-17AC-FB122CF8E190</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<referedAttribute>9F4E3418-8497-94A2-8EDD-84AACC2C5DEC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pro_ty_id" id="B4A727A9-DA0A-918A-AADC-B535D0FB996D">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 01:12:25 UTC</createdTime>
+<commentInRDBMS><![CDATA[property type ID]]></commentInRDBMS>
+<generatorID>BEB2E4B6-EEB8-26E7-772F-0897A27402A1</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<referedAttribute>E5090692-12D2-A465-6783-54975F09BE1C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="DFD53679-5456-5F84-95A5-C44C9BF5D08D" name="PROPERTY PK">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 12:33:51 UTC</createdTime>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9EA8DBD1-C5E4-7D5A-F57D-FB3EB781D26E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

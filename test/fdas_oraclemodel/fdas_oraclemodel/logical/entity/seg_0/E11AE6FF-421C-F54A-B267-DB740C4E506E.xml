@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E11AE6FF-421C-F54A-B267-DB740C4E506E" name="OWNER">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 22:59:15 UTC</createdTime>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="owner_id" id="9F4E3418-8497-94A2-8EDD-84AACC2C5DEC">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 23:01:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[owner_id]]></commentInRDBMS>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="owner_name" id="086A442A-603B-CC08-82EC-4025D9B215CB">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 23:04:42 UTC</createdTime>
+<commentInRDBMS><![CDATA[owner's name]]></commentInRDBMS>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="owner_phoneNumber" id="B8B91A67-8744-8D46-9ED6-3681B7ED2141">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 23:06:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[owner's phone number]]></commentInRDBMS>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="3478683A-1F06-60AE-8DFE-D48560F1606C" name="OWNER PK">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 23:01:40 UTC</createdTime>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9F4E3418-8497-94A2-8EDD-84AACC2C5DEC</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

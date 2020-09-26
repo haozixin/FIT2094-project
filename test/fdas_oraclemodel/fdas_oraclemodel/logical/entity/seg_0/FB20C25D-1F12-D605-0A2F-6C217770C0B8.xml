@@ -1,0 +1,135 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FB20C25D-1F12-D605-0A2F-6C217770C0B8" name="FIRE_EVENT">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 11:25:05 UTC</createdTime>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="fire_event_id" id="E0E1D21D-02F2-D724-550D-2B50EFC03889">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 11:25:57 UTC</createdTime>
+<commentInRDBMS><![CDATA[fire event ID
+]]></commentInRDBMS>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>9 BYTE</dataTypeSize>
+<ownDataTypeParameters>9 BYTE,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fire_event_name" id="996645D8-A1CA-4267-37D8-BEF27ABE663A">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 11:27:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[the name of the fire event]]></commentInRDBMS>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fire_event_Sdate" id="CCE209E4-052E-F2F1-3B90-C0346D4D4FAC">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 11:29:26 UTC</createdTime>
+<commentInRDBMS><![CDATA[the start-date of the fire event]]></commentInRDBMS>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fire_event_latitude" id="98F9C6DA-F6EE-694A-889D-90A4803D0479">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 11:31:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[the latitude of the fire event]]></commentInRDBMS>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>6</dataTypeScale>
+<ownDataTypeParameters>,9,6</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fire_event_longtitude" id="F614AA66-1804-247D-5C1A-E9CF828956E7">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 11:33:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[ longtitude of the event]]></commentInRDBMS>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>6</dataTypeScale>
+<ownDataTypeParameters>,9,6</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fire_event_burnArea" id="24F11011-274C-D15A-1898-19789E6EFA00">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 11:34:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[fire_event_burned_area (in hectare)]]></commentInRDBMS>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,11,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fire_event_LiLost" id="6DB511DB-D338-EDCA-9B90-D968FA53C049">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 12:01:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[fire_event_lives_lost]]></commentInRDBMS>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fire_event_Tdamage" id="02CF6A74-7BFC-4D2C-641A-8776CF881C61">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 12:05:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[total damage of the fire event]]></commentInRDBMS>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,9,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fire_event_sparkID" id="B232D12F-2966-7DA6-93C7-16512E0C052D">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 00:58:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[fire event ID
+]]></commentInRDBMS>
+<generatorID>26051C68-81FE-9748-C45E-80CC389D4A00</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>E0E1D21D-02F2-D724-550D-2B50EFC03889</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>9 BYTE</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="18434E55-83B2-BE4A-1F65-7A798D360345" name="FIRE_EVENT PK">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 11:26:18 UTC</createdTime>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E0E1D21D-02F2-D724-550D-2B50EFC03889</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
