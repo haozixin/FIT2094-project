@@ -27,6 +27,7 @@
 <commentInRDBMS><![CDATA[assessor_given name]]></commentInRDBMS>
 <generatorID>D3225254-BE3C-A981-264B-1E2443BDF7E8</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -40,6 +41,7 @@
 <commentInRDBMS><![CDATA[assessor_family name]]></commentInRDBMS>
 <generatorID>312D0CC0-9C51-B9E2-B4E5-6C3553C5688F</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -70,7 +72,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>7</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>

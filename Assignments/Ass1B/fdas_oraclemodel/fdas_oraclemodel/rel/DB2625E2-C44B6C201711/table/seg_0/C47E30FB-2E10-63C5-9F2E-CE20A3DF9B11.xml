@@ -52,9 +52,6 @@
 <ownDataTypeParameters>,3,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="D58A2282-5AC7-A6DC-CD0D-5774E79759C1" referredColumn="AEA9CCDF-D14D-0513-EA01-D8D466B37142"/>
-</associations>
 </Column>
 <Column name="pro_id" id="5D8603A9-BFC8-6CC0-761D-36E50738E744">
 <createdBy>zhao0004</createdBy>
@@ -69,9 +66,6 @@
 <ownDataTypeParameters>,7,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="D58A2282-5AC7-A6DC-CD0D-5774E79759C1" referredColumn="882F1600-BF24-871B-7317-7077589B5B65"/>
-</associations>
 </Column>
 <Column name="asse_Bdamage_cost" id="7DADFC85-B013-1A13-0046-E20753834278">
 <createdBy>zhao0004</createdBy>
@@ -118,6 +112,40 @@
 <colAssociation fkAssociation="5EB5588A-98B3-902B-2726-7CA11F129B22" referredColumn="D64D451B-38B6-6915-635A-8F3B9CDEE465"/>
 </associations>
 </Column>
+<Column name="pro_id1" id="00962992-A6A9-6C0A-676B-FCEFD1FE1408">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-27 10:10:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[property ID]]></commentInRDBMS>
+<generatorID>F99861BC-D389-C7CE-C124-55D50D26BD2A</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1686C3B9-6E0B-0EA6-CD9C-0F02A3C07F7C" referredColumn="882F1600-BF24-871B-7317-7077589B5B65"/>
+</associations>
+</Column>
+<Column name="building_id1" id="FFE1803F-E2CD-EE2A-652C-A390232585EF">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-27 10:10:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[building ID]]></commentInRDBMS>
+<generatorID>8E7133DB-EC29-4396-C9B6-F480D339B063</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1686C3B9-6E0B-0EA6-CD9C-0F02A3C07F7C" referredColumn="AEA9CCDF-D14D-0513-EA01-D8D466B37142"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="8A8193B5-8A1A-C1C3-FBAC-FCF02BB8CFDD" name="ASSESSMENT_DAMAGE_PK">
@@ -145,18 +173,6 @@
 <colUsage columnID="5D8603A9-BFC8-6CC0-761D-36E50738E744"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="5CC4CAF7-E774-B7BC-4A96-8324A8180640" name="BUILDING_ASSE_DAMAGE">
-<createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 03:37:05 UTC</createdTime>
-<generatorID>1B6CBC24-45A4-88C6-3BDD-77C264A56D01</generatorID>
-<ownerDesignName>fdas_oraclemodel</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="8A0DB350-5F1B-F3C5-3A9C-0E02D227542E"/>
-<colUsage columnID="5D8603A9-BFC8-6CC0-761D-36E50738E744"/>
-</indexColumnUsage>
-</ind_PK_UK>
 <ind_PK_UK id="8EC5E7B9-FBDB-E2A8-C589-2054D824DA66" name="FIRE_EVENT_ASSE_DAMAGE">
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-26 03:37:05 UTC</createdTime>
@@ -177,6 +193,18 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="668FF5E6-33C7-A2A1-15A6-36C4755F06F0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3B2D124B-D7A0-B579-B526-1387AB974F1D" name="BUILDING_ASSESSMENT_DAMAGE">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-27 10:10:41 UTC</createdTime>
+<generatorID>DFD5E976-105D-31F7-6FB3-71E0E139C8A4</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FFE1803F-E2CD-EE2A-652C-A390232585EF"/>
+<colUsage columnID="00962992-A6A9-6C0A-676B-FCEFD1FE1408"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

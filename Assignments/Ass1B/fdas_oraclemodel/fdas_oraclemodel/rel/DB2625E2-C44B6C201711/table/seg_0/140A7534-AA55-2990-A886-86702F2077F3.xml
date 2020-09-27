@@ -27,6 +27,7 @@
 <commentInRDBMS><![CDATA[insurer last name]]></commentInRDBMS>
 <generatorID>380ADD1E-7452-CBB6-4350-963DA03BAF1C</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -40,6 +41,7 @@
 <commentInRDBMS><![CDATA[insurer family name]]></commentInRDBMS>
 <generatorID>4E018BF4-DEAE-1F6F-FE8F-E49E05D76A07</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>

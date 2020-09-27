@@ -73,8 +73,10 @@ SQL> CREATE TABLE assessment_damage (
   5      pro_id               NUMBER(7) NOT NULL,
   6      asse_bdamage_cost    NUMBER(8, 2) NOT NULL,
   7      asse_building_value  NUMBER(5) NOT NULL,
-  8      assessor_id          NUMBER(7)
-  9  );
+  8      assessor_id          NUMBER(7),
+  9      pro_id1              NUMBER(7) NOT NULL,
+ 10      building_id1         NUMBER(3) NOT NULL
+ 11  );
 
 Table ASSESSMENT_DAMAGE created.
 
@@ -122,6 +124,18 @@ SQL> COMMENT ON COLUMN assessment_damage.assessor_id IS
 Comment created.
 
 SQL> 
+SQL> COMMENT ON COLUMN assessment_damage.pro_id1 IS
+  2      'property ID';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN assessment_damage.building_id1 IS
+  2      'building ID';
+
+Comment created.
+
+SQL> 
 SQL> ALTER TABLE assessment_damage ADD CONSTRAINT assessment_damage_pk PRIMARY KEY ( asse_dam_no );
 
 Table ASSESSMENT_DAMAGE altered.
@@ -137,8 +151,8 @@ Table ASSESSMENT_DAMAGE altered.
 SQL> 
 SQL> CREATE TABLE assessor (
   2      assessor_id             NUMBER(7) NOT NULL,
-  3      assessor_gname          VARCHAR2(30 BYTE) NOT NULL,
-  4      assessor_fname          VARCHAR2(30 BYTE) NOT NULL,
+  3      assessor_gname          VARCHAR2(30 BYTE),
+  4      assessor_fname          VARCHAR2(30 BYTE),
   5      assessor_contactnumber  CHAR(10 BYTE) NOT NULL,
   6      insur_code              NUMBER(7) NOT NULL
   7  );
@@ -406,8 +420,8 @@ Table FIRE_LGA altered.
 SQL> 
 SQL> CREATE TABLE insurer (
   2      insur_code         NUMBER(7) NOT NULL,
-  3      insur_lname        VARCHAR2(30 BYTE) NOT NULL,
-  4      insur_fname        VARCHAR2(30 BYTE) NOT NULL,
+  3      insur_lname        VARCHAR2(30 BYTE),
+  4      insur_fname        VARCHAR2(30 BYTE),
   5      insur_phonenumber  CHAR(10) NOT NULL
   6  );
 
@@ -628,15 +642,18 @@ Table PROPERTY_TYPE altered.
 
 SQL> 
 SQL> CREATE TABLE visit (
-  2      vi_no           NUMBER(7) NOT NULL,
-  3      pro_id          NUMBER(7) NOT NULL,
-  4      building_id     NUMBER(3) NOT NULL,
-  5      vi_arr_date     DATE NOT NULL,
-  6      vi_arr_time     DATE NOT NULL,
-  7      vi_depart_date  DATE NOT NULL,
-  8      vi_depart_time  DATE NOT NULL,
-  9      asse_dam_no     NUMBER(7) NOT NULL
- 10  );
+  2      vi_no               NUMBER(7) NOT NULL,
+  3      pro_id              NUMBER(7) NOT NULL,
+  4      building_id         NUMBER(3) NOT NULL,
+  5      vi_arr_datetime     DATE NOT NULL,
+  6      vi_arr_time         DATE NOT NULL,
+  7      vi_depart_datetime  DATE NOT NULL,
+  8      vi_depart_time      DATE NOT NULL,
+  9      vi_no2              NUMBER(7) NOT NULL,
+ 10      pro_id1             NUMBER(7) NOT NULL,
+ 11      building_id1        NUMBER(3) NOT NULL,
+ 12      fire_event_id       CHAR(9 BYTE) NOT NULL
+ 13  );
 
 Table VISIT created.
 
@@ -659,7 +676,7 @@ SQL> COMMENT ON COLUMN visit.building_id IS
 Comment created.
 
 SQL> 
-SQL> COMMENT ON COLUMN visit.vi_arr_date IS
+SQL> COMMENT ON COLUMN visit.vi_arr_datetime IS
   2      'visit_arrived_date';
 
 Comment created.
@@ -671,7 +688,7 @@ SQL> COMMENT ON COLUMN visit.vi_arr_time IS
 Comment created.
 
 SQL> 
-SQL> COMMENT ON COLUMN visit.vi_depart_date IS
+SQL> COMMENT ON COLUMN visit.vi_depart_datetime IS
   2      'visit_depart_date';
 
 Comment created.
@@ -683,8 +700,27 @@ SQL> COMMENT ON COLUMN visit.vi_depart_time IS
 Comment created.
 
 SQL> 
-SQL> COMMENT ON COLUMN visit.asse_dam_no IS
-  2      ' number of the assessment damage (surrogate key)';
+SQL> COMMENT ON COLUMN visit.vi_no2 IS
+  2      'visit number (surrogate key)';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN visit.pro_id1 IS
+  2      'property ID';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN visit.building_id1 IS
+  2      'building ID';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN visit.fire_event_id IS
+  2      'fire event ID
+  3  ';
 
 Comment created.
 
@@ -695,17 +731,10 @@ Table VISIT altered.
 
 SQL> 
 SQL> ALTER TABLE visit
-  2      ADD CONSTRAINT visit_nk UNIQUE ( vi_arr_date,
+  2      ADD CONSTRAINT visit_nk UNIQUE ( vi_arr_datetime,
   3                                       vi_arr_time,
   4                                       building_id,
   5                                       pro_id );
-
-Table VISIT altered.
-
-SQL> 
-SQL> ALTER TABLE visit
-  2      ADD CONSTRAINT assessment_damage_visit FOREIGN KEY ( asse_dam_no )
-  3          REFERENCES assessment_damage ( asse_dam_no );
 
 Table VISIT altered.
 
@@ -718,12 +747,21 @@ Table EMPLOYMENT altered.
 
 SQL> 
 SQL> ALTER TABLE assessment_damage
-  2      ADD CONSTRAINT building_asse_damage FOREIGN KEY ( building_id,
-  3                                                        pro_id )
+  2      ADD CONSTRAINT building_assessment_damage FOREIGN KEY ( building_id1,
+  3                                                              pro_id1 )
   4          REFERENCES building ( building_id,
   5                                pro_id );
 
 Table ASSESSMENT_DAMAGE altered.
+
+SQL> 
+SQL> ALTER TABLE visit
+  2      ADD CONSTRAINT building_visit FOREIGN KEY ( building_id1,
+  3                                                  pro_id1 )
+  4          REFERENCES building ( building_id,
+  5                                pro_id );
+
+Table VISIT altered.
 
 SQL> 
 SQL> ALTER TABLE assessment_damage
@@ -738,6 +776,13 @@ SQL> ALTER TABLE fire_lga
   3          REFERENCES fire_event ( fire_event_id );
 
 Table FIRE_LGA altered.
+
+SQL> 
+SQL> ALTER TABLE visit
+  2      ADD CONSTRAINT fire_event_visit FOREIGN KEY ( fire_event_id )
+  3          REFERENCES fire_event ( fire_event_id );
+
+Table VISIT altered.
 
 SQL> 
 SQL> ALTER TABLE employment
@@ -816,7 +861,7 @@ SQL> -- Oracle SQL Developer Data Modeler Summary Report:
 SQL> -- 
 SQL> -- CREATE TABLE                            12
 SQL> -- CREATE INDEX                             0
-SQL> -- ALTER TABLE                             32
+SQL> -- ALTER TABLE                             33
 SQL> -- CREATE VIEW                              0
 SQL> -- ALTER VIEW                               0
 SQL> -- CREATE PACKAGE                           0
