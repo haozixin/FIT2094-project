@@ -3,6 +3,9 @@
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-25 23:22:27 UTC</createdTime>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
+</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -17,6 +20,9 @@
 <createdTime>2020-09-25 23:22:37 UTC</createdTime>
 <commentInRDBMS><![CDATA[insurer code]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -28,6 +34,10 @@
 <createdTime>2020-09-25 23:25:05 UTC</createdTime>
 <commentInRDBMS><![CDATA[insurer last name]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -39,6 +49,10 @@
 <createdTime>2020-09-25 23:23:45 UTC</createdTime>
 <commentInRDBMS><![CDATA[insurer family name]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -50,6 +64,9 @@
 <createdTime>2020-09-25 23:25:54 UTC</createdTime>
 <commentInRDBMS><![CDATA[insurer's phone number]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
@@ -62,6 +79,9 @@
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-25 23:23:33 UTC</createdTime>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
+</engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>66AC0683-4E6B-1AA5-1A87-51FB395D03A1</attributeRef>

@@ -1,20 +1,20 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ASSESSMENT_DAMAGE_VISIT" directorySegmentName="seg_0" id="B5ACACE9-2C73-B258-533E-3A899A86E449">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="BUILDING_ASSESSMENT_DAMAGE" directorySegmentName="seg_0" id="DFD5E976-105D-31F7-6FB3-71E0E139C8A4">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 02:03:03 UTC</createdTime>
+<createdTime>2020-09-27 09:38:28 UTC</createdTime>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
 <engineerTo>
 <item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
 </engineerTo>
-<sourcePk>51A08B7E-860D-18AF-38D4-ADFB3046354F</sourcePk>
+<sourcePk>49DE7A1D-3E4C-E6EC-14CC-706A5BAE7C17</sourcePk>
 <identifying>false</identifying>
-<nameOnTarget>is for</nameOnTarget>
+<nameOnSource>has</nameOnSource>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
-<sourceEntity>F6F40970-9E3C-1252-4B2D-EFF395E57E12</sourceEntity>
+<sourceEntity>A48BDD0C-B00A-5FE0-AA40-6DE48D3BF453</sourceEntity>
 <targetCardinalityString>*</targetCardinalityString>
-<targetEntity>1D241260-DCD6-A16D-623E-1F6EF504CA82</targetEntity>
+<targetEntity>F6F40970-9E3C-1252-4B2D-EFF395E57E12</targetEntity>
 <transferable>true</transferable>
 <deleteRule>NO ACTION</deleteRule>
 </Relation>

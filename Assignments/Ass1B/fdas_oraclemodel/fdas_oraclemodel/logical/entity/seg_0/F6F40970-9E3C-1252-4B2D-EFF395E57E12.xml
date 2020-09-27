@@ -46,27 +46,11 @@
 <dataTypeSize>9 BYTE</dataTypeSize>
 <ownDataTypeParameters>9 BYTE,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="building_id" id="4F4864F0-E196-AA6D-58C8-44EBF7DBF799">
+<Attribute name="pro_id" id="F99861BC-D389-C7CE-C124-55D50D26BD2A">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-25 23:42:49 UTC</createdTime>
-<commentInRDBMS><![CDATA[building ID]]></commentInRDBMS>
-<generatorID>1B6CBC24-45A4-88C6-3BDD-77C264A56D01</generatorID>
-<ownerDesignName>fdas_oraclemodel</ownerDesignName>
-<engineerTo>
-<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
-</engineerTo>
-<referedAttribute>6CE97A9A-C37C-9A10-2EF3-D3F69253AEB4</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>3</dataTypePrecision>
-<ownDataTypeParameters>,3,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="pro_id" id="217F63ED-4D15-A8C7-632D-A858BD47AF14">
-<createdBy>zhao0004</createdBy>
-<createdTime>2020-09-25 23:44:52 UTC</createdTime>
+<createdTime>2020-09-27 09:38:28 UTC</createdTime>
 <commentInRDBMS><![CDATA[property ID]]></commentInRDBMS>
-<generatorID>1B6CBC24-45A4-88C6-3BDD-77C264A56D01</generatorID>
+<generatorID>DFD5E976-105D-31F7-6FB3-71E0E139C8A4</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
 <engineerTo>
 <item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
@@ -76,7 +60,23 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>7</dataTypePrecision>
-<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="building_id" id="8E7133DB-EC29-4396-C9B6-F480D339B063">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-27 09:38:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[building ID]]></commentInRDBMS>
+<generatorID>DFD5E976-105D-31F7-6FB3-71E0E139C8A4</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
+</engineerTo>
+<referedAttribute>6CE97A9A-C37C-9A10-2EF3-D3F69253AEB4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="asse_Bdamage_cost" id="B3A46737-1801-9845-913C-928B96D8F8A0">
 <createdBy>zhao0004</createdBy>
@@ -151,8 +151,8 @@
 <newElementsIDs>3A2C74DC-62AA-E3FF-4B50-E832C8AE48D3,1B6CBC24-45A4-88C6-3BDD-77C264A56D01</newElementsIDs>
 <usedAttributes>
 <attributeRef>F7C9BA9D-3919-85DF-39C4-A1E512397D4D</attributeRef>
-<attributeRef>4F4864F0-E196-AA6D-58C8-44EBF7DBF799</attributeRef>
-<attributeRef>217F63ED-4D15-A8C7-632D-A858BD47AF14</attributeRef>
+<attributeRef>8E7133DB-EC29-4396-C9B6-F480D339B063</attributeRef>
+<attributeRef>F99861BC-D389-C7CE-C124-55D50D26BD2A</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
