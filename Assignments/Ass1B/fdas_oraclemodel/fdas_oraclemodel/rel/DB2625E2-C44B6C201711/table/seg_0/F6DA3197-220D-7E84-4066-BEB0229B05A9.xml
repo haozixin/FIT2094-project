@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B23660B5-228F-32C9-C904-1124C952B745" name="BUILDING">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F6DA3197-220D-7E84-4066-BEB0229B05A9" name="BUILDING">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<createdTime>2020-09-28 11:25:28 UTC</createdTime>
 <generatorID>A48BDD0C-B00A-5FE0-AA40-6DE48D3BF453</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="building_id" id="AEA9CCDF-D14D-0513-EA01-D8D466B37142">
+<Column name="building_id" id="77FCAE07-D9A4-0E58-9E7A-A419796F99FF">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<createdTime>2020-09-28 11:25:28 UTC</createdTime>
 <commentInRDBMS><![CDATA[building ID]]></commentInRDBMS>
 <generatorID>6CE97A9A-C37C-9A10-2EF3-D3F69253AEB4</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
@@ -21,9 +21,9 @@
 <ownDataTypeParameters>,3,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="pro_id" id="882F1600-BF24-871B-7317-7077589B5B65">
+<Column name="pro_id" id="8CCA58EB-D1BC-10CA-AF36-0CB08A38E4DC">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<createdTime>2020-09-28 11:25:28 UTC</createdTime>
 <commentInRDBMS><![CDATA[property ID]]></commentInRDBMS>
 <generatorID>996CCC77-B074-3F7C-7D7D-26CBD0A7D1DB</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
@@ -35,12 +35,12 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="D9E207C1-E377-A0DC-AE73-6C21E2A278BE" referredColumn="143FEA21-F98F-BCF9-2A73-0FA60A43BF46"/>
+<colAssociation fkAssociation="0044616F-DD17-9862-6B7E-98708AAC2A82" referredColumn="C1F03B4B-D185-D34B-FE91-EF6B683D36DB"/>
 </associations>
 </Column>
-<Column name="building_size" id="43402808-F599-1EC7-E4E6-7713FA886AB2">
+<Column name="building_size" id="24D97B44-51C6-6020-32CD-50C27ADCDC0F">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<createdTime>2020-09-28 11:25:28 UTC</createdTime>
 <commentInRDBMS><![CDATA[building size (in square metres)]]></commentInRDBMS>
 <generatorID>03A2E8CF-0D27-65EC-A837-63C1BF0A444A</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
@@ -51,9 +51,9 @@
 <ownDataTypeParameters>,3,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="building_date" id="DA3C07B5-1CBC-B804-55FC-478FBA1D4CFD">
+<Column name="building_date" id="F9A01128-6A55-7486-700D-ECC78A390564">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<createdTime>2020-09-28 11:25:28 UTC</createdTime>
 <commentInRDBMS><![CDATA[building construction  date]]></commentInRDBMS>
 <generatorID>AABE0C27-96B5-C3F8-F3C2-195D5AA1136A</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
@@ -63,9 +63,9 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="building_class" id="E90674D2-B0A0-B645-96CB-6E21BACB6E3C">
+<Column name="building_class" id="98059F4A-CA64-A270-D608-CB7AD53E068B">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<createdTime>2020-09-28 11:25:28 UTC</createdTime>
 <commentInRDBMS><![CDATA[building class]]></commentInRDBMS>
 <generatorID>2E9B561B-9D6E-7D53-8A94-94B987604D4F</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
@@ -76,9 +76,9 @@
 <ownDataTypeParameters>2 BYTE,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="building_insur_cov" id="A193C08D-CCF0-CE4F-2D35-C674B9FC03BB">
+<Column name="building_insur_cov" id="FF4A2DA9-ED3A-B552-170B-8360455B7235">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<createdTime>2020-09-28 11:25:28 UTC</createdTime>
 <commentInRDBMS><![CDATA[building_insurance_coverage]]></commentInRDBMS>
 <generatorID>0FB9B593-6EB4-ECD5-29EF-81920E59531F</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
@@ -93,9 +93,9 @@
 <ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="builidng_Totally_destr" id="52863A76-B748-B380-2936-8D7E96CCE890">
+<Column name="builidng_Totally_destr" id="E425AA2F-06B3-5FF4-AE73-45C754890CCE">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<createdTime>2020-09-28 11:25:28 UTC</createdTime>
 <commentInRDBMS><![CDATA[check if building is totally destroyed]]></commentInRDBMS>
 <generatorID>DEA1FCE2-A738-1814-967C-225BF25F2E64</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
@@ -110,12 +110,13 @@
 <ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="insur_code" id="52DD5163-7213-DEC4-4AAB-D49B43B63378">
+<Column name="insur_code" id="06EFF8B2-65BB-0570-D70A-2460E4F7BA81">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<createdTime>2020-09-28 11:25:28 UTC</createdTime>
 <commentInRDBMS><![CDATA[insurer code]]></commentInRDBMS>
 <generatorID>7AFEF21B-D833-F5A9-A81B-FC6948719AE4</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -124,44 +125,44 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="ED0259CD-2854-5DC5-9874-FB2BFDF68AEE" referredColumn="4B1338CA-4351-F122-DDE4-106C496A2256"/>
+<colAssociation fkAssociation="669C89AB-4E65-03B3-7D67-8A54A5F63782" referredColumn="AA58D3EA-0CCF-BC3A-B415-469A47A51CA7"/>
 </associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="ADD66481-636A-3787-7DAA-6665433D9C53" name="BUILDING_PK">
+<ind_PK_UK id="BB88DE6E-D320-274F-8806-0FB21D821B30" name="BUILDING_PK">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<createdTime>2020-09-28 11:25:28 UTC</createdTime>
 <generatorID>49DE7A1D-3E4C-E6EC-14CC-706A5BAE7C17</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="AEA9CCDF-D14D-0513-EA01-D8D466B37142"/>
-<colUsage columnID="882F1600-BF24-871B-7317-7077589B5B65"/>
+<colUsage columnID="77FCAE07-D9A4-0E58-9E7A-A419796F99FF"/>
+<colUsage columnID="8CCA58EB-D1BC-10CA-AF36-0CB08A38E4DC"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="CD4D5F2D-3E37-9C71-5793-C67E7A1014DC" name="INSURER_BUILDING">
+<ind_PK_UK id="B6DD0C7B-AB06-B48B-3577-B8C5C8384B36" name="INSURER_BUILDING">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<createdTime>2020-09-28 11:25:28 UTC</createdTime>
 <generatorID>6E6A4FD5-6C3C-5483-2132-B836A918515F</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="52DD5163-7213-DEC4-4AAB-D49B43B63378"/>
+<colUsage columnID="06EFF8B2-65BB-0570-D70A-2460E4F7BA81"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="A58C066F-7561-2B96-789C-BC0C64E9F529" name="PROPERTY_BUILDING">
+<ind_PK_UK id="ED4E7CCA-A9EC-4869-9576-F74CCDEAB893" name="PROPERTY_BUILDING">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<createdTime>2020-09-28 11:25:28 UTC</createdTime>
 <generatorID>1A40FF6F-C056-4701-C97F-F6D45B0DDDEC</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="882F1600-BF24-871B-7317-7077589B5B65"/>
+<colUsage columnID="8CCA58EB-D1BC-10CA-AF36-0CB08A38E4DC"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CF7C877D-5E05-11DF-9C57-E07FD514BE50" name="FIRE_LGA">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="034C217A-6CD1-5E00-36F0-0F1A667190E8" name="FIRE_LGA">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<createdTime>2020-09-28 11:25:28 UTC</createdTime>
 <generatorID>E5EF42BB-66B5-3524-69C8-5E6A02D8686B</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="fire_event_id" id="5F34FF4F-9C1A-012C-8E17-A5775572FC0D">
+<Column name="fire_event_id" id="52AFD520-A6E0-3AB5-E4AF-0C0FE60E8EB4">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<createdTime>2020-09-28 11:25:28 UTC</createdTime>
 <commentInRDBMS><![CDATA[fire event ID
 ]]></commentInRDBMS>
 <generatorID>D78431E9-FCDB-B710-E071-71BC5B639259</generatorID>
@@ -23,12 +23,12 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="13C7F476-DDDF-2242-3ACA-2224DC40EB7F" referredColumn="4B17BD5B-F618-44CC-5459-DA1A17E76112"/>
+<colAssociation fkAssociation="41E3E889-6CF3-ACA1-ADC0-48009DCBEAEA" referredColumn="4D6DFB02-658F-BD04-ADF6-460DAC8C7CC2"/>
 </associations>
 </Column>
-<Column name="LGA_code" id="0EC37A31-B3A7-39D7-6746-341014EAE02E">
+<Column name="LGA_code" id="D1A3BB03-33FA-FC1D-90AB-46C4982D62EC">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<createdTime>2020-09-28 11:25:28 UTC</createdTime>
 <commentInRDBMS><![CDATA[local government area code]]></commentInRDBMS>
 <generatorID>D87C0F74-EEB0-2512-4494-83ECA25B672E</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
@@ -40,44 +40,44 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="C40B086E-51ED-E4B9-E823-9A671663D31B" referredColumn="06825B4A-13A3-20E2-0AA3-18AA3E5CE21E"/>
+<colAssociation fkAssociation="AEFCC41F-16B1-13BE-E55D-291AA105F2CE" referredColumn="BBB0D62A-FD06-950D-6AD3-194FED5BEC85"/>
 </associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="6E88C547-A020-AB7F-828F-7232D6F6888E" name="FIRE_LGA_PK">
+<ind_PK_UK id="1AB1FC92-0AEF-BACF-3C0B-C83AE97CED1D" name="FIRE_LGA_PK">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<createdTime>2020-09-28 11:25:28 UTC</createdTime>
 <generatorID>ABFFAF16-5A44-2F2A-12B4-B75CB59CBC1C</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="5F34FF4F-9C1A-012C-8E17-A5775572FC0D"/>
-<colUsage columnID="0EC37A31-B3A7-39D7-6746-341014EAE02E"/>
+<colUsage columnID="52AFD520-A6E0-3AB5-E4AF-0C0FE60E8EB4"/>
+<colUsage columnID="D1A3BB03-33FA-FC1D-90AB-46C4982D62EC"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="198348D2-2DEA-06F4-A4DE-2C642348B24A" name="FIRE_EVENT_FIRE_LGA">
+<ind_PK_UK id="40A94317-D8B3-2B30-2AE4-F5944E679B88" name="FIRE_EVENT_FIRE_LGA">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<createdTime>2020-09-28 11:25:28 UTC</createdTime>
 <generatorID>07C4C77F-8955-B1D8-7FFA-D6E2CFA8F8D4</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="5F34FF4F-9C1A-012C-8E17-A5775572FC0D"/>
+<colUsage columnID="52AFD520-A6E0-3AB5-E4AF-0C0FE60E8EB4"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="5B8566C2-AD2B-4A9F-E5ED-87DFD50DF6DF" name="LGA_FIRE_LGA">
+<ind_PK_UK id="D3684EC1-B1F8-899F-21D1-FD14C3E8F44D" name="LGA_FIRE_LGA">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<createdTime>2020-09-28 11:25:28 UTC</createdTime>
 <generatorID>E1A86C38-D92B-C342-56C0-7A5ACA8A85AE</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="0EC37A31-B3A7-39D7-6746-341014EAE02E"/>
+<colUsage columnID="D1A3BB03-33FA-FC1D-90AB-46C4982D62EC"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

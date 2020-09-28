@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="FC972482-89A1-8B9A-2C71-5C947DD7E9E9" containerWithKeyObject="BB23F2A6-493B-9D6D-0C1B-B0C1F9680B6A" localFKIndex="BCFDA8BC-4E45-EF76-722D-BE73D21D9206" name="BUILDING_VISIT">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-28 11:25:28 UTC</createdTime>
+<generatorID>E4A11A3E-1D37-638A-6AEE-0ED32866A148</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<referredTableLongName>BUILDING</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F6DA3197-220D-7E84-4066-BEB0229B05A9</referredTableID>
+<keyObject>BB88DE6E-D320-274F-8806-0FB21D821B30</keyObject>
+<referredKeyID>BB88DE6E-D320-274F-8806-0FB21D821B30</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>building_id,pro_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

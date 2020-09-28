@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="140A7534-AA55-2990-A886-86702F2077F3" name="INSURER">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="864D4BD9-ACA4-5095-2558-70AB50E843D3" name="INSURER">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<createdTime>2020-09-28 11:25:28 UTC</createdTime>
 <generatorID>BC34F69E-3795-35CD-60C0-5F4123142F68</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="insur_code" id="4B1338CA-4351-F122-DDE4-106C496A2256">
+<Column name="insur_code" id="AA58D3EA-0CCF-BC3A-B415-469A47A51CA7">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<createdTime>2020-09-28 11:25:28 UTC</createdTime>
 <commentInRDBMS><![CDATA[insurer code]]></commentInRDBMS>
 <generatorID>66AC0683-4E6B-1AA5-1A87-51FB395D03A1</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
@@ -21,9 +21,9 @@
 <ownDataTypeParameters>,7,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="insur_lname" id="2299C7BA-9987-EA73-4C6C-F2BBCDBD7E62">
+<Column name="insur_lname" id="1FFE0428-9203-AA51-C672-96220414E3FA">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<createdTime>2020-09-28 11:25:28 UTC</createdTime>
 <commentInRDBMS><![CDATA[insurer last name]]></commentInRDBMS>
 <generatorID>380ADD1E-7452-CBB6-4350-963DA03BAF1C</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
@@ -35,9 +35,9 @@
 <ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="insur_fname" id="62D73BB3-2D7A-C74E-19FC-88CAC421784E">
+<Column name="insur_fname" id="9E5D43D3-5144-CAC0-DAB8-0B1C775F2703">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<createdTime>2020-09-28 11:25:28 UTC</createdTime>
 <commentInRDBMS><![CDATA[insurer family name]]></commentInRDBMS>
 <generatorID>4E018BF4-DEAE-1F6F-FE8F-E49E05D76A07</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
@@ -49,9 +49,9 @@
 <ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="insur_phoneNumber" id="44A9682E-7E17-24BE-94CE-F3A2A93AD972">
+<Column name="insur_phoneNumber" id="EA39BE80-F6BE-26C3-2092-3C8D91FA3819">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<createdTime>2020-09-28 11:25:28 UTC</createdTime>
 <commentInRDBMS><![CDATA[insurer's phone number]]></commentInRDBMS>
 <generatorID>DA612454-6329-E7A8-E3F2-2D7726C192D2</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
@@ -64,16 +64,16 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="7D7A24C2-3A69-6747-DCDA-545DBD18CA36" name="INSURER_PK">
+<ind_PK_UK id="99A000EA-6E40-B552-2C77-FDBC339C9E50" name="INSURER_PK">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<createdTime>2020-09-28 11:25:28 UTC</createdTime>
 <generatorID>B34FE841-BE13-A9F8-1F7B-B6AA1DF957E4</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="4B1338CA-4351-F122-DDE4-106C496A2256"/>
+<colUsage columnID="AA58D3EA-0CCF-BC3A-B415-469A47A51CA7"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

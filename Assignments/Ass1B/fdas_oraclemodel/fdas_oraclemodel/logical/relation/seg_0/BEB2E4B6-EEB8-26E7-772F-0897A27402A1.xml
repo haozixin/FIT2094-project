@@ -3,10 +3,13 @@
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-26 01:12:25 UTC</createdTime>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
+</engineerTo>
 <sourcePk>084AED92-621D-8F00-749E-4BE6D82108A7</sourcePk>
 <identifying>false</identifying>
 <nameOnSource>categorises</nameOnSource>
-<optionalSource>true</optionalSource>
+<optionalSource>false</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
 <sourceEntity>1B7A372C-8D0C-958E-D35E-1F38E75334DF</sourceEntity>

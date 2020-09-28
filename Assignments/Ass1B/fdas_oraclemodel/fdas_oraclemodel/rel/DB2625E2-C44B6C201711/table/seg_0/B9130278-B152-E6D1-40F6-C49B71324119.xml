@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="475950E4-F6E1-0AF6-0945-320340131CA4" name="OWNER">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B9130278-B152-E6D1-40F6-C49B71324119" name="OWNER">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<createdTime>2020-09-28 11:25:28 UTC</createdTime>
 <generatorID>E11AE6FF-421C-F54A-B267-DB740C4E506E</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="owner_id" id="5395FB1A-82B3-A24E-E432-559D3451CBC7">
+<Column name="owner_id" id="254CCA4F-19AE-5177-A3C2-58C129F4CB58">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<createdTime>2020-09-28 11:25:28 UTC</createdTime>
 <commentInRDBMS><![CDATA[owner_id]]></commentInRDBMS>
 <generatorID>9F4E3418-8497-94A2-8EDD-84AACC2C5DEC</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
@@ -21,9 +21,9 @@
 <ownDataTypeParameters>,7,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="owner_name" id="A4FB40E1-8FEC-1B2B-1FD8-4F1BEDAE5BF5">
+<Column name="owner_name" id="21CE5CA6-25E0-E7FA-FC05-3326C30F9025">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<createdTime>2020-09-28 11:25:28 UTC</createdTime>
 <commentInRDBMS><![CDATA[owner's name]]></commentInRDBMS>
 <generatorID>086A442A-603B-CC08-82EC-4025D9B215CB</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
@@ -34,9 +34,9 @@
 <ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="owner_phoneNumber" id="90DB1CDF-8227-D1B9-CCC5-24D9E0745D27">
+<Column name="owner_phoneNumber" id="92AC5A85-8218-487A-54A7-EFF4F9ADB753">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<createdTime>2020-09-28 11:25:28 UTC</createdTime>
 <commentInRDBMS><![CDATA[owner's phone number]]></commentInRDBMS>
 <generatorID>B8B91A67-8744-8D46-9ED6-3681B7ED2141</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
@@ -49,16 +49,16 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="83E279D8-6A06-F676-37EA-6B2FC747A3A0" name="OWNER_PK">
+<ind_PK_UK id="25433767-D14E-A0D1-B005-F9F9CF3759DD" name="OWNER_PK">
 <createdBy>zhao0004</createdBy>
-<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<createdTime>2020-09-28 11:25:28 UTC</createdTime>
 <generatorID>3478683A-1F06-60AE-8DFE-D48560F1606C</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="5395FB1A-82B3-A24E-E432-559D3451CBC7"/>
+<colUsage columnID="254CCA4F-19AE-5177-A3C2-58C129F4CB58"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

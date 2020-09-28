@@ -69,14 +69,12 @@ SQL>
 SQL> CREATE TABLE assessment_damage (
   2      asse_dam_no          NUMBER(7) NOT NULL,
   3      fire_event_id        CHAR(9 BYTE) NOT NULL,
-  4      building_id          NUMBER(3) NOT NULL,
-  5      pro_id               NUMBER(7) NOT NULL,
+  4      pro_id               NUMBER(7) NOT NULL,
+  5      building_id          NUMBER(3) NOT NULL,
   6      asse_bdamage_cost    NUMBER(8, 2) NOT NULL,
   7      asse_building_value  NUMBER(5) NOT NULL,
-  8      assessor_id          NUMBER(7),
-  9      pro_id1              NUMBER(7) NOT NULL,
- 10      building_id1         NUMBER(3) NOT NULL
- 11  );
+  8      assessor_id          NUMBER(7)
+  9  );
 
 Table ASSESSMENT_DAMAGE created.
 
@@ -94,14 +92,14 @@ SQL> COMMENT ON COLUMN assessment_damage.fire_event_id IS
 Comment created.
 
 SQL> 
-SQL> COMMENT ON COLUMN assessment_damage.building_id IS
-  2      'building ID';
+SQL> COMMENT ON COLUMN assessment_damage.pro_id IS
+  2      'property ID';
 
 Comment created.
 
 SQL> 
-SQL> COMMENT ON COLUMN assessment_damage.pro_id IS
-  2      'property ID';
+SQL> COMMENT ON COLUMN assessment_damage.building_id IS
+  2      'building ID';
 
 Comment created.
 
@@ -124,27 +122,12 @@ SQL> COMMENT ON COLUMN assessment_damage.assessor_id IS
 Comment created.
 
 SQL> 
-SQL> COMMENT ON COLUMN assessment_damage.pro_id1 IS
-  2      'property ID';
-
-Comment created.
-
-SQL> 
-SQL> COMMENT ON COLUMN assessment_damage.building_id1 IS
-  2      'building ID';
-
-Comment created.
-
-SQL> 
 SQL> ALTER TABLE assessment_damage ADD CONSTRAINT assessment_damage_pk PRIMARY KEY ( asse_dam_no );
 
 Table ASSESSMENT_DAMAGE altered.
 
 SQL> 
-SQL> ALTER TABLE assessment_damage
-  2      ADD CONSTRAINT assessment_damage_nk UNIQUE ( fire_event_id,
-  3                                                   building_id,
-  4                                                   pro_id );
+SQL> ALTER TABLE assessment_damage ADD CONSTRAINT assessment_damage_nk UNIQUE ( fire_event_id );
 
 Table ASSESSMENT_DAMAGE altered.
 
@@ -203,7 +186,7 @@ SQL> CREATE TABLE building (
   6      building_class          CHAR(2 BYTE) NOT NULL,
   7      building_insur_cov      CHAR(1 BYTE) NOT NULL,
   8      builidng_totally_destr  CHAR(1 BYTE) NOT NULL,
-  9      insur_code              NUMBER(7) NOT NULL
+  9      insur_code              NUMBER(7)
  10  );
 
 Table BUILDING created.
@@ -646,20 +629,15 @@ SQL> CREATE TABLE visit (
   3      pro_id              NUMBER(7) NOT NULL,
   4      building_id         NUMBER(3) NOT NULL,
   5      vi_arr_datetime     DATE NOT NULL,
-  6      vi_arr_time         DATE NOT NULL,
-  7      vi_depart_datetime  DATE NOT NULL,
-  8      vi_depart_time      DATE NOT NULL,
-  9      vi_no2              NUMBER(7) NOT NULL,
- 10      pro_id1             NUMBER(7) NOT NULL,
- 11      building_id1        NUMBER(3) NOT NULL,
- 12      fire_event_id       CHAR(9 BYTE) NOT NULL
- 13  );
+  6      vi_depart_datetime  DATE NOT NULL,
+  7      fire_event_id       CHAR(9 BYTE) NOT NULL
+  8  );
 
 Table VISIT created.
 
 SQL> 
 SQL> COMMENT ON COLUMN visit.vi_no IS
-  2      'visit number(surrogate key)';
+  2      'visit number (surrogate key)';
 
 Comment created.
 
@@ -682,38 +660,8 @@ SQL> COMMENT ON COLUMN visit.vi_arr_datetime IS
 Comment created.
 
 SQL> 
-SQL> COMMENT ON COLUMN visit.vi_arr_time IS
-  2      'visit_arrived_time';
-
-Comment created.
-
-SQL> 
 SQL> COMMENT ON COLUMN visit.vi_depart_datetime IS
   2      'visit_depart_date';
-
-Comment created.
-
-SQL> 
-SQL> COMMENT ON COLUMN visit.vi_depart_time IS
-  2      'visit_depart_time';
-
-Comment created.
-
-SQL> 
-SQL> COMMENT ON COLUMN visit.vi_no2 IS
-  2      'visit number (surrogate key)';
-
-Comment created.
-
-SQL> 
-SQL> COMMENT ON COLUMN visit.pro_id1 IS
-  2      'property ID';
-
-Comment created.
-
-SQL> 
-SQL> COMMENT ON COLUMN visit.building_id1 IS
-  2      'building ID';
 
 Comment created.
 
@@ -732,9 +680,8 @@ Table VISIT altered.
 SQL> 
 SQL> ALTER TABLE visit
   2      ADD CONSTRAINT visit_nk UNIQUE ( vi_arr_datetime,
-  3                                       vi_arr_time,
-  4                                       building_id,
-  5                                       pro_id );
+  3                                       building_id,
+  4                                       pro_id );
 
 Table VISIT altered.
 
@@ -747,8 +694,8 @@ Table EMPLOYMENT altered.
 
 SQL> 
 SQL> ALTER TABLE assessment_damage
-  2      ADD CONSTRAINT building_assessment_damage FOREIGN KEY ( building_id1,
-  3                                                              pro_id1 )
+  2      ADD CONSTRAINT building_assessment_damage FOREIGN KEY ( building_id,
+  3                                                              pro_id )
   4          REFERENCES building ( building_id,
   5                                pro_id );
 
@@ -756,8 +703,8 @@ Table ASSESSMENT_DAMAGE altered.
 
 SQL> 
 SQL> ALTER TABLE visit
-  2      ADD CONSTRAINT building_visit FOREIGN KEY ( building_id1,
-  3                                                  pro_id1 )
+  2      ADD CONSTRAINT building_visit FOREIGN KEY ( building_id,
+  3                                                  pro_id )
   4          REFERENCES building ( building_id,
   5                                pro_id );
 
