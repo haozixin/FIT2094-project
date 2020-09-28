@@ -127,7 +127,10 @@ SQL> ALTER TABLE assessment_damage ADD CONSTRAINT assessment_damage_pk PRIMARY K
 Table ASSESSMENT_DAMAGE altered.
 
 SQL> 
-SQL> ALTER TABLE assessment_damage ADD CONSTRAINT assessment_damage_nk UNIQUE ( fire_event_id );
+SQL> ALTER TABLE assessment_damage
+  2      ADD CONSTRAINT assessment_damage_nk UNIQUE ( fire_event_id,
+  3                                                   building_id,
+  4                                                   pro_id );
 
 Table ASSESSMENT_DAMAGE altered.
 
