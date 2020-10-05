@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D1E86F3D-9562-15BD-492F-146DEB697909" name="FIRE_LGA">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<generatorID>E5EF42BB-66B5-3524-69C8-5E6A02D8686B</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="fire_event_id" id="E336D68D-C5A5-8FAC-497D-1C1663687737">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[fire event ID
+]]></commentInRDBMS>
+<generatorID>D78431E9-FCDB-B710-E071-71BC5B639259</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>9 BYTE</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A5336DE0-B1E6-6913-7118-4FF3594CF8A8" referredColumn="997DDF9C-29C4-A443-C75E-0CBD05B6D43A"/>
+</associations>
+</Column>
+<Column name="LGA_code" id="8BF2F70D-ADEC-F6CA-C558-32041630AE8B">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[local government area code]]></commentInRDBMS>
+<generatorID>D87C0F74-EEB0-2512-4494-83ECA25B672E</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="548575A0-962B-B0F8-5C49-E62F00F4EAE1" referredColumn="C553315C-608D-9B7D-DF37-8C68E1346FB7"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DBAEF2C1-7730-DE1C-AE66-F4C8D157DBE2" name="FIRE_LGA_PK">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<generatorID>ABFFAF16-5A44-2F2A-12B4-B75CB59CBC1C</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E336D68D-C5A5-8FAC-497D-1C1663687737"/>
+<colUsage columnID="8BF2F70D-ADEC-F6CA-C558-32041630AE8B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6F289570-1BCC-A3FB-95C9-F7EA59D74728" name="FIRE_EVENT_FIRE_LGA">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<generatorID>07C4C77F-8955-B1D8-7FFA-D6E2CFA8F8D4</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E336D68D-C5A5-8FAC-497D-1C1663687737"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D877CD09-8789-FAE9-F4FD-03F8171CF80B" name="LGA_FIRE_LGA">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<generatorID>E1A86C38-D92B-C342-56C0-7A5ACA8A85AE</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8BF2F70D-ADEC-F6CA-C558-32041630AE8B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

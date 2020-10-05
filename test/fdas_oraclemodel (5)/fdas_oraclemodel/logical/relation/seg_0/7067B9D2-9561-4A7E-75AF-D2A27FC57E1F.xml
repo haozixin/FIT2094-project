@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="INSURER" directorySegmentName="seg_0" id="7067B9D2-9561-4A7E-75AF-D2A27FC57E1F">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 00:08:08 UTC</createdTime>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<sourcePk>B34FE841-BE13-A9F8-1F7B-B6AA1DF957E4</sourcePk>
+<identifying>true</identifying>
+<nameOnTarget>is employed by</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>BC34F69E-3795-35CD-60C0-5F4123142F68</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>E24C7F9D-A7C1-5C57-3342-EA7A43DF75D5</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

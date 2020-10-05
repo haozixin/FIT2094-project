@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="LGA_FIRE_LGA" directorySegmentName="seg_0" id="E1A86C38-D92B-C342-56C0-7A5ACA8A85AE">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-25 22:55:58 UTC</createdTime>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<sourcePk>5DBBA985-1819-7C7B-BBB8-7593D83664DA</sourcePk>
+<identifying>true</identifying>
+<nameOnSource>has</nameOnSource>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>066F9327-5FD0-6777-58A5-FC07DBE141EF</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>E5EF42BB-66B5-3524-69C8-5E6A02D8686B</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

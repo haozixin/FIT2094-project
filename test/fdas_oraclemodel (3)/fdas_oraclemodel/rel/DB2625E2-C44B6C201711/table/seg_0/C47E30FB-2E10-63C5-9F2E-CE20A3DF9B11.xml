@@ -1,0 +1,211 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C47E30FB-2E10-63C5-9F2E-CE20A3DF9B11" name="ASSESSMENT_DAMAGE">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<generatorID>F6F40970-9E3C-1252-4B2D-EFF395E57E12</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="asse_dam_no" id="16877EE2-1DCB-0D09-090E-B639862CD742">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[ number of the assessment damage (surrogate key)]]></commentInRDBMS>
+<generatorID>A93A2EF1-8261-EDDA-0CA3-CAA00D5A7167</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fire_event_id" id="79C4059A-5F31-17CA-92F1-F4AB584781E1">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[fire event ID
+]]></commentInRDBMS>
+<generatorID>F7C9BA9D-3919-85DF-39C4-A1E512397D4D</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>9 BYTE</dataTypeSize>
+<ownDataTypeParameters>9 BYTE,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DE9651F0-55AF-1BD2-6B53-E205C4D783F7" referredColumn="4B17BD5B-F618-44CC-5459-DA1A17E76112"/>
+</associations>
+</Column>
+<Column name="building_id" id="8A0DB350-5F1B-F3C5-3A9C-0E02D227542E">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[building ID]]></commentInRDBMS>
+<generatorID>4F4864F0-E196-AA6D-58C8-44EBF7DBF799</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pro_id" id="5D8603A9-BFC8-6CC0-761D-36E50738E744">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[property ID]]></commentInRDBMS>
+<generatorID>217F63ED-4D15-A8C7-632D-A858BD47AF14</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="asse_Bdamage_cost" id="7DADFC85-B013-1A13-0046-E20753834278">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[the damage cost of the building in assessment]]></commentInRDBMS>
+<generatorID>B3A46737-1801-9845-913C-928B96D8F8A0</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="asse_Building_value" id="6475B67D-76E0-2EF9-8776-EE00F2C61020">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[building value(assigned by LGA) in assessment ]]></commentInRDBMS>
+<generatorID>F2F96148-D58F-0883-3889-F9C576D6E919</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="assessor_id" id="668FF5E6-33C7-A2A1-15A6-36C4755F06F0">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[assessor ID]]></commentInRDBMS>
+<generatorID>36651F82-DB76-70E7-88D4-E6446DB9407C</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5EB5588A-98B3-902B-2726-7CA11F129B22" referredColumn="D64D451B-38B6-6915-635A-8F3B9CDEE465"/>
+</associations>
+</Column>
+<Column name="pro_id1" id="00962992-A6A9-6C0A-676B-FCEFD1FE1408">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-27 10:10:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[property ID]]></commentInRDBMS>
+<generatorID>F99861BC-D389-C7CE-C124-55D50D26BD2A</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1686C3B9-6E0B-0EA6-CD9C-0F02A3C07F7C" referredColumn="882F1600-BF24-871B-7317-7077589B5B65"/>
+</associations>
+</Column>
+<Column name="building_id1" id="FFE1803F-E2CD-EE2A-652C-A390232585EF">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-27 10:10:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[building ID]]></commentInRDBMS>
+<generatorID>8E7133DB-EC29-4396-C9B6-F480D339B063</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1686C3B9-6E0B-0EA6-CD9C-0F02A3C07F7C" referredColumn="AEA9CCDF-D14D-0513-EA01-D8D466B37142"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8A8193B5-8A1A-C1C3-FBAC-FCF02BB8CFDD" name="ASSESSMENT_DAMAGE_PK">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<generatorID>51A08B7E-860D-18AF-38D4-ADFB3046354F</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="16877EE2-1DCB-0D09-090E-B639862CD742"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="982B4CC0-810C-AFB7-88AF-E546A32B9CC1" name="ASSESSMENT_DAMAGE_NK">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<generatorID>4599FC64-D522-CB64-DA1D-173063CAEBBD</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="79C4059A-5F31-17CA-92F1-F4AB584781E1"/>
+<colUsage columnID="8A0DB350-5F1B-F3C5-3A9C-0E02D227542E"/>
+<colUsage columnID="5D8603A9-BFC8-6CC0-761D-36E50738E744"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8EC5E7B9-FBDB-E2A8-C589-2054D824DA66" name="FIRE_EVENT_ASSE_DAMAGE">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<generatorID>3A2C74DC-62AA-E3FF-4B50-E832C8AE48D3</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="79C4059A-5F31-17CA-92F1-F4AB584781E1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="987032CA-B3A8-F551-04FB-F92A075E6ACA" name="Relation_8">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<generatorID>1798E5DF-C66E-3FF5-7A9F-54D42745D921</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="668FF5E6-33C7-A2A1-15A6-36C4755F06F0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3B2D124B-D7A0-B579-B526-1387AB974F1D" name="BUILDING_ASSESSMENT_DAMAGE">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-27 10:10:41 UTC</createdTime>
+<generatorID>DFD5E976-105D-31F7-6FB3-71E0E139C8A4</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FFE1803F-E2CD-EE2A-652C-A390232585EF"/>
+<colUsage columnID="00962992-A6A9-6C0A-676B-FCEFD1FE1408"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

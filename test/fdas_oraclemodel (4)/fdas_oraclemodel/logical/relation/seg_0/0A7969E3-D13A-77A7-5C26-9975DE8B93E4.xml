@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ASSESSOR_EMPLOYMENT" directorySegmentName="seg_0" id="0A7969E3-D13A-77A7-5C26-9975DE8B93E4">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 00:07:23 UTC</createdTime>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<sourcePk>BD346ECC-754E-3EF0-D75B-28E50488782C</sourcePk>
+<identifying>true</identifying>
+<nameOnSource>has</nameOnSource>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>9417A1DB-310C-F651-3335-85546A4B44B6</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>E24C7F9D-A7C1-5C57-3342-EA7A43DF75D5</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

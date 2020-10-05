@@ -128,9 +128,9 @@ Table ASSESSMENT_DAMAGE altered.
 
 SQL> 
 SQL> ALTER TABLE assessment_damage
-  2      ADD CONSTRAINT assessment_damage_nk UNIQUE ( fire_event_id,
+  2      ADD CONSTRAINT assessment_damage_nk UNIQUE ( pro_id,
   3                                                   building_id,
-  4                                                   pro_id );
+  4                                                   fire_event_id );
 
 Table ASSESSMENT_DAMAGE altered.
 
@@ -683,8 +683,8 @@ Table VISIT altered.
 SQL> 
 SQL> ALTER TABLE visit
   2      ADD CONSTRAINT visit_nk UNIQUE ( vi_arr_datetime,
-  3                                       building_id,
-  4                                       pro_id );
+  3                                       pro_id,
+  4                                       building_id );
 
 Table VISIT altered.
 

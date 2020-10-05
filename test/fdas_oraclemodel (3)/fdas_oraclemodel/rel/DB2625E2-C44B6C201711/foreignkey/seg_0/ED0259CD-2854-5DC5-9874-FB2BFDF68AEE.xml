@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="ED0259CD-2854-5DC5-9874-FB2BFDF68AEE" containerWithKeyObject="B23660B5-228F-32C9-C904-1124C952B745" localFKIndex="CD4D5F2D-3E37-9C71-5793-C67E7A1014DC" name="INSURER_BUILDING">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-26 03:37:05 UTC</createdTime>
+<generatorID>6E6A4FD5-6C3C-5483-2132-B836A918515F</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<referredTableLongName>INSURER</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>140A7534-AA55-2990-A886-86702F2077F3</referredTableID>
+<keyObject>7D7A24C2-3A69-6747-DCDA-545DBD18CA36</keyObject>
+<referredKeyID>7D7A24C2-3A69-6747-DCDA-545DBD18CA36</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>insur_code</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
