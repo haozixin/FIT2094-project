@@ -1,0 +1,195 @@
+SQL> /*
+SQL>Databases Week 8 Tutorial
+SQL>week8_sqlbasic_part_a.sql
+SQL>
+SQL>student id: 30758017
+SQL>student name:ZIXIN HAO
+SQL>last modified date:
+SQL>
+SQL>*/
+SQL> 
+SQL> /* A1. List all units and their details. Order the output by unit code. */
+SQL> SELECT
+  2      *
+  3  FROM
+  4      uni.unit
+  5  ORDER BY
+  6      unitcode;
+
+UNITCOD UNITNAME                                                                                             UNITDESC                                                                                                                                                                                                
+------- ---------------------------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FIT1045 Algorithms and programming fundamentals in python                                                    A foundational understanding of program design and implementation of algorithms to solve problems using the Python language                                                                             
+FIT1050 Web fundamentals                                                                                     A sound basic knowledge of the web and a range of issues which may be involved in web application development                                                                                           
+FIT2094 Databases                                                                                            An introduction to the concepts of database design and usage and the related issues of data management                                                                                                  
+FIT3157 Advanced web design                                                                                  Introduces students to the design and development of mobile online media using HTML5, CSS3, JavaScript and WordPress                                                                                    
+FIT3176 Advanced database design                                                                             Introduces advanced concepts in the areas of database design, including document-store, column-store, and graph database design; implementations in non-relational database systems                     
+FIT5145 Introduction to data science                                                                         Looks at processes, case studies and simple tools to understand the many facets of working with data in an organisation                                                                                 
+FIT5196 Data wrangling                                                                                       Introduces the tools and techniques for data wrangling. Covers problems that prevent raw data from being effectively used in analysis and the data cleansing tasks that prepare it for analytics        
+FIT9132 Introduction to databases                                                                            Introduces the concept of data management in an organisation through relational database technology.                                                                                                    
+FIT9136 Algorithms and programming foundations in Python                                                     This unit introduces the Python programming and the basics of data structure and algorithms including their design, analysis and implementation in Python                                               
+FIT9137 Introduction to computer architecture and networks                                                   Introduces students to the fundamentals of computer systems, with a focus on modern operating systems and networking technology                                                                         
+
+10 rows selected. 
+
+SQL> 
+SQL> 
+SQL> /* A2. List all students’ details who live in Caulfield. 
+SQL>Order the output by student first name.*/
+SQL> 
+SQL> SELECT
+  2      *
+  3  FROM
+  4      uni.student
+  5  WHERE
+  6      studaddress LIKE '%Caulfield'
+  7  ORDER BY
+  8      studfname;
+
+    STUDID STUDFNAME            STUDLNAME            STUDDOB   STUDADDRESS                                                                                          STUDPHONE       STUDEMAIL                                         
+---------- -------------------- -------------------- --------- ---------------------------------------------------------------------------------------------------- --------------- --------------------------------------------------
+  14374036 Claudette            Serman               21/MAY/98 12 Ridgeway Plaza, Caulfield                                                                         2013740473      Claudette.Serman@student.monash.edu               
+  21375916 Eugen                Welldrake            10/OCT/98 586 Bashford Pass, Caulfield                                                                         7603629857      Eugen.Welldrake@student.monash.edu                
+  23094083 Margette             Wethered             21/SEP/97 808 Arizona Avenue, Caulfield                                                                        4035304181      Margette.Wethered@student.monash.edu              
+  14615430 Siffre               Dibdale              06/MAY/92 4 Anzinger Terrace, Caulfield                                                                        8647290149      Siffre.Dibdale@student.monash.edu                 
+  18012671 Starr                Clapton              03/SEP/94 698 Melody Court, Caulfield                                                                          7788257538      Starr.Clapton@student.monash.edu                  
+  25437072 Trace                Abel                 01/SEP/92 4720 Birchwood Avenue, Caulfield                                                                     8759489782      Trace.Abel@student.monash.edu                     
+
+6 rows selected. 
+
+SQL> 
+SQL> /* A3. List the student's surname, firstname and address for those students 
+SQL>who have a surname starting with the letter 'S' and firstname contains the letter 'i'. 
+SQL>Order the output by student id*/
+SQL> SELECT
+  2      studlname,
+  3      studfname,
+  4      studaddress
+  5  FROM
+  6      uni.student
+  7  WHERE
+  8      studfname LIKE '%i%'
+  9      AND studlname LIKE 'S%'
+ 10  ORDER BY
+ 11      studid;
+
+STUDLNAME            STUDFNAME            STUDADDRESS                                                                                         
+-------------------- -------------------- ----------------------------------------------------------------------------------------------------
+Stirley              Myriam               7 Spenser Point, Mulgrave                                                                           
+Sperrett             Niki                 56 Becker Street, Dingley                                                                           
+Stubbings            Lizabeth             9 Forster Place, Glen Huntly                                                                        
+Staggs               Mellicent            511 3rd Point, Carlton                                                                              
+Smullin              Cathrin              9 Carey Center, Ormond                                                                              
+
+SQL> 
+SQL> /* A4. List the unit code of all units that are offered in semester 1 of 2019. */
+SQL> SELECT
+  2      unitcode
+  3  FROM
+  4      uni.offering
+  5  WHERE
+  6          semester = 1
+  7      AND to_char(ofyear, 'yyyy') = '2019'
+  8  ORDER BY
+  9      unitcode;
+
+UNITCOD
+-------
+FIT1045
+FIT1050
+FIT9132
+FIT9136
+
+SQL> 
+SQL> 
+SQL> 
+SQL> 
+SQL> /* A5. Assuming that a unit code is created based on the following rules:
+SQL>a. The first three letters represent faculty abbreviation, eg FIT for the Faculty of Information Technology.
+SQL>b. The first digit of the number following the letter represents the year level. 
+SQL>   For example, FIT2094 is a unit code from Faculty of IT (FIT) and the number 2 refers to a second year unit.
+SQL>List the unit details of all first year units in the Faculty of Information Technology.*/
+SQL> SELECT
+  2      *
+  3  FROM
+  4      uni.unit
+  5  WHERE
+  6      unitcode LIKE 'FIT1%'
+  7  ORDER BY
+  8      unitcode;
+
+UNITCOD UNITNAME                                                                                             UNITDESC                                                                                                                                                                                                
+------- ---------------------------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FIT1045 Algorithms and programming fundamentals in python                                                    A foundational understanding of program design and implementation of algorithms to solve problems using the Python language                                                                             
+FIT1050 Web fundamentals                                                                                     A sound basic knowledge of the web and a range of issues which may be involved in web application development                                                                                           
+
+SQL> 
+SQL> 
+SQL> 
+SQL> /* A6. List the year, semester, and unit code for all units that were offered 
+SQL>in either semester 1 of 2019 or semester 1 of 2020. 
+SQL>Order the output by year and semester then by unit code.*/
+SQL> SELECT
+  2      ofyear      AS year,
+  3      semester,
+  4      o.unitcode    AS "unit code"
+  5  FROM
+  6           uni.unit u
+  7      JOIN uni.offering o ON u.unitcode = o.unitcode
+  8  WHERE
+  9          o.semester = 1
+ 10      AND to_char(o.ofyear, 'yyyy') IN ( '2019', '2020' )
+ 11  ORDER BY
+ 12      year,
+ 13      semester,
+ 14      o.unitcode;
+
+YEAR        SEMESTER unit co
+--------- ---------- -------
+01/JAN/19          1 FIT1045
+01/JAN/19          1 FIT1050
+01/JAN/19          1 FIT9132
+01/JAN/19          1 FIT9136
+01/JAN/20          1 FIT1045
+01/JAN/20          1 FIT1050
+01/JAN/20          1 FIT2094
+01/JAN/20          1 FIT3157
+01/JAN/20          1 FIT3176
+01/JAN/20          1 FIT5145
+01/JAN/20          1 FIT5196
+
+YEAR        SEMESTER unit co
+--------- ---------- -------
+01/JAN/20          1 FIT9132
+01/JAN/20          1 FIT9136
+01/JAN/20          1 FIT9137
+
+14 rows selected. 
+
+SQL> 
+SQL> 
+SQL> /* A7. List the student id, unit code and mark 
+SQL>for those students who have failed any unit in semester 2 of 2019. 
+SQL>Order the output by student id then order by unit code. */
+SQL> SELECT
+  2      studid,
+  3      unitcode,
+  4      mark
+  5  FROM
+  6      uni.enrolment
+  7  WHERE
+  8          semester = 2
+  9      AND EXTRACT(YEAR FROM ofyear) = 2019
+ 10      AND mark < 50
+ 11  ORDER BY
+ 12      studid,
+ 13      unitcode;
+
+    STUDID UNITCOD       MARK
+---------- ------- ----------
+  12609485 FIT1050         36
+  17030353 FIT1050         22
+  19633815 FIT9132         33
+  20776000 FIT9132         40
+
+SQL> 
+SQL> SPOOL OFF

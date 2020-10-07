@@ -1,0 +1,52 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="237EFE34-D53D-B534-AEF9-5AB40DE66C6A" name="PROPERTY_TYPE">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<generatorID>1B7A372C-8D0C-958E-D35E-1F38E75334DF</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="pro_ty_id" id="E3D7FF56-B018-E3F4-C820-A776E4891349">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[property type ID]]></commentInRDBMS>
+<generatorID>E5090692-12D2-A465-6783-54975F09BE1C</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pro_ty_name" id="ECD34E2C-1639-72CF-8E17-3549612A784F">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[property type name]]></commentInRDBMS>
+<generatorID>7756DD6F-63F9-2C4D-175C-EE6E309F1EA5</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AC15DA06-8DE8-B02D-3D46-A407841C1075" name="PROPERTY_TYPE_PK">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<generatorID>084AED92-621D-8F00-749E-4BE6D82108A7</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E3D7FF56-B018-E3F4-C820-A776E4891349"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

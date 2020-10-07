@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="83F5933C-3B10-8F72-493F-B1247B807753" name="LOCAL_GOVERNMENT_AREA">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<generatorID>066F9327-5FD0-6777-58A5-FC07DBE141EF</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="LGA_code" id="C553315C-608D-9B7D-DF37-8C68E1346FB7">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[local government area code]]></commentInRDBMS>
+<generatorID>9D49D1BA-0515-05A9-0E0B-994D8DE330C3</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LGA_name" id="AD76A9CD-AA9F-D97C-BF51-128322A6274B">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[the name of local government area]]></commentInRDBMS>
+<generatorID>63276C78-12D8-DC9F-0268-EBC71A80EF69</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<ownDataTypeParameters>25 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LGA_size" id="084766D1-52FF-CB3B-84D7-5A56DE134F57">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[local government area (km^2)]]></commentInRDBMS>
+<generatorID>22DA454A-4E66-4791-9F59-AEF6D4AEFD6A</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LGA_CEO_name" id="010B2BDC-E2C5-36BE-088B-199BDEB0CC74">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[name of CEO of local government area]]></commentInRDBMS>
+<generatorID>DA76966E-D042-7056-869D-B7EF52D2E8C5</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<ownDataTypeParameters>25 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LGA_phoneNumber" id="A2B4A02B-5C40-6C0D-65C2-612EE153EE07">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[phone number of local government area office]]></commentInRDBMS>
+<generatorID>64A21999-EE3A-7ADA-0145-7198EC835347</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BF145B6D-CE2B-9A43-4460-80FE07F34268" name="LOCAL_GOVERNMENT_AREA_PK">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<generatorID>5DBBA985-1819-7C7B-BBB8-7593D83664DA</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C553315C-608D-9B7D-DF37-8C68E1346FB7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,194 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3D6ECAA7-C570-921A-4763-098B9CFD1298" name="PROPERTY">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<generatorID>5B02BB13-90CD-068A-815D-A6A361403C39</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="pro_id" id="7A4C120B-FFBE-52D9-6139-79500FDCBEDD">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[property ID]]></commentInRDBMS>
+<generatorID>9EA8DBD1-C5E4-7D5A-F57D-FB3EB781D26E</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pro_addStreet" id="83D6E177-9474-DB5E-E556-4962FB8A186C">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[property  street address]]></commentInRDBMS>
+<generatorID>0EF9A646-9954-C7D3-C906-A18EC5647146</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pro_addtown" id="2C9DC6DA-066E-B99E-200C-A63B787E855C">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[property twon address]]></commentInRDBMS>
+<generatorID>F1936390-445B-4D01-E3FC-447B8FE07ABC</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 BYTE</dataTypeSize>
+<ownDataTypeParameters>30 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pro_addpostcode" id="2413F838-59BD-748A-4013-E0A63E270FF2">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[postcode of the property]]></commentInRDBMS>
+<generatorID>2EA164A4-5202-8133-2237-85B676100F6E</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>4 BYTE</dataTypeSize>
+<ownDataTypeParameters>4 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pro_size" id="02B9461E-3892-7035-B960-D3FA377E5C60">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[property size(km^2)]]></commentInRDBMS>
+<generatorID>36207ADD-3F3F-BFB0-A162-B50040D25652</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pro_type" id="EEA1F917-1794-DB49-CDC6-3A6B765653FB">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[property type]]></commentInRDBMS>
+<generatorID>8D3C2A9E-2BC7-A889-EFA0-7485E2BC7722</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<listOfValues>
+<valueDef value="B" description="business property"/>
+<valueDef value="C" description="residential property(in city)"/>
+<valueDef value="F" description="farm property"/>
+<valueDef value="T" description="residential property(in town)"/>
+</listOfValues>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LGA_code" id="2628D88F-CCFF-2141-B2E2-86921C3FE377">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[local government area code]]></commentInRDBMS>
+<generatorID>C57D8987-D9DF-D083-29BC-CADD6494B2DB</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F06BDAD7-493D-6287-548D-C28CC744B03B" referredColumn="C553315C-608D-9B7D-DF37-8C68E1346FB7"/>
+</associations>
+</Column>
+<Column name="owner_id" id="D7784221-A94C-7112-5565-797F5243E323">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[owner_id]]></commentInRDBMS>
+<generatorID>B3A8EB30-F7A2-33C4-86C7-9429AD177007</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FDC3837A-B4F6-547C-2F36-7AAA480F447D" referredColumn="0C9A16DA-36A4-E79F-2ADE-66B4A9BBE915"/>
+</associations>
+</Column>
+<Column name="pro_ty_id" id="30D2B938-06E5-1E2D-77C4-C0DB4E1EB8AA">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[property type ID]]></commentInRDBMS>
+<generatorID>B4A727A9-DA0A-918A-AADC-B535D0FB996D</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1E3F2FF0-13A0-FDC5-F404-AA8959CA1A25" referredColumn="E3D7FF56-B018-E3F4-C820-A776E4891349"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="82928DCF-CCCF-C079-59E3-8C46F1BA5ED1" name="PROPERTY_PK">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<generatorID>DFD53679-5456-5F84-95A5-C44C9BF5D08D</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7A4C120B-FFBE-52D9-6139-79500FDCBEDD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="34807144-0D21-CD50-8B6C-15EEB8E0CCE5" name="LGA_PROPERTY">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<generatorID>DF3AF305-A0DA-7746-E1A3-E4A85E20B773</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2628D88F-CCFF-2141-B2E2-86921C3FE377"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="44C1A489-6822-040D-2F94-BCB077167B9B" name="OWNER_PROPERTY">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<generatorID>AC683D84-345F-0E5D-17AC-FB122CF8E190</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D7784221-A94C-7112-5565-797F5243E323"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4C17C234-6B83-67A7-DB28-8764CA77445E" name="PROPERTY_TYPE_PROPERTY">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<generatorID>BEB2E4B6-EEB8-26E7-772F-0897A27402A1</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="30D2B938-06E5-1E2D-77C4-C0DB4E1EB8AA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

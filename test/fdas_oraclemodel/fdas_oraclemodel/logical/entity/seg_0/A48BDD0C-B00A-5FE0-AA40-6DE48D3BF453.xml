@@ -3,6 +3,9 @@
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-25 23:26:41 UTC</createdTime>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
+</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -17,6 +20,9 @@
 <createdTime>2020-09-25 23:26:48 UTC</createdTime>
 <commentInRDBMS><![CDATA[building ID]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -29,18 +35,24 @@
 <commentInRDBMS><![CDATA[property ID]]></commentInRDBMS>
 <generatorID>1A40FF6F-C056-4701-C97F-F6D45B0DDDEC</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
+</engineerTo>
 <referedAttribute>9EA8DBD1-C5E4-7D5A-F57D-FB3EB781D26E</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>7</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="building_size" id="03A2E8CF-0D27-65EC-A837-63C1BF0A444A">
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-25 23:29:05 UTC</createdTime>
 <commentInRDBMS><![CDATA[building size (in square metres)]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
@@ -52,6 +64,9 @@
 <createdTime>2020-09-25 23:36:28 UTC</createdTime>
 <commentInRDBMS><![CDATA[building construction  date]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
@@ -62,6 +77,9 @@
 <createdTime>2020-09-25 23:36:53 UTC</createdTime>
 <commentInRDBMS><![CDATA[building class]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
@@ -73,6 +91,9 @@
 <createdTime>2020-09-25 23:37:36 UTC</createdTime>
 <commentInRDBMS><![CDATA[building_insurance_coverage]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
@@ -88,6 +109,9 @@
 <createdTime>2020-09-26 01:31:55 UTC</createdTime>
 <commentInRDBMS><![CDATA[check if building is totally destroyed]]></commentInRDBMS>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
@@ -104,12 +128,16 @@
 <commentInRDBMS><![CDATA[insurer code]]></commentInRDBMS>
 <generatorID>6E6A4FD5-6C3C-5483-2132-B836A918515F</generatorID>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <referedAttribute>66AC0683-4E6B-1AA5-1A87-51FB395D03A1</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>7</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -117,6 +145,9 @@
 <createdBy>zhao0004</createdBy>
 <createdTime>2020-09-25 23:42:43 UTC</createdTime>
 <ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
+</engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>6CE97A9A-C37C-9A10-2EF3-D3F69253AEB4</attributeRef>

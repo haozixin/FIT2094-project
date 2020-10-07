@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4DC6190A-8FB6-6840-AE9E-6641CB48B147" name="EMPLOYMENT">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<generatorID>E24C7F9D-A7C1-5C57-3342-EA7A43DF75D5</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="assessor_id" id="6DAE61EB-C44D-9A18-9F47-5A7DD2F0483E">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[assessor ID]]></commentInRDBMS>
+<generatorID>1C860729-B146-C722-1D9A-C9B7FD7C1F83</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F0BEB74B-D366-F076-CF31-F54ADBDF1A2F" referredColumn="7ED5A4CC-FB30-4FF8-7D0D-97050A659AD5"/>
+</associations>
+</Column>
+<Column name="insur_code" id="9B5DBE7B-DA03-AE45-86C9-08124A91BCE4">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[insurer code]]></commentInRDBMS>
+<generatorID>C25123AD-DECC-84E1-494A-8333D1CDAD1C</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F289542D-E98F-D668-81CB-2A0386C745E9" referredColumn="6C11BFD4-2233-2345-6CAA-8D607EDB3433"/>
+</associations>
+</Column>
+<Column name="emp_Sdate" id="DAB882D8-EA2B-482A-C0C1-8C123A43E423">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[employment start date]]></commentInRDBMS>
+<generatorID>15373AEF-571E-9A1E-C218-CBDBF2CD2413</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="emp_Ldate" id="B0C950CB-CA8B-2F98-BBA7-EF758AFC3C7F">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<commentInRDBMS><![CDATA[employment leave date]]></commentInRDBMS>
+<generatorID>AF8ED1CD-08EF-33E8-100C-186DC58F6182</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="08CDD469-1374-699F-4833-11B78DC61775" name="EMPLOYMENT_PK">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<generatorID>22E9963F-0D5F-5E65-50B4-69B6F64DFFC3</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6DAE61EB-C44D-9A18-9F47-5A7DD2F0483E"/>
+<colUsage columnID="9B5DBE7B-DA03-AE45-86C9-08124A91BCE4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="226D4B72-B7CA-87AD-BC82-E900CCBB3AFB" name="ASSESSOR_EMPLOYMENT">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<generatorID>0A7969E3-D13A-77A7-5C26-9975DE8B93E4</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6DAE61EB-C44D-9A18-9F47-5A7DD2F0483E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="083FE7B2-9F9C-262E-EFAE-7326991A1E54" name="INSURER">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-10-05 04:01:24 UTC</createdTime>
+<generatorID>7067B9D2-9561-4A7E-75AF-D2A27FC57E1F</generatorID>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9B5DBE7B-DA03-AE45-86C9-08124A91BCE4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

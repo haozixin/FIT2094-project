@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="BUILDING_VISIT" directorySegmentName="seg_0" id="E4A11A3E-1D37-638A-6AEE-0ED32866A148">
+<createdBy>zhao0004</createdBy>
+<createdTime>2020-09-27 09:42:53 UTC</createdTime>
+<ownerDesignName>fdas_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="DB2625E2-B957-9BA8-CE46-C44B6C201711" value="true"/>
+</engineerTo>
+<sourcePk>49DE7A1D-3E4C-E6EC-14CC-706A5BAE7C17</sourcePk>
+<identifying>false</identifying>
+<nameOnTarget>is for</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>A48BDD0C-B00A-5FE0-AA40-6DE48D3BF453</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>1D241260-DCD6-A16D-623E-1F6EF504CA82</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

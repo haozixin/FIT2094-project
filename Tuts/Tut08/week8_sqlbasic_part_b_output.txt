@@ -1,0 +1,527 @@
+SQL> 
+SQL> /*
+SQL>Databases Week 8 Tutorial Sample Solution
+SQL>week8_sqlbasic_part_b.sql
+SQL>
+SQL>student id: 30758017
+SQL>student name:ZIXIN HAO
+SQL>last modified date:2020/10/7
+SQL>*/
+SQL> 
+SQL> /* B1. List all the unit codes, semester and name of the chief examiner 
+SQL>for all the units that are offered in 2020. Order the output by unit code.*/
+SQL> SELECT
+  2      o.unitcode,
+  3      o.semester,
+  4      s.stafffname,
+  5      s.stafflname
+  6  FROM
+  7           uni.offering o
+  8      JOIN uni.staff s ON s.staffid = o.chiefexam
+  9  WHERE
+ 10      EXTRACT(YEAR FROM ofyear) = 2020;
+
+UNITCOD   SEMESTER STAFFFNAME           STAFFLNAME          
+------- ---------- -------------------- --------------------
+FIT1045          1 Gunar                Dutch               
+FIT1050          1 Sandro               Wethered            
+FIT2094          1 Lizabeth             Stubbings           
+FIT3157          1 Trixy                Warner              
+FIT3176          1 Windham              Ellard              
+FIT5145          1 Windham              Ellard              
+FIT5196          1 Windham              Ellard              
+FIT9132          1 Xena                 Epine               
+FIT9136          1 Tammi                Soane               
+FIT9137          1 Kennie               Pickin              
+
+10 rows selected. 
+
+SQL> 
+SQL> 
+SQL> 
+SQL> /* B2. List all the unit codes and the unit names and their year and semester offerings. 
+SQL>Order the output by unit code then by offering year and semester. 
+SQL>To display the date correctly in Oracle, you need to use the to_char function. 
+SQL>For example, to_char(ofyear,'yyyy'). */
+SQL> 
+SQL> SELECT
+  2      o.unitcode                       AS "unit code",
+  3      u.unitname,
+  4      to_char(ofyear, 'yyyy')        AS year,
+  5      o.semester
+  6  FROM
+  7           uni.unit u
+  8      JOIN uni.offering o ON u.unitcode = o.unitcode
+  9  ORDER BY
+ 10      o.unitcode,
+ 11      year,
+ 12      semester;
+
+unit co UNITNAME                                                                                             YEAR   SEMESTER
+------- ---------------------------------------------------------------------------------------------------- ---- ----------
+FIT1045 Algorithms and programming fundamentals in python                                                    2019          1
+FIT1045 Algorithms and programming fundamentals in python                                                    2019          2
+FIT1045 Algorithms and programming fundamentals in python                                                    2020          1
+FIT1050 Web fundamentals                                                                                     2019          1
+FIT1050 Web fundamentals                                                                                     2019          2
+FIT1050 Web fundamentals                                                                                     2020          1
+FIT2094 Databases                                                                                            2019          2
+FIT2094 Databases                                                                                            2020          1
+FIT3157 Advanced web design                                                                                  2019          2
+FIT3157 Advanced web design                                                                                  2020          1
+FIT3176 Advanced database design                                                                             2019          2
+
+unit co UNITNAME                                                                                             YEAR   SEMESTER
+------- ---------------------------------------------------------------------------------------------------- ---- ----------
+FIT3176 Advanced database design                                                                             2020          1
+FIT5145 Introduction to data science                                                                         2019          2
+FIT5145 Introduction to data science                                                                         2020          1
+FIT5196 Data wrangling                                                                                       2019          2
+FIT5196 Data wrangling                                                                                       2020          1
+FIT9132 Introduction to databases                                                                            2019          1
+FIT9132 Introduction to databases                                                                            2019          2
+FIT9132 Introduction to databases                                                                            2020          1
+FIT9136 Algorithms and programming foundations in Python                                                     2019          1
+FIT9136 Algorithms and programming foundations in Python                                                     2019          2
+FIT9136 Algorithms and programming foundations in Python                                                     2020          1
+
+unit co UNITNAME                                                                                             YEAR   SEMESTER
+------- ---------------------------------------------------------------------------------------------------- ---- ----------
+FIT9137 Introduction to computer architecture and networks                                                   2019          2
+FIT9137 Introduction to computer architecture and networks                                                   2020          1
+
+24 rows selected. 
+
+SQL> 
+SQL> 
+SQL> 
+SQL> /* B3. List the unit code, semester, class type (lecture or tutorial), day and time 
+SQL>for all units taught by Windham Ellard in 2020. 
+SQL>Sort the list according to the unit code..*/
+SQL> 
+SQL> SELECT
+  2      unitcode                            AS "unit code",
+  3      semester,
+  4      cltype                              AS "class type",
+  5      clday                               AS day,
+  6      to_char(cltime, 'dd-mon-yyyy')      AS time
+  7  FROM
+  8           uni.schedclass c
+  9      JOIN uni.staff s ON c.staffid = s.staffid
+ 10  WHERE
+ 11          stafffname = 'Windham'
+ 12      AND stafflname = 'Ellard'
+ 13      AND EXTRACT(YEAR FROM cltime) = 2020
+ 14  ORDER BY
+ 15      unitcode;
+
+unit co   SEMESTER c DAY TIME                
+------- ---------- - --- --------------------
+FIT3176          1 L Thu 01-jan-2020         
+FIT3176          1 T Thu 01-jan-2020         
+FIT5145          1 L Wed 01-jan-2020         
+FIT5145          1 T Wed 01-jan-2020         
+FIT5196          1 L Fri 01-jan-2020         
+FIT5196          1 T Fri 01-jan-2020         
+
+6 rows selected. 
+
+SQL> 
+SQL> 
+SQL> /* B4. Create a study statement for Friedrick Geist. 
+SQL>A study statement contains unit code, unit name, semester and year study was attempted, 
+SQL>the mark and grade. If the mark and grade is unknown, show the mark and grade as ‘N/A' 
+SQL>Sort the list by year, then by semester and unit code. */
+SQL> 
+SQL> SELECT
+  2      unitcode                      AS "unit code",
+  3      unitname                      AS "unit name",
+  4      semester,
+  5      EXTRACT(YEAR FROM ofyear)     AS year,
+  6      nvl(mark, 0),
+  7      nvl(grade, 'N/A')
+  8  FROM
+  9           uni.unit u
+ 10      NATURAL JOIN uni.enrolment e
+ 11  ORDER BY
+ 12      year,
+ 13      semester,
+ 14      "unit code";
+
+unit co unit name                                                                                              SEMESTER       YEAR NVL(MARK,0) NVL
+------- ---------------------------------------------------------------------------------------------------- ---------- ---------- ----------- ---
+FIT1045 Algorithms and programming fundamentals in python                                                             1       2019          85 HD 
+FIT1045 Algorithms and programming fundamentals in python                                                             1       2019          65 C  
+FIT1045 Algorithms and programming fundamentals in python                                                             1       2019          97 HD 
+FIT1045 Algorithms and programming fundamentals in python                                                             1       2019          62 C  
+FIT1045 Algorithms and programming fundamentals in python                                                             1       2019          87 HD 
+FIT1045 Algorithms and programming fundamentals in python                                                             1       2019          74 D  
+FIT1045 Algorithms and programming fundamentals in python                                                             1       2019          83 HD 
+FIT1045 Algorithms and programming fundamentals in python                                                             1       2019          85 HD 
+FIT1045 Algorithms and programming fundamentals in python                                                             1       2019          40 N  
+FIT1045 Algorithms and programming fundamentals in python                                                             1       2019          61 C  
+FIT1050 Web fundamentals                                                                                              1       2019          69 C  
+
+unit co unit name                                                                                              SEMESTER       YEAR NVL(MARK,0) NVL
+------- ---------------------------------------------------------------------------------------------------- ---------- ---------- ----------- ---
+FIT1050 Web fundamentals                                                                                              1       2019          54 P  
+FIT1050 Web fundamentals                                                                                              1       2019          91 HD 
+FIT1050 Web fundamentals                                                                                              1       2019          97 HD 
+FIT1050 Web fundamentals                                                                                              1       2019          76 D  
+FIT1050 Web fundamentals                                                                                              1       2019          61 C  
+FIT1050 Web fundamentals                                                                                              1       2019          23 N  
+FIT1050 Web fundamentals                                                                                              1       2019          86 HD 
+FIT1050 Web fundamentals                                                                                              1       2019          44 N  
+FIT1050 Web fundamentals                                                                                              1       2019          60 C  
+FIT9132 Introduction to databases                                                                                     1       2019          40 N  
+FIT9132 Introduction to databases                                                                                     1       2019          98 HD 
+
+unit co unit name                                                                                              SEMESTER       YEAR NVL(MARK,0) NVL
+------- ---------------------------------------------------------------------------------------------------- ---------- ---------- ----------- ---
+FIT9132 Introduction to databases                                                                                     1       2019          32 N  
+FIT9132 Introduction to databases                                                                                     1       2019          59 P  
+FIT9132 Introduction to databases                                                                                     1       2019          70 D  
+FIT9132 Introduction to databases                                                                                     1       2019          43 N  
+FIT9132 Introduction to databases                                                                                     1       2019          88 HD 
+FIT9132 Introduction to databases                                                                                     1       2019          74 D  
+FIT9132 Introduction to databases                                                                                     1       2019          92 HD 
+FIT9132 Introduction to databases                                                                                     1       2019          56 P  
+FIT9136 Algorithms and programming foundations in Python                                                              1       2019          97 HD 
+FIT9136 Algorithms and programming foundations in Python                                                              1       2019          87 HD 
+FIT9136 Algorithms and programming foundations in Python                                                              1       2019          66 C  
+
+unit co unit name                                                                                              SEMESTER       YEAR NVL(MARK,0) NVL
+------- ---------------------------------------------------------------------------------------------------- ---------- ---------- ----------- ---
+FIT9136 Algorithms and programming foundations in Python                                                              1       2019          54 P  
+FIT9136 Algorithms and programming foundations in Python                                                              1       2019          97 HD 
+FIT9136 Algorithms and programming foundations in Python                                                              1       2019          73 D  
+FIT9136 Algorithms and programming foundations in Python                                                              1       2019          91 HD 
+FIT9136 Algorithms and programming foundations in Python                                                              1       2019          16 N  
+FIT9136 Algorithms and programming foundations in Python                                                              1       2019          81 HD 
+FIT9136 Algorithms and programming foundations in Python                                                              1       2019          87 HD 
+FIT1045 Algorithms and programming fundamentals in python                                                             2       2019          80 HD 
+FIT1045 Algorithms and programming fundamentals in python                                                             2       2019          86 HD 
+FIT1045 Algorithms and programming fundamentals in python                                                             2       2019          95 HD 
+FIT1045 Algorithms and programming fundamentals in python                                                             2       2019          94 HD 
+
+unit co unit name                                                                                              SEMESTER       YEAR NVL(MARK,0) NVL
+------- ---------------------------------------------------------------------------------------------------- ---------- ---------- ----------- ---
+FIT1045 Algorithms and programming fundamentals in python                                                             2       2019          90 HD 
+FIT1045 Algorithms and programming fundamentals in python                                                             2       2019          89 HD 
+FIT1045 Algorithms and programming fundamentals in python                                                             2       2019          74 D  
+FIT1045 Algorithms and programming fundamentals in python                                                             2       2019          78 D  
+FIT1045 Algorithms and programming fundamentals in python                                                             2       2019          95 HD 
+FIT1045 Algorithms and programming fundamentals in python                                                             2       2019          65 C  
+FIT1045 Algorithms and programming fundamentals in python                                                             2       2019          74 D  
+FIT1050 Web fundamentals                                                                                              2       2019          82 HD 
+FIT1050 Web fundamentals                                                                                              2       2019          72 D  
+FIT1050 Web fundamentals                                                                                              2       2019          54 P  
+FIT1050 Web fundamentals                                                                                              2       2019          22 N  
+
+unit co unit name                                                                                              SEMESTER       YEAR NVL(MARK,0) NVL
+------- ---------------------------------------------------------------------------------------------------- ---------- ---------- ----------- ---
+FIT1050 Web fundamentals                                                                                              2       2019          89 HD 
+FIT1050 Web fundamentals                                                                                              2       2019          70 D  
+FIT1050 Web fundamentals                                                                                              2       2019          89 HD 
+FIT1050 Web fundamentals                                                                                              2       2019          98 HD 
+FIT1050 Web fundamentals                                                                                              2       2019          53 P  
+FIT1050 Web fundamentals                                                                                              2       2019          36 N  
+FIT1050 Web fundamentals                                                                                              2       2019          65 C  
+FIT1050 Web fundamentals                                                                                              2       2019          92 HD 
+FIT2094 Databases                                                                                                     2       2019          83 HD 
+FIT2094 Databases                                                                                                     2       2019          69 C  
+FIT2094 Databases                                                                                                     2       2019          96 HD 
+
+unit co unit name                                                                                              SEMESTER       YEAR NVL(MARK,0) NVL
+------- ---------------------------------------------------------------------------------------------------- ---------- ---------- ----------- ---
+FIT2094 Databases                                                                                                     2       2019          55 P  
+FIT2094 Databases                                                                                                     2       2019          69 C  
+FIT2094 Databases                                                                                                     2       2019          64 C  
+FIT2094 Databases                                                                                                     2       2019          88 HD 
+FIT2094 Databases                                                                                                     2       2019          58 P  
+FIT2094 Databases                                                                                                     2       2019          52 P  
+FIT3157 Advanced web design                                                                                           2       2019          98 HD 
+FIT3157 Advanced web design                                                                                           2       2019          62 C  
+FIT3157 Advanced web design                                                                                           2       2019          83 HD 
+FIT3157 Advanced web design                                                                                           2       2019          72 D  
+FIT3157 Advanced web design                                                                                           2       2019          93 HD 
+
+unit co unit name                                                                                              SEMESTER       YEAR NVL(MARK,0) NVL
+------- ---------------------------------------------------------------------------------------------------- ---------- ---------- ----------- ---
+FIT3157 Advanced web design                                                                                           2       2019          82 HD 
+FIT3157 Advanced web design                                                                                           2       2019          65 C  
+FIT3157 Advanced web design                                                                                           2       2019          71 D  
+FIT5145 Introduction to data science                                                                                  2       2019          69 C  
+FIT5145 Introduction to data science                                                                                  2       2019          61 C  
+FIT5145 Introduction to data science                                                                                  2       2019          91 HD 
+FIT5145 Introduction to data science                                                                                  2       2019          92 HD 
+FIT5145 Introduction to data science                                                                                  2       2019          64 C  
+FIT5145 Introduction to data science                                                                                  2       2019          55 P  
+FIT5196 Data wrangling                                                                                                2       2019          59 P  
+FIT5196 Data wrangling                                                                                                2       2019          55 P  
+
+unit co unit name                                                                                              SEMESTER       YEAR NVL(MARK,0) NVL
+------- ---------------------------------------------------------------------------------------------------- ---------- ---------- ----------- ---
+FIT9132 Introduction to databases                                                                                     2       2019          97 HD 
+FIT9132 Introduction to databases                                                                                     2       2019          95 HD 
+FIT9132 Introduction to databases                                                                                     2       2019          82 HD 
+FIT9132 Introduction to databases                                                                                     2       2019          77 D  
+FIT9132 Introduction to databases                                                                                     2       2019          58 P  
+FIT9132 Introduction to databases                                                                                     2       2019          51 P  
+FIT9132 Introduction to databases                                                                                     2       2019          33 N  
+FIT9132 Introduction to databases                                                                                     2       2019          68 C  
+FIT9132 Introduction to databases                                                                                     2       2019          72 D  
+FIT9132 Introduction to databases                                                                                     2       2019          68 C  
+FIT9132 Introduction to databases                                                                                     2       2019          95 HD 
+
+unit co unit name                                                                                              SEMESTER       YEAR NVL(MARK,0) NVL
+------- ---------------------------------------------------------------------------------------------------- ---------- ---------- ----------- ---
+FIT9132 Introduction to databases                                                                                     2       2019          65 C  
+FIT9132 Introduction to databases                                                                                     2       2019          40 N  
+FIT9136 Algorithms and programming foundations in Python                                                              2       2019          81 HD 
+FIT9136 Algorithms and programming foundations in Python                                                              2       2019          74 D  
+FIT9136 Algorithms and programming foundations in Python                                                              2       2019          96 HD 
+FIT9136 Algorithms and programming foundations in Python                                                              2       2019          90 HD 
+FIT9136 Algorithms and programming foundations in Python                                                              2       2019          91 HD 
+FIT9136 Algorithms and programming foundations in Python                                                              2       2019          89 HD 
+FIT9136 Algorithms and programming foundations in Python                                                              2       2019          76 D  
+FIT9136 Algorithms and programming foundations in Python                                                              2       2019          51 P  
+FIT9136 Algorithms and programming foundations in Python                                                              2       2019          98 HD 
+
+unit co unit name                                                                                              SEMESTER       YEAR NVL(MARK,0) NVL
+------- ---------------------------------------------------------------------------------------------------- ---------- ---------- ----------- ---
+FIT9136 Algorithms and programming foundations in Python                                                              2       2019          77 D  
+FIT9136 Algorithms and programming foundations in Python                                                              2       2019          57 P  
+FIT9137 Introduction to computer architecture and networks                                                            2       2019          76 D  
+FIT9137 Introduction to computer architecture and networks                                                            2       2019          94 HD 
+FIT9137 Introduction to computer architecture and networks                                                            2       2019          77 D  
+FIT9137 Introduction to computer architecture and networks                                                            2       2019          58 P  
+FIT9137 Introduction to computer architecture and networks                                                            2       2019          53 P  
+FIT9137 Introduction to computer architecture and networks                                                            2       2019          84 HD 
+FIT9137 Introduction to computer architecture and networks                                                            2       2019          73 D  
+FIT9137 Introduction to computer architecture and networks                                                            2       2019          60 C  
+FIT1045 Algorithms and programming fundamentals in python                                                             1       2020          82 HD 
+
+unit co unit name                                                                                              SEMESTER       YEAR NVL(MARK,0) NVL
+------- ---------------------------------------------------------------------------------------------------- ---------- ---------- ----------- ---
+FIT1045 Algorithms and programming fundamentals in python                                                             1       2020          83 HD 
+FIT1045 Algorithms and programming fundamentals in python                                                             1       2020          72 D  
+FIT1045 Algorithms and programming fundamentals in python                                                             1       2020           0 WH 
+FIT1045 Algorithms and programming fundamentals in python                                                             1       2020          65 C  
+FIT1045 Algorithms and programming fundamentals in python                                                             1       2020          64 C  
+FIT1045 Algorithms and programming fundamentals in python                                                             1       2020          69 C  
+FIT1045 Algorithms and programming fundamentals in python                                                             1       2020          55 P  
+FIT1045 Algorithms and programming fundamentals in python                                                             1       2020          71 D  
+FIT1045 Algorithms and programming fundamentals in python                                                             1       2020          53 P  
+FIT1050 Web fundamentals                                                                                              1       2020          76 D  
+FIT1050 Web fundamentals                                                                                              1       2020          54 P  
+
+unit co unit name                                                                                              SEMESTER       YEAR NVL(MARK,0) NVL
+------- ---------------------------------------------------------------------------------------------------- ---------- ---------- ----------- ---
+FIT1050 Web fundamentals                                                                                              1       2020          77 D  
+FIT1050 Web fundamentals                                                                                              1       2020          58 P  
+FIT1050 Web fundamentals                                                                                              1       2020          97 HD 
+FIT1050 Web fundamentals                                                                                              1       2020          73 D  
+FIT1050 Web fundamentals                                                                                              1       2020          76 D  
+FIT1050 Web fundamentals                                                                                              1       2020          77 D  
+FIT1050 Web fundamentals                                                                                              1       2020           0 WH 
+FIT1050 Web fundamentals                                                                                              1       2020          44 N  
+FIT1050 Web fundamentals                                                                                              1       2020          73 D  
+FIT1050 Web fundamentals                                                                                              1       2020          97 HD 
+FIT2094 Databases                                                                                                     1       2020          64 C  
+
+unit co unit name                                                                                              SEMESTER       YEAR NVL(MARK,0) NVL
+------- ---------------------------------------------------------------------------------------------------- ---------- ---------- ----------- ---
+FIT2094 Databases                                                                                                     1       2020          88 HD 
+FIT2094 Databases                                                                                                     1       2020          58 P  
+FIT2094 Databases                                                                                                     1       2020          52 P  
+FIT2094 Databases                                                                                                     1       2020          69 C  
+FIT2094 Databases                                                                                                     1       2020          63 C  
+FIT2094 Databases                                                                                                     1       2020          55 P  
+FIT2094 Databases                                                                                                     1       2020          69 C  
+FIT2094 Databases                                                                                                     1       2020          92 HD 
+FIT2094 Databases                                                                                                     1       2020          36 N  
+FIT2094 Databases                                                                                                     1       2020          55 P  
+FIT3157 Advanced web design                                                                                           1       2020          65 C  
+
+unit co unit name                                                                                              SEMESTER       YEAR NVL(MARK,0) NVL
+------- ---------------------------------------------------------------------------------------------------- ---------- ---------- ----------- ---
+FIT3157 Advanced web design                                                                                           1       2020          71 D  
+FIT3157 Advanced web design                                                                                           1       2020          62 C  
+FIT3157 Advanced web design                                                                                           1       2020          36 N  
+FIT3157 Advanced web design                                                                                           1       2020          58 P  
+FIT3157 Advanced web design                                                                                           1       2020          72 D  
+FIT3157 Advanced web design                                                                                           1       2020          83 HD 
+FIT3157 Advanced web design                                                                                           1       2020          53 P  
+FIT3157 Advanced web design                                                                                           1       2020          82 HD 
+FIT3176 Advanced database design                                                                                      1       2020          52 P  
+FIT3176 Advanced database design                                                                                      1       2020           0 WH 
+FIT3176 Advanced database design                                                                                      1       2020           0 WH 
+
+unit co unit name                                                                                              SEMESTER       YEAR NVL(MARK,0) NVL
+------- ---------------------------------------------------------------------------------------------------- ---------- ---------- ----------- ---
+FIT3176 Advanced database design                                                                                      1       2020           0 WH 
+FIT3176 Advanced database design                                                                                      1       2020           0 WH 
+FIT3176 Advanced database design                                                                                      1       2020           0 WH 
+FIT3176 Advanced database design                                                                                      1       2020          69 C  
+FIT3176 Advanced database design                                                                                      1       2020           0 WH 
+FIT5145 Introduction to data science                                                                                  1       2020          65 C  
+FIT5145 Introduction to data science                                                                                  1       2020          71 D  
+FIT5145 Introduction to data science                                                                                  1       2020          62 C  
+FIT5145 Introduction to data science                                                                                  1       2020          36 N  
+FIT5145 Introduction to data science                                                                                  1       2020          92 HD 
+FIT5145 Introduction to data science                                                                                  1       2020          36 N  
+
+unit co unit name                                                                                              SEMESTER       YEAR NVL(MARK,0) NVL
+------- ---------------------------------------------------------------------------------------------------- ---------- ---------- ----------- ---
+FIT5145 Introduction to data science                                                                                  1       2020          55 P  
+FIT5145 Introduction to data science                                                                                  1       2020          69 C  
+FIT5145 Introduction to data science                                                                                  1       2020          62 C  
+FIT5145 Introduction to data science                                                                                  1       2020          55 P  
+FIT5196 Data wrangling                                                                                                1       2020          58 P  
+FIT5196 Data wrangling                                                                                                1       2020          55 P  
+FIT5196 Data wrangling                                                                                                1       2020           0 WH 
+FIT5196 Data wrangling                                                                                                1       2020           0 DEF
+FIT5196 Data wrangling                                                                                                1       2020          36 N  
+FIT5196 Data wrangling                                                                                                1       2020          55 P  
+FIT5196 Data wrangling                                                                                                1       2020           0 DEF
+
+unit co unit name                                                                                              SEMESTER       YEAR NVL(MARK,0) NVL
+------- ---------------------------------------------------------------------------------------------------- ---------- ---------- ----------- ---
+FIT5196 Data wrangling                                                                                                1       2020          64 C  
+FIT9132 Introduction to databases                                                                                     1       2020           0 WH 
+FIT9132 Introduction to databases                                                                                     1       2020          50 P  
+FIT9132 Introduction to databases                                                                                     1       2020          61 C  
+FIT9132 Introduction to databases                                                                                     1       2020          78 D  
+FIT9132 Introduction to databases                                                                                     1       2020          54 P  
+FIT9132 Introduction to databases                                                                                     1       2020          54 P  
+FIT9132 Introduction to databases                                                                                     1       2020          55 P  
+FIT9132 Introduction to databases                                                                                     1       2020          36 N  
+FIT9132 Introduction to databases                                                                                     1       2020           0 DEF
+FIT9132 Introduction to databases                                                                                     1       2020          55 P  
+
+unit co unit name                                                                                              SEMESTER       YEAR NVL(MARK,0) NVL
+------- ---------------------------------------------------------------------------------------------------- ---------- ---------- ----------- ---
+FIT9132 Introduction to databases                                                                                     1       2020          73 D  
+FIT9132 Introduction to databases                                                                                     1       2020          69 C  
+FIT9136 Algorithms and programming foundations in Python                                                              1       2020          71 D  
+FIT9136 Algorithms and programming foundations in Python                                                              1       2020          62 C  
+FIT9136 Algorithms and programming foundations in Python                                                              1       2020          36 N  
+FIT9136 Algorithms and programming foundations in Python                                                              1       2020          65 C  
+FIT9136 Algorithms and programming foundations in Python                                                              1       2020          58 P  
+FIT9136 Algorithms and programming foundations in Python                                                              1       2020          53 P  
+FIT9136 Algorithms and programming foundations in Python                                                              1       2020          83 HD 
+FIT9136 Algorithms and programming foundations in Python                                                              1       2020          72 D  
+FIT9136 Algorithms and programming foundations in Python                                                              1       2020          93 HD 
+
+unit co unit name                                                                                              SEMESTER       YEAR NVL(MARK,0) NVL
+------- ---------------------------------------------------------------------------------------------------- ---------- ---------- ----------- ---
+FIT9136 Algorithms and programming foundations in Python                                                              1       2020           0 DEF
+FIT9137 Introduction to computer architecture and networks                                                            1       2020          77 D  
+FIT9137 Introduction to computer architecture and networks                                                            1       2020          54 P  
+FIT9137 Introduction to computer architecture and networks                                                            1       2020          76 D  
+FIT9137 Introduction to computer architecture and networks                                                            1       2020           0 DEF
+FIT9137 Introduction to computer architecture and networks                                                            1       2020           0 DEF
+FIT9137 Introduction to computer architecture and networks                                                            1       2020           0 DEF
+FIT9137 Introduction to computer architecture and networks                                                            1       2020          50 P  
+FIT9137 Introduction to computer architecture and networks                                                            1       2020          61 C  
+FIT9137 Introduction to computer architecture and networks                                                            1       2020          97 HD 
+FIT9137 Introduction to computer architecture and networks                                                            1       2020          78 D  
+
+220 rows selected. 
+
+SQL> 
+SQL> 
+SQL> /* B5. List the unit code and unit name of the prerequisite units 
+SQL>of 'Introduction to data science' unit. 
+SQL>Order the output by prerequisite unit code. */
+SQL> 
+SQL> SELECT
+  2      p.has_prereq_of AS unitcode,
+  3      t.unitname
+  4  FROM
+  5           uni.unit u
+  6      JOIN uni.prereq    p ON u.unitcode = p.unitcode
+  7      JOIN uni.unit      t ON t.unitcode = p.has_prereq_of
+  8  WHERE
+  9      u.unitname = 'Introduction to data science'
+ 10  ORDER BY
+ 11      has_prereq_of;
+
+UNITCOD UNITNAME                                                                                            
+------- ----------------------------------------------------------------------------------------------------
+FIT9132 Introduction to databases                                                                           
+FIT9136 Algorithms and programming foundations in Python                                                    
+
+SQL> 
+SQL> /* B6. Find all students (list their id, firstname and surname) 
+SQL>who have received an HD for FIT2094 unit in semester 2 of 2019. 
+SQL>Sort the list by student id. */
+SQL> SELECT
+  2      s.studid     AS student_id,
+  3      studfname  AS firstname,
+  4      studlname  AS surname
+  5  FROM
+  6           uni.student s
+  7      JOIN uni.enrolment e ON s.studid = e.studid
+  8  WHERE
+  9          grade = 'HD'
+ 10      AND unitcode = 'FIT2094'
+ 11      AND semester = 2
+ 12      AND to_char(ofyear, 'yyyy') = '2019'
+ 13  ORDER BY
+ 14      s.studid;
+
+STUDENT_ID FIRSTNAME            SURNAME             
+---------- -------------------- --------------------
+  12511467 Francyne             Rigney              
+  13028303 Herculie             Mendus              
+  13453333 Pierrette            Moynihan            
+
+SQL> 
+SQL> 
+SQL> 
+SQL> /* B7.	List the student full name, and unit code for those students 
+SQL>who have no mark in any unit in semester 1 of 2020. 
+SQL>Sort the list by student full name. */
+SQL> SELECT studfname || ' '
+  2                      || studlname AS student_full_name,
+  3         e.unitcode
+  4  FROM
+  5           uni.student s
+  6      JOIN uni.enrolment e USING ( studid )
+  7  WHERE
+  8      mark IS NULL
+  9      AND semester = 1
+ 10          AND EXTRACT(YEAR FROM ofyear) = 2020
+ 11  ORDER
+ 12      by student_full_name;
+
+STUDENT_FULL_NAME                         UNITCOD
+----------------------------------------- -------
+Aleda Whistan                             FIT9137
+Brier Kilgour                             FIT3176
+Carolee Bonnor                            FIT9136
+Cathrin Smullin                           FIT9132
+Eada Royds                                FIT5196
+Elihu Fer                                 FIT1045
+Francyne Rigney                           FIT3176
+Friedrick Geist                           FIT3176
+Herculie Mendus                           FIT3176
+Herminia Mendus                           FIT3176
+Mellicent Staggs                          FIT9132
+
+STUDENT_FULL_NAME                         UNITCOD
+----------------------------------------- -------
+Mychal Ghiroldi                           FIT1050
+Shadow Lamberton                          FIT5196
+Shandra Lindblom                          FIT3176
+Siffre Dibdale                            FIT5196
+Tessie Rheam                              FIT9137
+Viviana Brewer                            FIT9137
+
+17 rows selected. 
+
+SQL> 
+SQL> 
+SQL> spool off
