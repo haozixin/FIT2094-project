@@ -1,0 +1,105 @@
+SQL> --9.2.1 UPDATE
+SQL> select * from enrolment;
+
+   STU_NBR UNIT_CO ENROL_YEAR E ENROL_MARK EN
+---------- ------- ---------- - ---------- --
+  11111111 FIT5132       2013 1         35 N 
+  11111111 FIT5016       2013 1         61 C 
+  11111111 FIT5132       2013 2         42 N 
+  11111111 FIT5111       2013 2         76 D 
+  11111111 FIT5132       2014 2              
+  11111112 FIT5132       2013 2         83 HD
+  11111112 FIT5111       2013 2         79 D 
+  11111113 FIT5132       2014 2              
+  11111113 FIT5111       2014 2              
+  11111114 FIT5111       2014 2              
+  11111115 FIT5132       2016 2              
+
+   STU_NBR UNIT_CO ENROL_YEAR E ENROL_MARK EN
+---------- ------- ---------- - ---------- --
+  11111116 FIT5132       2015 1              
+
+12 rows selected. 
+
+SQL> select * from unit;
+
+UNIT_CO UNIT_NAME                                         
+------- --------------------------------------------------
+FIT9999 FIT Last Unit                                     
+FIT5132 Introduction to Databases                         
+FIT5016 Project                                           
+FIT5111 Student's Life                                    
+
+SQL> 
+SQL> --1. Update the unit name of FIT9999 from 'FIT Last Unit' to 'place holder unit'.
+SQL> 
+SQL> update unit
+  2  set unit_name =  'place holder unit' where unit_name = 'FIT Last Unit' and unit_code = 'FIT9999';
+
+1 row updated.
+
+SQL> 
+SQL> --2. Enter the mark and grade for the student with the student number of 11111113 for the unit
+SQL> --code FIT5132 that the student enrolled in semester 2 of 2014. The mark is 75 and the grade
+SQL> --is D.
+SQL> 
+SQL> update enrolment
+  2  set enrol_mark= 75, enrol_grade='D' where stu_nbr=11111113 and unit_code='FIT5132' and enrol_semester=2 and enrol_year=2014;
+
+1 row updated.
+
+SQL> 
+SQL> --3. The university has introduced a new grade classification scale. The new classifications are:
+SQL> update enrolment
+  2  set enrol_grade = 
+  3  case when enrol_mark between 45 and 54 then 'P1'
+  4  when enrol_mark between 55 and 64 then 'P2'
+  5  when enrol_mark between 65 and 74 then 'C'
+  6  when enrol_mark between 75 and 84 then 'D'
+  7  when enrol_mark between 85 and 100 then 'HD'
+  8  when enrol_mark between 0 and 44 then 'N'
+  9  end
+ 10  ;
+
+12 rows updated.
+
+SQL> 
+SQL> --9.2.2 DELETE
+SQL> --task1
+SQL> Delete from enrolment 
+  2  where stu_nbr=11111114 and enrol_semester='2' and enrol_year=2014;
+
+1 row deleted.
+
+SQL> 
+SQL> --task2
+SQL> delete from enrolment where stu_nbr=11111113;
+
+2 rows deleted.
+
+SQL> delete from student where stu_nbr=11111113;
+
+1 row deleted.
+
+SQL> 
+SQL> --task3
+SQL> select * from student;
+
+   STU_NBR STU_LNAME                                          STU_FNAME                                          STU_DOB  
+---------- -------------------------------------------------- -------------------------------------------------- ---------
+  11111111 Bloggs                                             Fred                                               01/JAN/90
+  11111112 Nice                                               Nick                                               10/OCT/94
+  11111114 Sheen                                              Cindy                                              25/DEC/96
+  11111115 MICKEY                                             MOUSE                                              21/FEB/00
+  11111116 ALLEN                                              HAO                                                23/FEB/00
+
+SQL> insert into student values(11111113,'Wendy','Wheat',to_date('21-Feb-2000','dd-Mon-yyyy'));
+
+1 row inserted.
+
+SQL> 
+SQL> commit;
+
+Commit complete.
+
+SQL> spool off
