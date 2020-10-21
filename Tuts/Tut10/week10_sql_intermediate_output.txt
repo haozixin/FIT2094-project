@@ -1,0 +1,329 @@
+SQL> /*
+SQL>Databases Week 10 Tutorial
+SQL>week10_sql_intermediate.sql
+SQL>
+SQL>student id: 30758017
+SQL>student name:ZIXIN HAO
+SQL>last modified date: 
+SQL>
+SQL>*/
+SQL> 
+SQL> /* 1. Find the average mark of FIT2094 in semester 2, 2019. 
+SQL>Show the average mark with two decimal places. 
+SQL>Name the output column as â€œAverage Markâ€?. */
+SQL> SELECT
+  2      to_char(AVG(mark), '990.99') AS "Average mark"
+  3  FROM
+  4      uni.enrolment
+  5  WHERE
+  6          semester = 2
+  7      AND EXTRACT(YEAR FROM ofyear) = 2019
+  8      AND unitcode = 'FIT2094';
+
+Average
+-------
+  70.44
+
+SQL> 
+SQL> 
+SQL> /* 2. List the average mark for each offering of FIT9136. 
+SQL>In the listing, include the year and semester number. 
+SQL>Sort the result according to the year then the semester.*/
+SQL> SELECT
+  2      semester,
+  3      EXTRACT(YEAR FROM ofyear)            AS year,
+  4      to_char(AVG(mark), '990.99')         AS average_mark
+  5  FROM
+  6      uni.enrolment
+  7  WHERE
+  8      unitcode = 'FIT9136'
+  9  GROUP BY
+ 10      semester,
+ 11      EXTRACT(YEAR FROM ofyear);
+
+  SEMESTER       YEAR AVERAGE
+---------- ---------- -------
+         1       2019   74.90
+         1       2020   65.89
+         2       2019   80.00
+
+SQL> 
+SQL> 
+SQL> 
+SQL> 
+SQL> 
+SQL> /* 3. Find the number of students enrolled in FIT1045 in the year 2019, 
+SQL>under the following conditions:
+SQL>      a. Repeat students are counted each time
+SQL>      b. Repeat students are only counted once
+SQL>*/
+SQL> SELECT
+  2      *
+  3  FROM
+  4      uni.enrolment
+  5  WHERE
+  6          unitcode = 'FIT1045'
+  7      AND EXTRACT(YEAR FROM ofyear) = 2019;
+
+UNITCOD   SEMESTER OFYEAR        STUDID       MARK GRA
+------- ---------- --------- ---------- ---------- ---
+FIT1045          1 01/JAN/19   12489379         40 N  
+FIT1045          2 01/JUL/19   12489379         89 HD 
+FIT1045          1 01/JAN/19   12511467         87 HD 
+FIT1045          1 01/JAN/19   12609485         85 HD 
+FIT1045          1 01/JAN/19   12802225         83 HD 
+FIT1045          1 01/JAN/19   12842838         74 D  
+FIT1045          1 01/JAN/19   13028303         61 C  
+FIT1045          1 01/JAN/19   13119134         62 C  
+FIT1045          1 01/JAN/19   13390148         97 HD 
+FIT1045          1 01/JAN/19   13413109         65 C  
+FIT1045          1 01/JAN/19   13453333         85 HD 
+
+UNITCOD   SEMESTER OFYEAR        STUDID       MARK GRA
+------- ---------- --------- ---------- ---------- ---
+FIT1045          2 01/JUL/19   15543217         65 C  
+FIT1045          2 01/JUL/19   15875842         95 HD 
+FIT1045          2 01/JUL/19   16476616         78 D  
+FIT1045          2 01/JUL/19   16929043         74 D  
+FIT1045          2 01/JUL/19   17013887         74 D  
+FIT1045          2 01/JUL/19   17030353         90 HD 
+FIT1045          2 01/JUL/19   17872041         94 HD 
+FIT1045          2 01/JUL/19   18012671         95 HD 
+FIT1045          2 01/JUL/19   18063424         86 HD 
+FIT1045          2 01/JUL/19   18651413         80 HD 
+
+21 rows selected. 
+
+SQL> -- a. Repeat students are counted each time
+SQL> 
+SQL> SELECT
+  2      COUNT(studid)
+  3  FROM
+  4      uni.enrolment
+  5  WHERE
+  6          unitcode = 'FIT1045'
+  7      AND EXTRACT(YEAR FROM ofyear) = 2019;
+
+COUNT(STUDID)
+-------------
+           21
+
+SQL> 
+SQL> -- b. Repeat students are only counted once
+SQL> 
+SQL> SELECT
+  2      COUNT(DISTINCT studid)
+  3  FROM
+  4      uni.enrolment
+  5  WHERE
+  6          unitcode = 'FIT1045'
+  7      AND EXTRACT(YEAR FROM ofyear) = 2019;
+
+COUNT(DISTINCTSTUDID)
+---------------------
+                   20
+
+SQL> 
+SQL> /* 4. Find the total number of prerequisite units for FIT5145. */
+SQL> 
+SQL> SELECT
+  2      COUNT(has_prereq_of)
+  3  FROM
+  4      uni.prereq
+  5  WHERE
+  6      unitcode = 'FIT5145';
+
+COUNT(HAS_PREREQ_OF)
+--------------------
+                   2
+
+SQL> 
+SQL> 
+SQL> /* 5. Find the total number of prerequisite units for each unit. 
+SQL>In the list, include the unitcode for which the count is applicable. 
+SQL>Order the list by unit code.*/
+SQL> SELECT
+  2      unitcode,
+  3      COUNT(has_prereq_of)
+  4  FROM
+  5      uni.prereq
+  6  GROUP BY
+  7      unitcode
+  8  ORDER BY
+  9      unitcode;
+
+UNITCOD COUNT(HAS_PREREQ_OF)
+------- --------------------
+FIT2094                    1
+FIT3157                    1
+FIT3176                    1
+FIT5145                    2
+FIT5196                    1
+
+SQL> 
+SQL> 
+SQL> /*6. Find the total number of students 
+SQL>whose marks are being withheld (grade is recorded as 'WH') 
+SQL>for each unit offered in semester 1 2020. 
+SQL>In the listing include the unit code for which the count is applicable. 
+SQL>Sort the list by descending order of the total number of students 
+SQL>whose marks are being withheld.*/
+SQL> SELECT
+  2      unitcode,
+  3      COUNT(studid) AS total
+  4  FROM
+  5      uni.enrolment
+  6  WHERE
+  7          grade = 'WH'
+  8      AND semester = 1
+  9      AND EXTRACT(YEAR FROM ofyear) = 2020
+ 10  GROUP BY
+ 11      unitcode
+ 12  ORDER BY
+ 13      total DESC;
+
+UNITCOD      TOTAL
+------- ----------
+FIT3176          6
+FIT9132          1
+FIT1050          1
+FIT5196          1
+FIT1045          1
+
+SQL> 
+SQL> 
+SQL> /* 7. For each prerequisite unit, calculate how many times 
+SQL>it has been used as a prerequisite (number of times used). 
+SQL>In the listing include the prerequisite unit code, 
+SQL>the prerequisite unit name and the number of times used. 
+SQL>Sort the output by unit name. */
+SQL> SELECT
+  2      p.has_prereq_of,
+  3      unitname,
+  4      COUNT(has_prereq_of) AS "Times used"
+  5  FROM
+  6           uni.prereq p
+  7      JOIN uni.unit u ON u.unitcode = p.has_prereq_of
+  8  GROUP BY
+  9      u.unitname,
+ 10      p.has_prereq_of
+ 11  ORDER BY
+ 12      u.unitname;
+
+HAS_PRE UNITNAME                                                                                             Times used
+------- ---------------------------------------------------------------------------------------------------- ----------
+FIT9136 Algorithms and programming foundations in Python                                                              2
+FIT1045 Algorithms and programming fundamentals in python                                                             1
+FIT2094 Databases                                                                                                     1
+FIT9132 Introduction to databases                                                                                     1
+FIT1050 Web fundamentals                                                                                              1
+
+SQL> 
+SQL> 
+SQL> /*8. Display unit code and unit name of units 
+SQL>which had at least 1 student who was granted deferred exam 
+SQL>(grade is recorded as 'DEF') in semester 1 2020. 
+SQL>Order the list by unit code.*/
+SQL> SELECT
+  2      e.unitcode,
+  3      u.unitname
+  4  FROM
+  5           uni.enrolment e
+  6      JOIN uni.unit u ON u.unitcode = e.unitcode
+  7  WHERE
+  8          grade = 'DEF'
+  9      AND semester = 1
+ 10      AND EXTRACT(YEAR FROM ofyear) = 2020
+ 11  GROUP BY
+ 12      e.unitcode,
+ 13      u.unitname
+ 14  ORDER BY
+ 15      unitcode;
+
+UNITCOD UNITNAME                                                                                            
+------- ----------------------------------------------------------------------------------------------------
+FIT5196 Data wrangling                                                                                      
+FIT9132 Introduction to databases                                                                           
+FIT9136 Algorithms and programming foundations in Python                                                    
+FIT9137 Introduction to computer architecture and networks                                                  
+
+SQL> 
+SQL> 
+SQL> /* 9. Find the unit/s with the highest number of enrolments 
+SQL>for each offering in the year 2019. 
+SQL>Sort the list by semester then by unit code. */
+SQL> SELECT
+  2      unitcode,
+  3      COUNT(studid) AS numbers
+  4  FROM
+  5      uni.enrolment
+  6  WHERE
+  7      EXTRACT(YEAR FROM ofyear) = 2019
+  8  GROUP BY
+  9      semester,
+ 10      unitcode
+ 11  HAVING
+ 12      COUNT(studid) = (
+ 13          SELECT
+ 14              MAX(COUNT(studid))
+ 15          FROM
+ 16              uni.enrolment
+ 17          WHERE
+ 18              EXTRACT(YEAR FROM ofyear) = 2019
+ 19          GROUP BY
+ 20              semester,
+ 21              unitcode
+ 22      );
+
+UNITCOD    NUMBERS
+------- ----------
+FIT9132         13
+
+SQL> 
+SQL> 
+SQL> /* 10. Find all students enrolled in FIT3157 in semester 1, 2020 
+SQL>who have scored more than the average mark for FIT3157 in the same offering? 
+SQL>Display the students' name and the mark. 
+SQL>Sort the list in the order of the mark from the highest to the lowest 
+SQL>then in increasing order of student name.*/
+SQL> 
+SQL> SELECT
+  2      studfname
+  3      || ' '
+  4      || studlname AS "student name",
+  5      mark
+  6  FROM
+  7           uni.enrolment e
+  8      JOIN uni.student s ON e.studid = s.studid
+  9  WHERE
+ 10          unitcode = 'FIT3157'
+ 11      AND semester = 1
+ 12      AND EXTRACT(YEAR FROM ofyear) = 2020
+ 13      AND mark > (
+ 14          SELECT
+ 15              round(AVG(mark), 2)
+ 16          FROM
+ 17                   uni.enrolment e
+ 18              JOIN uni.student s ON e.studid = s.studid
+ 19          WHERE
+ 20                  unitcode = 'FIT3157'
+ 21              AND semester = 1
+ 22              AND EXTRACT(YEAR FROM ofyear) = 2020
+ 23      )
+ 24  ORDER BY
+ 25      mark DESC,
+ 26      studfname
+ 27      || ' '
+ 28      || studlname ASC;
+
+student name                                    MARK
+----------------------------------------- ----------
+Starr Clapton                                     83
+Harv Wethered                                     82
+Aristotle Rolph                                   72
+Mattheus Kardos                                   71
+Billie Friedank                                   65
+
+SQL> 
+SQL> 
+SQL> spool off
