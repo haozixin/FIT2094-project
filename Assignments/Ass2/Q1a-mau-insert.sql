@@ -10,7 +10,7 @@
 2. the beginning of the display generally start with one month after submission. 
 3. the date of sale must between beginning and end of display.
 4. sale price is bigger than artwork_minpayment after deducting MAU fees and gallery fees
-
+5. submission date is the start-date of ’w‘ status. 
 */
 
 
