@@ -1,0 +1,612 @@
+SQL> 
+SQL> 
+SQL> 
+SQL> /* 1. Find the number of scheduled classes assigned to each staff member 
+SQL>for each semester in 2019. If the number of classes is 2 
+SQL>then this should be labelled as a correct load, 
+SQL>more than 2 as an overload and less than 2 as an underload. 
+SQL>Order the list by decreasing order of the number of scheduled classes 
+SQL>and when the number of classes is the same order by increasing order of staff id. */
+SQL> SELECT
+  2      to_char(ofyear, 'yyyy'),
+  3      semester,
+  4      s.staffid,
+  5      stafffname,
+  6      stafflname,
+  7      COUNT(cltype)     AS "number of scheduled class",
+  8      CASE
+  9          WHEN COUNT(cltype) > 2     THEN
+ 10              'over load'
+ 11          WHEN COUNT(cltype) = 2     THEN
+ 12              'correct load'
+ 13          WHEN COUNT(cltype) < 2     THEN
+ 14              'under load'
+ 15      END               AS load_label
+ 16  FROM
+ 17           uni.schedclass c
+ 18      JOIN uni.staff s ON s.staffid = c.staffid
+ 19  WHERE
+ 20      to_char(ofyear, 'yyyy') = 2019
+ 21  GROUP BY
+ 22      to_char(ofyear, 'yyyy'),
+ 23      semester,
+ 24      s.staffid,
+ 25      stafffname,
+ 26      stafflname
+ 27  ORDER BY
+ 28      COUNT(cltype) DESC,
+ 29      staffid ASC;
+
+TO_C   SEMESTER    STAFFID STAFFFNAME           STAFFLNAME           number of scheduled class LOAD_LABEL  
+---- ---------- ---------- -------------------- -------------------- ------------------------- ------------
+2019          2     419817 Windham              Ellard                                       6 over load   
+2019          1     412994 Gunar                Dutch                                        2 correct load
+2019          2     412994 Gunar                Dutch                                        2 correct load
+2019          2     415448 Sandro               Wethered                                     2 correct load
+2019          1     415448 Sandro               Wethered                                     2 correct load
+2019          2     418454 Lizabeth             Stubbings                                    2 correct load
+2019          2     419421 Trixy                Warner                                       2 correct load
+2019          1     434760 Xena                 Epine                                        2 correct load
+2019          2     434760 Xena                 Epine                                        2 correct load
+2019          1     436760 Tammi                Soane                                        2 correct load
+2019          2     436760 Tammi                Soane                                        2 correct load
+
+TO_C   SEMESTER    STAFFID STAFFFNAME           STAFFLNAME           number of scheduled class LOAD_LABEL  
+---- ---------- ---------- -------------------- -------------------- ------------------------- ------------
+2019          2     439066 Kennie               Pickin                                       2 correct load
+2019          2     459186 Papageno             Gayton                                       1 under load  
+2019          1     459186 Papageno             Gayton                                       1 under load  
+2019          2     467165 Deina                MacGarrity                                   1 under load  
+2019          1     467165 Deina                MacGarrity                                   1 under load  
+2019          2     470313 Gunar                Dutch                                        1 under load  
+2019          1     470313 Gunar                Dutch                                        1 under load  
+2019          2     475342 Mikol                Kohrt                                        1 under load  
+2019          2     475912 Mycah                Preddle                                      1 under load  
+2019          2     485533 Worden               Abel                                         1 under load  
+2019          1     487823 Benny                Plunket                                      1 under load  
+
+TO_C   SEMESTER    STAFFID STAFFFNAME           STAFFLNAME           number of scheduled class LOAD_LABEL  
+---- ---------- ---------- -------------------- -------------------- ------------------------- ------------
+2019          2     487823 Benny                Plunket                                      1 under load  
+2019          2     494975 Hildy                Edyson                                       1 under load  
+2019          2     497227 Ashleigh             O'Bruen                                      1 under load  
+2019          2     498160 Martino              Boram                                        1 under load  
+2019          1     498160 Martino              Boram                                        1 under load  
+
+27 rows selected. 
+
+SQL> 
+SQL> 
+SQL> /* 2. Display the unit code and unit name for units that do not have a prerequisite. 
+SQL>Order the list in increasing order of unit code. 
+SQL>
+SQL>There are many approaches that you can take in writing an SQL statement to answer this query. 
+SQL>You can use the SET OPERATORS, OUTER JOIN and a SUBQUERY. 
+SQL>Write SQL statements based on all three approaches.*/
+SQL> 
+SQL> /* Using outer join */
+SQL> SELECT
+  2      u.unitcode,
+  3      unitname
+  4  FROM
+  5      uni.prereq    p
+  6      RIGHT OUTER JOIN uni.unit      u ON u.unitcode = p.unitcode
+  7  GROUP BY
+  8      u.unitcode,
+  9      unitname
+ 10  HAVING
+ 11      COUNT(has_prereq_of) = 0
+ 12  ORDER BY
+ 13      u.unitcode ASC;
+
+UNITCOD UNITNAME                                                                                            
+------- ----------------------------------------------------------------------------------------------------
+FIT1003 IT in organisations                                                                                 
+FIT1045 Algorithms and programming fundamentals in python                                                   
+FIT1050 Web fundamentals                                                                                    
+FIT9132 Introduction to databases                                                                           
+FIT9134 Computer architecture and operating systems                                                         
+FIT9136 Algorithms and programming foundations in Python                                                    
+FIT9137 Introduction to computer architecture and networks                                                  
+
+7 rows selected. 
+
+SQL> 
+SQL> /* Using set operator MINUS */
+SQL> ( SELECT
+  2      unitcode,
+  3      unitname
+  4  FROM
+  5      uni.unit
+  6  MINUS
+  7  SELECT
+  8      p.unitcode,
+  9      unitname
+ 10  FROM
+ 11           uni.prereq p
+ 12      JOIN uni.unit u ON p.unitcode = u.unitcode
+ 13  )
+ 14  ORDER BY
+ 15      unitcode ASC;
+
+UNITCOD UNITNAME                                                                                            
+------- ----------------------------------------------------------------------------------------------------
+FIT1003 IT in organisations                                                                                 
+FIT1045 Algorithms and programming fundamentals in python                                                   
+FIT1050 Web fundamentals                                                                                    
+FIT9132 Introduction to databases                                                                           
+FIT9134 Computer architecture and operating systems                                                         
+FIT9136 Algorithms and programming foundations in Python                                                    
+FIT9137 Introduction to computer architecture and networks                                                  
+
+7 rows selected. 
+
+SQL> 
+SQL> 
+SQL> /* Using subquery */
+SQL> SELECT
+  2      unitcode,
+  3      unitname
+  4  FROM
+  5      uni.unit
+  6  WHERE
+  7      unitcode NOT IN (
+  8          SELECT
+  9              unitcode
+ 10          FROM
+ 11              uni.prereq
+ 12      )
+ 13  ORDER BY
+ 14      unitcode ASC;
+
+UNITCOD UNITNAME                                                                                            
+------- ----------------------------------------------------------------------------------------------------
+FIT1003 IT in organisations                                                                                 
+FIT1045 Algorithms and programming fundamentals in python                                                   
+FIT1050 Web fundamentals                                                                                    
+FIT9132 Introduction to databases                                                                           
+FIT9134 Computer architecture and operating systems                                                         
+FIT9136 Algorithms and programming foundations in Python                                                    
+FIT9137 Introduction to computer architecture and networks                                                  
+
+7 rows selected. 
+
+SQL> 
+SQL> 
+SQL> /* 3. List all units offered in semester 2 2019 which do not have any enrolment. 
+SQL>Include the unit code, unit name, and the chief examiner's name in the list. 
+SQL>Order the list based on the unit code. */
+SQL> SELECT
+  2      o.unitcode,
+  3      unitname,
+  4      s.stafffname
+  5      || ' '
+  6      || s.stafflname AS examiner_name
+  7  FROM
+  8           uni.offering o
+  9      JOIN uni.staff    s ON s.staffid = o.chiefexam
+ 10      JOIN uni.unit     u ON u.unitcode = o.unitcode
+ 11  WHERE
+ 12          semester = 2
+ 13      AND to_char(ofyear, 'yyyy') = '2019'
+ 14      AND o.unitcode NOT IN (
+ 15          SELECT DISTINCT
+ 16              unitcode
+ 17          FROM
+ 18              uni.enrolment e
+ 19          WHERE
+ 20                  e.semester = 2
+ 21              AND to_char(e.ofyear, 'yyyy') = '2019'
+ 22      )
+ 23  ORDER BY
+ 24      o.unitcode;
+
+UNITCOD UNITNAME                                                                                             EXAMINER_NAME                            
+------- ---------------------------------------------------------------------------------------------------- -----------------------------------------
+FIT3176 Advanced database design                                                                             Windham Ellard                           
+
+SQL> 
+SQL> 
+SQL> /* 4. List the full names of students who are enrolled in both ‘Introduction to databases’ 
+SQL>and ‘Introduction to computer architecture and networks’ (note: both unit names are unique)
+SQL>in semester 1 2020. Order the list by the students’ full name.*/
+SQL> SELECT
+  2      studfname
+  3      || ' '
+  4      || studlname AS full_name
+  5  FROM
+  6           uni.student s
+  7      JOIN uni.enrolment u ON s.studid = u.studid
+  8  WHERE
+  9          semester = 1
+ 10      AND to_char(ofyear, 'yyyy') = '2020'
+ 11      AND unitcode IN (
+ 12          SELECT
+ 13              unitcode
+ 14          FROM
+ 15              uni.enrolment
+ 16          WHERE
+ 17              unitcode IN (
+ 18                  SELECT
+ 19                      unitcode
+ 20                  FROM
+ 21                      uni.unit
+ 22                  WHERE
+ 23                      unitname = 'Introduction to databases'
+ 24              )
+ 25      )
+ 26  INTERSECT
+ 27  SELECT
+ 28      studfname
+ 29      || ' '
+ 30      || studlname AS full_name
+ 31  FROM
+ 32           uni.student s
+ 33      JOIN uni.enrolment u ON s.studid = u.studid
+ 34  WHERE
+ 35          semester = 1
+ 36      AND to_char(ofyear, 'yyyy') = '2020'
+ 37      AND unitcode IN (
+ 38          SELECT
+ 39              unitcode
+ 40          FROM
+ 41              uni.enrolment
+ 42          WHERE
+ 43              unitcode IN (
+ 44                  SELECT
+ 45                      unitcode
+ 46                  FROM
+ 47                      uni.unit
+ 48                  WHERE
+ 49                      unitname = 'Introduction to computer architecture and networks'
+ 50              )
+ 51      )
+ 52  ORDER BY
+ 53      full_name;
+
+FULL_NAME                                
+-----------------------------------------
+Tessie Rheam
+Viviana Brewer
+
+SQL> /* 5. Given that the payment rate for a tutorial is $42.85 per hour 
+SQL>and the payment rate for a lecture is $75.60 per hour, 
+SQL>calculate the weekly payment per type of class for each staff member in semester 1 2020. 
+SQL>In the display, include staff id, staff name, type of class (lecture or tutorial), 
+SQL>number of classes, number of hours (total duration), 
+SQL>and weekly payment (number of hours * payment rate). 
+SQL>Order the list by increasing order of staff id and for a given staff id by type of class.*/
+SQL> 
+SQL> SELECT
+  2      s.staffid,
+  3      f.stafffname
+  4      || ' '
+  5      || f.stafflname                                                                               AS staffname,
+  6      CASE cltype
+  7          WHEN 'L'  THEN
+  8              'Lecture'
+  9          WHEN 'T'  THEN
+ 10              'Tutorial'
+ 11      END                                                                                           AS type,
+ 12      COUNT(classno)                                                                                AS no_of_classes,
+ 13      SUM(clduration)                                                                               AS total_hours,
+ 14      lpad(to_char(COUNT(classno) * SUM(clduration) * 75.6, '$9999.99'), 20, ' ')                   AS weekly_payment
+ 15  FROM
+ 16           uni.schedclass s
+ 17      JOIN uni.staff f ON s.staffid = f.staffid
+ 18  WHERE
+ 19          semester = 1
+ 20      AND EXTRACT(YEAR FROM ofyear) = 2020
+ 21      AND cltype = 'L'
+ 22  GROUP BY
+ 23      s.staffid,
+ 24      f.stafffname
+ 25      || ' '
+ 26      || f.stafflname,
+ 27      cltype
+ 28  UNION
+ 29  SELECT
+ 30      s.staffid,
+ 31      f.stafffname
+ 32      || ' '
+ 33      || f.stafflname     AS staffname,
+ 34      CASE cltype
+ 35          WHEN 'L'  THEN
+ 36              'Lecture'
+ 37          WHEN 'T'  THEN
+ 38              'Tutorial'
+ 39      END                 AS type,
+ 40      COUNT(classno)      AS no_of_classes,
+ 41      SUM(clduration)     AS total_hours,
+ 42      lpad(to_char(COUNT(classno) * SUM(clduration) * 42.85, '$9999.99'), 20,
+ 43           ' ')           AS weekly_payment
+ 44  FROM
+ 45           uni.schedclass s
+ 46      JOIN uni.staff f ON s.staffid = f.staffid
+ 47  WHERE
+ 48          semester = 1
+ 49      AND EXTRACT(YEAR FROM ofyear) = 2020
+ 50      AND cltype = 'T'
+ 51  GROUP BY
+ 52      s.staffid,
+ 53      f.stafffname
+ 54      || ' '
+ 55      || f.stafflname,
+ 56      cltype
+ 57  ORDER BY
+ 58      staffid,
+ 59      type;
+
+   STAFFID STAFFNAME                                 TYPE     NO_OF_CLASSES TOTAL_HOURS WEEKLY_PAYMENT      
+---------- ----------------------------------------- -------- ------------- ----------- --------------------
+    412994 Gunar Dutch                               Lecture              1           2              $151.20
+    412994 Gunar Dutch                               Tutorial             1           2               $85.70
+    415448 Sandro Wethered                           Lecture              1           2              $151.20
+    415448 Sandro Wethered                           Tutorial             1           2               $85.70
+    418454 Lizabeth Stubbings                        Lecture              1           2              $151.20
+    418454 Lizabeth Stubbings                        Tutorial             1           2               $85.70
+    419421 Trixy Warner                              Lecture              1           2              $151.20
+    419421 Trixy Warner                              Tutorial             1           2               $85.70
+    419817 Windham Ellard                            Lecture              3           4              $907.20
+    419817 Windham Ellard                            Tutorial             3           6              $771.30
+    434760 Xena Epine                                Lecture              1           1               $75.60
+
+   STAFFID STAFFNAME                                 TYPE     NO_OF_CLASSES TOTAL_HOURS WEEKLY_PAYMENT      
+---------- ----------------------------------------- -------- ------------- ----------- --------------------
+    434760 Xena Epine                                Tutorial             1           2               $85.70
+    436760 Tammi Soane                               Lecture              1           1               $75.60
+    436760 Tammi Soane                               Tutorial             1           2               $85.70
+    439066 Kennie Pickin                             Lecture              1           1               $75.60
+    439066 Kennie Pickin                             Tutorial             1           2               $85.70
+    459186 Papageno Gayton                           Tutorial             1           2               $85.70
+    467165 Deina MacGarrity                          Tutorial             1           2               $85.70
+    470313 Gunar Dutch                               Tutorial             1           2               $85.70
+    475342 Mikol Kohrt                               Tutorial             1           2               $85.70
+    475912 Mycah Preddle                             Tutorial             1           2               $85.70
+    485533 Worden Abel                               Tutorial             1           2               $85.70
+
+   STAFFID STAFFNAME                                 TYPE     NO_OF_CLASSES TOTAL_HOURS WEEKLY_PAYMENT      
+---------- ----------------------------------------- -------- ------------- ----------- --------------------
+    487823 Benny Plunket                             Tutorial             1           2               $85.70
+    494975 Hildy Edyson                              Tutorial             1           2               $85.70
+    497227 Ashleigh O'Bruen                          Tutorial             1           2               $85.70
+    498160 Martino Boram                             Tutorial             1           2               $85.70
+
+26 rows selected. 
+
+SQL> 
+SQL> 
+SQL> /* 6. Given that the payment rate for a tutorial is $42.85 per hour 
+SQL>and the payment rate for a lecture is $75.60 per hour, 
+SQL>calculate the total weekly payment (the sum of both tutorial and lecture payments) 
+SQL>for each staff member in semester 1 2020. 
+SQL>In the display, include staff id, staff name, total weekly payment for tutorials, 
+SQL>total weekly payment for lectures and the total weekly payment. 
+SQL>If the payment is null, show it as $0.00. 
+SQL>Order the list by increasing order of staff id.*/
+SQL> SELECT
+  2      a.staffid,
+  3      a.staffname,
+  4      a.weekly_payment    AS tutorial_payment,
+  5      b.weekly_payment    AS lecture_payment,
+  6      lpad(to_char(to_number(a.weekly_payment, '$999.99') + to_number(b.weekly_payment,
+  7      '$999.99'),
+  8                   '$999.99'),
+  9           20,
+ 10           ' ')           AS total_weekly_payment
+ 11  FROM
+ 12           (
+ 13          SELECT
+ 14              s.staffid,
+ 15              f.stafffname
+ 16              || ' '
+ 17              || f.stafflname                                                               AS staffname,
+ 18              CASE cltype
+ 19                  WHEN 'L'  THEN
+ 20                      'Lecture'
+ 21                  WHEN 'T'  THEN
+ 22                      'Tutorial'
+ 23              END                                                                           AS type,
+ 24              COUNT(classno)                                                                AS no_of_classes,
+ 25              SUM(clduration)                                                               AS total_hours,
+ 26              to_char((COUNT(classno) * SUM(clduration) * 42.85), '$999.99')                AS weekly_payment
+ 27          FROM
+ 28                   uni.schedclass s
+ 29              JOIN uni.staff f ON s.staffid = f.staffid
+ 30          WHERE
+ 31                  semester = 1
+ 32              AND EXTRACT(YEAR FROM ofyear) = 2020
+ 33              AND cltype = 'T'
+ 34          GROUP BY
+ 35              s.staffid,
+ 36              f.stafffname
+ 37              || ' '
+ 38              || f.stafflname,
+ 39              cltype
+ 40      ) a
+ 41      JOIN (
+ 42          SELECT
+ 43              s.staffid,
+ 44              f.stafffname
+ 45              || ' '
+ 46              || f.stafflname                                                              AS staffname,
+ 47              CASE cltype
+ 48                  WHEN 'L'  THEN
+ 49                      'Lecture'
+ 50                  WHEN 'T'  THEN
+ 51                      'Tutorial'
+ 52              END                                                                          AS type,
+ 53              COUNT(classno)                                                               AS no_of_classes,
+ 54              SUM(clduration)                                                              AS total_hours,
+ 55              to_char((COUNT(classno) * SUM(clduration) * 75.6), '$999.99')                AS weekly_payment
+ 56          FROM
+ 57                   uni.schedclass s
+ 58              JOIN uni.staff f ON s.staffid = f.staffid
+ 59          WHERE
+ 60                  semester = 1
+ 61              AND EXTRACT(YEAR FROM ofyear) = 2020
+ 62              AND cltype = 'L'
+ 63          GROUP BY
+ 64              s.staffid,
+ 65              f.stafffname
+ 66              || ' '
+ 67              || f.stafflname,
+ 68              cltype
+ 69      ) b ON a.staffid = b.staffid;
+
+   STAFFID STAFFNAME                                 TUTORIAL LECTURE_ TOTAL_WEEKLY_PAYMENT
+---------- ----------------------------------------- -------- -------- --------------------
+    418454 Lizabeth Stubbings                          $85.70  $151.20              $236.90
+    412994 Gunar Dutch                                 $85.70  $151.20              $236.90
+    434760 Xena Epine                                  $85.70   $75.60              $161.30
+    415448 Sandro Wethered                             $85.70  $151.20              $236.90
+    439066 Kennie Pickin                               $85.70   $75.60              $161.30
+    436760 Tammi Soane                                 $85.70   $75.60              $161.30
+    419421 Trixy Warner                                $85.70  $151.20              $236.90
+    419817 Windham Ellard                             $771.30  $907.20             ########
+
+8 rows selected. 
+
+SQL> 
+SQL> /* 7. Assume that all units are worth 6 credit points each, 
+SQL>calculate each student’s Weighted Average Mark (WAM) and GPA. 
+SQL>Please refer to these Monash websites: https://www.monash.edu/exams/results/wam 
+SQL>and https://www.monash.edu/exams/results/gpa for more information about WAM and GPA respectively. 
+SQL>Do not include WH or DEF grade in the calculation.
+SQL>
+SQL>
+SQL>Include student id, student full name (in a 40 characters wide column headed “Student Full Name�?), 
+SQL>WAM and GPA in the display. Order the list by descending order of WAM then descending order of GPA.
+SQL>*/
+SQL> SELECT
+  2      s.studid,
+  3      cast((s.studfname
+  4           || ' '
+  5           || s.studlname) as char(40) ) as "Student Full name",
+  6      to_char( sum (case
+  7      WHEN
+  8          substr(unitcode, 4, 1) = 1
+  9          AND mark IS NOT NULL
+ 10      THEN
+ 11          mark * 3.0 
+ 12      when substr(unitcode,4,1)<>1 and mark is not null then
+ 13      mark*6 end)/ sum(
+ 14                          CASE
+ 15                                  WHEN substr(unitcode, 4, 1) = 1             THEN
+ 16                                          3.0
+ 17                                  WHEN substr(unitcode, 4, 1) <> 1            THEN
+ 18                                          6.0
+ 19                          END
+ 20                       ),
+ 21          '990.99') as WAM,
+ 22                        to_char((SUM(
+ 23                            CASE
+ 24                                WHEN mark IS NOT NULL
+ 25                                     AND grade = 'N' THEN
+ 26                                    0.3
+ 27                                WHEN mark IS NOT NULL
+ 28                                     AND grade = 'P' THEN
+ 29                                    1
+ 30                                WHEN mark IS NOT NULL
+ 31                                     AND grade = 'C' THEN
+ 32                                    2
+ 33                                WHEN mark IS NOT NULL
+ 34                                     AND grade = 'D' THEN
+ 35                                    3
+ 36                                WHEN mark IS NOT NULL
+ 37                                     AND grade = 'HD' THEN
+ 38                                    4
+ 39                            END
+ 40                        ) * 6) /(COUNT(mark) * 6),
+ 41                                '990.99') AS gpa
+ 42  
+ 43  from uni.enrolment e
+ 44  INNER JOIN uni.student s ON e.studid = s.studid
+ 45  group BY s.studid,
+ 46                                                           s.studfname,
+ 47                                                           s.studlname
+ 48  order BY wam DESC,
+ 49  gpa DESC ;
+
+    STUDID Student Full name                        WAM     GPA    
+---------- ---------------------------------------- ------- -------
+  21262436 Flss Cunio                                 84.00    3.50
+  25437072 Trace Abel                                 81.00    3.00
+  21472665 Heloise Tanti                              79.50    3.50
+  23094083 Margette Wethered                          78.00    3.50
+  18063424 Lynnell Cliburn                            76.33    3.25
+  13453333 Pierrette Moynihan                         75.88    3.00
+  17013887 Harv Wethered                              75.83    3.25
+  14676780 Niki Sperrett                              75.20    3.06
+  16929043 Billie Friedank                            75.00    3.00
+  23545528 Benny Plunket                              75.00    2.50
+  20752513 Aldwin MacGinney                           74.50    2.75
+
+    STUDID Student Full name                        WAM     GPA    
+---------- ---------------------------------------- ------- -------
+  18841033 Artus Swiffen                              74.25    2.75
+  22329123 Archie Alessandretti                       74.00    3.00
+  14635701 Cord Yard                                  73.80    2.80
+  21163360 Kareem Cicchetto                           72.50    2.50
+  24733760 Shannon Broster                            71.50    2.50
+  16476616 Mattheus Kardos                            70.83    2.75
+  21117462 Darlene Lyddiard                           70.50    2.50
+  15875842 Marci Blabber                              70.17    2.75
+  14900897 Casper Rottger                             69.00    2.06
+  14615430 Siffre Dibdale                             68.20    3.50
+  15127454 Lizabeth Stubbings                         68.20    2.26
+
+    STUDID Student Full name                        WAM     GPA    
+---------- ---------------------------------------- ------- -------
+  19646834 Corena Quadri                              67.75    2.00
+  18012671 Starr Clapton                              67.50    2.83
+  20277720 Odele Toby                                 67.25    2.25
+  17872041 Aristotle Rolph                            67.00    2.25
+  12511467 Francyne Rigney                            66.88    4.00
+  14996864 Odele Toby                                 66.00    2.20
+  13742778 Warden Eyden                               66.00    2.06
+  13413109 Myriam Stirley                             65.75    2.00
+  12489379 Gilberto Bwy                               65.17    2.12
+  20648900 Aleda Whistan                              64.25    3.67
+  21195803 Ethan Gisburn                              64.00    2.00
+
+    STUDID Student Full name                        WAM     GPA    
+---------- ---------------------------------------- ------- -------
+  25749653 Rene Kelk                                  63.50    2.00
+  18651413 Buffy Beathem                              61.83    2.00
+  21375916 Eugen Welldrake                            61.50    1.50
+  20225144 Isacco Semeniuk                            61.25    2.08
+  19014350 Morse Andriolli                            61.00    1.50
+  13880303 Shadow Lamberton                           59.60    2.75
+  25814205 Ethe Butts                                 59.50    2.15
+  13390148 Brier Kilgour                              59.38    2.75
+  14374036 Claudette Serman                           58.80    2.06
+  13028303 Herculie Mendus                            58.00    3.00
+  25852461 Shalne Chalk                               56.50    1.00
+
+    STUDID Student Full name                        WAM     GPA    
+---------- ---------------------------------------- ------- -------
+  24374498 Oswald O'Hartagan                          56.00    1.50
+  13119134 Shandra Lindblom                           55.63    3.00
+  15067408 Eada Royds                                 55.00    2.25
+  19273222 Silvio Cornwell                            55.00    1.33
+  15543217 Averell Corp                               54.67    1.33
+  12609485 Cassondra Sedcole                          54.33    1.38
+  12842838 Herminia Mendus                            51.00    2.50
+  19633815 Tessie Rheam                               51.00    2.43
+  17030353 Mychal Ghiroldi                            50.00    2.10
+  23667952 Jeramey Jervoise                           48.50    1.15
+  20776000 Viviana Brewer                             47.50    1.77
+
+    STUDID Student Full name                        WAM     GPA    
+---------- ---------------------------------------- ------- -------
+  12802225 Friedrick Geist                            46.50    2.25
+  24702705 Mellicent Staggs                           35.50    3.00
+  25257376 Carolee Bonnor                             27.00    1.00
+  21585680 Elihu Fer                                  27.00    1.00
+  25828434 Cathrin Smullin                            26.50    1.00
+
+60 rows selected. 
+
+SQL> 
+SQL> spool off

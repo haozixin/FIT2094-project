@@ -7,8 +7,11 @@ week11_sql_advanced.sql
 student id: 30758017
 student name:Zixin Hao
 last modified date:
-
 */
+set echo on 
+spool week11_sql_advanced_output.txt
+
+
 
 /* 1. Find the number of scheduled classes assigned to each staff member 
 for each semester in 2019. If the number of classes is 2 
@@ -396,6 +399,6 @@ group BY s.studid,
 order BY wam DESC,
 gpa DESC ;
 
-
-
+spool off
+set echo off
 
