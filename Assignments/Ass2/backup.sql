@@ -97,13 +97,13 @@ insert into AW_DISPLAY values(6,6,1,to_date('1-May-2019','dd-Mon-yyyy')+1,to_dat
 --7
 insert into ARTWORK values(0007,0001,'Yellow Country',3418.40,to_date('11-Sep-2019','dd-Mon-yyyy'));
 insert into AW_STATUS values(7,7,1,to_date('14:40:00 11-Sep-2019','HH24:MI:SS dd-Mon-yyyy'),'W',null);
+insert into AW_STATUS values(36,7,1,to_date('14:20:00 11-Sep-2019','HH24:MI:SS dd-Mon-yyyy')+110,'R',null);------2019.12.30return
 
-
-
+select to_date('14:20:00 16-Oct-2019','HH24:MI:SS dd-Mon-yyyy')+80 from dual;
 --8
 insert into ARTWORK values(0008,0001,'Meeting of Two Intensities',3587.90,to_date('16-Oct-2019','dd-Mon-yyyy'));
 insert into AW_STATUS values(8,8,1,to_date('15:00:00 16-Oct-2019','HH24:MI:SS dd-Mon-yyyy'),'W',null);
-
+insert into AW_STATUS values(36,8,1,to_date('14:20:00 16-Oct-2019','HH24:MI:SS dd-Mon-yyyy')+80,'R',null);------2020.1.4-return
 
 
 --9
@@ -164,10 +164,13 @@ insert into AW_DISPLAY values(10,9,2,to_date('26-May-2020','dd-Mon-yyyy')+1,to_d
 
 insert into AW_STATUS values(37,9,2,to_date('10:00:00 26-May-2020','HH24:MI:SS dd-Mon-yyyy')+15,'T',5);--
 insert into AW_STATUS values(37,9,2,to_date('13:00:00 26-May-2020','HH24:MI:SS dd-Mon-yyyy')+15,'W',null);--
-insert into AW_STATUS values(37,9,2,to_date('15:00:00 26-May-2020','HH24:MI:SS dd-Mon-yyyy')+15+100,'S',null);--
+insert into AW_STATUS values(37,9,2,to_date('15:00:00 26-May-2020','HH24:MI:SS dd-Mon-yyyy')+15+100,'R',null);--
 --15
 insert into ARTWORK values(0009,0003,'st john of patmos vision',78000.40,to_date('30-Jun-2020','dd-Mon-yyyy'));
 insert into AW_STATUS values(15,9,3,to_date('15:35:00 30-Jun-2020','HH24:MI:SS dd-Mon-yyyy'),'W',null);
 
-
+--16
+insert into ARTWORK values(0007,0002,'a picture of the picture',3418.40,to_date('1-Jul-2020','dd-Mon-yyyy'));
+insert into AW_STATUS values(7,7,2,to_date('14:40:00 1-Jul-2020','HH24:MI:SS dd-Mon-yyyy'),'W',null);
+insert into AW_STATUS values(36,7,2,to_date('14:20:00 1-Jul-2020','HH24:MI:SS dd-Mon-yyyy')+10,'R',null);------2020.7.11
 
