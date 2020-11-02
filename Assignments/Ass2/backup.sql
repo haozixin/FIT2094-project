@@ -135,6 +135,9 @@ insert into AW_STATUS values(37,4,3,to_date('18:00:00 21-Feb-2020','HH24:MI:SS d
 
 insert into AW_DISPLAY values(8,4,3,to_date('21-Feb-2020','dd-Mon-yyyy')+1,to_date('21-Feb-2020','dd-Mon-yyyy')+14,5);
 
+insert into AW_STATUS values(37,9,2,to_date('11:00:00 21-Feb-2020','HH24:MI:SS dd-Mon-yyyy')+1+13+1,'T',5);--
+insert into AW_STATUS values(37,9,2,to_date('13:40:00 21-Feb-2020','HH24:MI:SS dd-Mon-yyyy')+1+13+1,'W',null);--
+insert into AW_STATUS values(37,9,2,to_date('10:00:00 21-Feb-2020','HH24:MI:SS dd-Mon-yyyy')+1+13+1+90,'S',null);--
 
 --13
 insert into ARTWORK values(0008,0002,'bacchus and ariadne',40200.94,to_date('1-Apr-2020','dd-Mon-yyyy'));
@@ -144,9 +147,12 @@ insert into AW_STATUS values(13,8,2,to_date('11:00:00 1-Apr-2020','HH24:MI:SS dd
 insert into AW_STATUS values(22,8,2,to_date('15:20:00 1-Apr-2020','HH24:MI:SS dd-Mon-yyyy'),'T',5);
 insert into AW_STATUS values(37,8,2,to_date('18:00:00 1-Apr-2020','HH24:MI:SS dd-Mon-yyyy'),'G',5);
 
-insert into AW_DISPLAY values(9,8,2,to_date('1-Apr-2020','dd-Mon-yyyy')+1,to_date('1-Apr-2020','dd-Mon-yyyy')+14,5);
+insert into AW_DISPLAY values(9,8,2,to_date('1-Apr-2020','dd-Mon-yyyy')+1,to_date('1-Apr-2020','dd-Mon-yyyy')+1+13,5);
 
 
+insert into AW_STATUS values(37,9,2,to_date('10:00:00 1-Apr-2020','HH24:MI:SS dd-Mon-yyyy')+1+13+1,'T',5);--
+insert into AW_STATUS values(37,9,2,to_date('13:00:00 1-Apr-2020','HH24:MI:SS dd-Mon-yyyy')+1+13+1,'W',null);--
+insert into AW_STATUS values(37,9,2,to_date('10:00:00 1-Apr-2020','HH24:MI:SS dd-Mon-yyyy')+1+13+1+150,'S',null);--
 --14
 insert into ARTWORK values(0009,0002,'jupiter and io',50000.00,to_date('26-May-2020','dd-Mon-yyyy'));
 insert into AW_STATUS values(14,9,2,to_date('11:10:00 26-May-2020','HH24:MI:SS dd-Mon-yyyy'),'W',null);
@@ -154,7 +160,11 @@ insert into AW_STATUS values(14,9,2,to_date('11:10:00 26-May-2020','HH24:MI:SS d
 insert into AW_STATUS values(22,9,2,to_date('15:20:00 26-May-2020','HH24:MI:SS dd-Mon-yyyy'),'T',5);
 insert into AW_STATUS values(37,9,2,to_date('18:00:00 26-May-2020','HH24:MI:SS dd-Mon-yyyy'),'G',5);
 
-insert into AW_DISPLAY values(10,9,2,to_date('26-May-2020','dd-Mon-yyyy')+1,to_date('26-May-2020','dd-Mon-yyyy')+14,5);
+insert into AW_DISPLAY values(10,9,2,to_date('26-May-2020','dd-Mon-yyyy')+1,to_date('26-May-2020','dd-Mon-yyyy')+1+13,5);
+
+insert into AW_STATUS values(37,9,2,to_date('10:00:00 26-May-2020','HH24:MI:SS dd-Mon-yyyy')+15,'T',5);--
+insert into AW_STATUS values(37,9,2,to_date('13:00:00 26-May-2020','HH24:MI:SS dd-Mon-yyyy')+15,'W',null);--
+insert into AW_STATUS values(37,9,2,to_date('15:00:00 26-May-2020','HH24:MI:SS dd-Mon-yyyy')+15+100,'S',null);--
 --15
 insert into ARTWORK values(0009,0003,'st john of patmos vision',78000.40,to_date('30-Jun-2020','dd-Mon-yyyy'));
 insert into AW_STATUS values(15,9,3,to_date('15:35:00 30-Jun-2020','HH24:MI:SS dd-Mon-yyyy'),'W',null);

@@ -76,14 +76,22 @@ insert into AW_STATUS values(29,4,2,to_date('17:45:00 21-Jan-2020','HH24:MI:SS d
 insert into AW_STATUS values(30,4,3,to_date('15:15:00 21-Feb-2020','HH24:MI:SS dd-Mon-yyyy'),'W',null);
 insert into AW_STATUS values(31,4,3,to_date('16:00:00 21-Feb-2020','HH24:MI:SS dd-Mon-yyyy'),'T',5);
 insert into AW_STATUS values(32,4,3,to_date('18:00:00 21-Feb-2020','HH24:MI:SS dd-Mon-yyyy'),'G',5);
-insert into AW_STATUS values(33,8,2,to_date('11:00:00 1-Apr-2020','HH24:MI:SS dd-Mon-yyyy'),'W',null);
-insert into AW_STATUS values(34,8,2,to_date('15:20:00 1-Apr-2020','HH24:MI:SS dd-Mon-yyyy'),'T',5);
-insert into AW_STATUS values(35,8,2,to_date('18:00:00 1-Apr-2020','HH24:MI:SS dd-Mon-yyyy'),'G',5);
-insert into AW_STATUS values(36,9,2,to_date('11:10:00 26-May-2020','HH24:MI:SS dd-Mon-yyyy'),'W',null);
-insert into AW_STATUS values(37,9,2,to_date('15:20:00 26-May-2020','HH24:MI:SS dd-Mon-yyyy'),'T',5);
-insert into AW_STATUS values(38,9,2,to_date('18:00:00 26-May-2020','HH24:MI:SS dd-Mon-yyyy'),'G',5);
-insert into AW_STATUS values(39,9,3,to_date('15:35:00 30-Jun-2020','HH24:MI:SS dd-Mon-yyyy'),'W',null);
-
+insert into AW_STATUS values(33,9,2,to_date('11:00:00 21-Feb-2020','HH24:MI:SS dd-Mon-yyyy')+1+13+1,'T',5);--2020.3.7
+insert into AW_STATUS values(34,9,2,to_date('13:40:00 21-Feb-2020','HH24:MI:SS dd-Mon-yyyy')+1+13+1,'W',null);--
+insert into AW_STATUS values(35,8,2,to_date('11:00:00 1-Apr-2020','HH24:MI:SS dd-Mon-yyyy'),'W',null);
+insert into AW_STATUS values(36,8,2,to_date('15:20:00 1-Apr-2020','HH24:MI:SS dd-Mon-yyyy'),'T',5);
+insert into AW_STATUS values(37,8,2,to_date('18:00:00 1-Apr-2020','HH24:MI:SS dd-Mon-yyyy'),'G',5);
+insert into AW_STATUS values(38,9,2,to_date('10:00:00 1-Apr-2020','HH24:MI:SS dd-Mon-yyyy')+1+13+1,'T',5);--
+insert into AW_STATUS values(39,9,2,to_date('13:00:00 1-Apr-2020','HH24:MI:SS dd-Mon-yyyy')+1+13+1,'W',null);--2020.4.26
+insert into AW_STATUS values(40,9,2,to_date('11:10:00 26-May-2020','HH24:MI:SS dd-Mon-yyyy'),'W',null);
+insert into AW_STATUS values(41,9,2,to_date('15:20:00 26-May-2020','HH24:MI:SS dd-Mon-yyyy'),'T',5);
+insert into AW_STATUS values(42,9,2,to_date('18:00:00 26-May-2020','HH24:MI:SS dd-Mon-yyyy'),'G',5);
+insert into AW_STATUS values(43,9,2,to_date('10:00:00 21-Feb-2020','HH24:MI:SS dd-Mon-yyyy')+1+13+1+90,'S',null);--2020.6.5
+insert into AW_STATUS values(44,9,2,to_date('10:00:00 26-May-2020','HH24:MI:SS dd-Mon-yyyy')+15,'T',5);--
+insert into AW_STATUS values(45,9,2,to_date('13:00:00 26-May-2020','HH24:MI:SS dd-Mon-yyyy')+15,'W',null);--2020.6.10
+insert into AW_STATUS values(46,9,3,to_date('15:35:00 30-Jun-2020','HH24:MI:SS dd-Mon-yyyy'),'W',null);
+insert into AW_STATUS values(47,9,2,to_date('10:00:00 1-Apr-2020','HH24:MI:SS dd-Mon-yyyy')+1+13+1+150,'S',null);--2020.9.13
+insert into AW_STATUS values(48,9,2,to_date('15:00:00 26-May-2020','HH24:MI:SS dd-Mon-yyyy')+15+100,'S',null);--2020.9.18
 
 --10 AW_DISPLAYs
 insert into AW_DISPLAY values(1,1,1,to_date('10-Jan-2019','dd-Mon-yyyy')+1,to_date('10-Jan-2019','dd-Mon-yyyy')+1+10,1);--sold
@@ -103,6 +111,7 @@ insert into SALE values (2,to_date('14-Jan-2019','dd-Mon-yyyy')+1+5, (2938.94+40
 insert into SALE values (3,to_date('16-Feb-2019','dd-Mon-yyyy')+1+4, (20029.90+2000)/(1-0.2-0.103),5,3);
 insert into SALE values (4,to_date('31-Mar-2019','dd-Mon-yyyy')+1+7, (10112.74+1000)/(1-0.2-0.103),6,4);
 
+--
 
 
 commit;
